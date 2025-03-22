@@ -15,7 +15,7 @@
         <activity
             android:name=".WelcomeActivity"
             android:exported="false"
-            android:theme="@style/Base.Theme.AppThemeSplash"/>
+            android:theme="@style/Theme.AppThemeSplash"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
