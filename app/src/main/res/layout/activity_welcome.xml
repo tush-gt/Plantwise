@@ -9,19 +9,19 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="413dp"
-        android:layout_height="732dp"
+        android:layout_width="520dp"
+        android:layout_height="1000dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.505"
         app:srcCompat="@drawable/homeimg" />
 
     <TextView
         android:id="@+id/textViewSplash"
-        android:layout_width="323dp"
-        android:layout_height="91dp"
+        android:layout_width="400dp"
+        android:layout_height="109dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/allerta_stencil"
@@ -29,9 +29,11 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#3E6632"
-        android:textSize="50sp"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.479" />
 </androidx.constraintlayout.widget.ConstraintLayout>
