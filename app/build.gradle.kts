@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+//    id("com.google.gms.google-services")
+
 }
 
 android {
@@ -37,6 +39,11 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+//    configurations.all {
+//        resolutionStrategy.force("com.google.android.gms:play-services-auth:20.7.0")
+//    }
+
 }
 
 dependencies {
@@ -49,4 +56,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+//    implementation("com.google.firebase:firebase-auth-ktx:21.0.3")
+//    implementation("com.google.android.gms:play-services-auth:20.7.0")
+
+
+
+
 }
+//
+//apply(plugin = "com.google.gms.google-services")

@@ -29,7 +29,7 @@ class WelcomeActivity : AppCompatActivity() {
 
         var postDelayed = handler.postDelayed(object : Runnable {
             override fun run() {
-                val intent = Intent(this@WelcomeActivity, MainActivity::class.java)
+                val intent = Intent(this@WelcomeActivity, loginActivity::class.java)
                 startActivity(intent)
                 finish()
             }
