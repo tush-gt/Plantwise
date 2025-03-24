@@ -8,15 +8,14 @@
     tools:context=".SignupActivity">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView5"
         android:layout_width="554dp"
-        android:layout_height="1025dp"
-        android:layout_marginTop="267dp"
+        android:layout_height="1076dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949"
-        app:srcCompat="@drawable/SignUp" />
+        app:layout_constraintVertical_bias="0.598"
+        app:srcCompat="@drawable/imgsu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
