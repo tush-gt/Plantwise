@@ -78,13 +78,14 @@
         android:layout_marginTop="10dp"
         app:boxStrokeColor="#8FE08A"
         app:endIconMode="password_toggle"
-        app:hintTextColor="@color/black">
+        app:hintTextColor="@color/black"
+        app:startIconDrawable="@drawable/baseline_lock_24">
 
       <com.google.android.material.textfield.TextInputEditText
           android:id="@+id/edittextLoginpassword"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:hint="        Password"
+          android:hint="Password"
           android:inputType="textPassword"
           android:textColor="@color/black"
           android:textColorHint="@color/black"
