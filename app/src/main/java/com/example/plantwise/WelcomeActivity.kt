@@ -27,13 +27,12 @@ class WelcomeActivity : AppCompatActivity() {
 
         val handler = Handler(Looper.getMainLooper())
 
-        var postDelayed = handler.postDelayed(object : Runnable {
-            override fun run() {
-                val intent = Intent(this@WelcomeActivity, loginActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-        },5000)
+        handler.postDelayed({
+            val intent = Intent(this@WelcomeActivity, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 5000)
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
