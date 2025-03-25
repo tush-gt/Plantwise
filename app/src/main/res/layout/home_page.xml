@@ -5,28 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/items_background">
 
     <!-- Search Bar -->
 
     <!-- RecyclerView for Plant Items -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="@drawable/img"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle_background"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_icon" />
+
+        <!-- Hey Wiser Text -->
+        <TextView
+            android:id="@+id/greetingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="cursive"
+            android:text="Hey Wiser!"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 
     <EditText
         android:id="@+id/searchBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/search_bar"
-        android:hint="Search plants"
-        android:textColorHint="#FAF8ECEC"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:padding="12dp" />
-
+        android:layout_width="322dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/search_bar_white"
+        android:drawableStart="@drawable/search_icon"
+        android:drawablePadding="10dp"
+        android:focusableInTouchMode="true"
+        android:fontFamily="serif"
+        android:hint="Search"
+        android:outlineProvider="none"
+        android:paddingVertical="10dp"
+        android:paddingStart="45dp"
+        android:textColor="#4D4D4D"
+        android:textColorHint="#888888"
+        android:textSize="16sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp" />
+        android:padding="10dp"
+        />
 
 </LinearLayout>
