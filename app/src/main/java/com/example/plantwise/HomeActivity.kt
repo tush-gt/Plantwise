@@ -27,7 +27,14 @@ class HomeActivity: AppCompatActivity() {
             Plant("Bee Balm", R.drawable.bee_balm),
             Plant("Chamomile", R.drawable.chamomile),
             Plant("Cosmos", R.drawable.cosmos),
-            Plant("Dahlia", R.drawable.dahlia)
+            Plant("Dahlia", R.drawable.dahlia),
+            Plant("Marigold",R.drawable.cosmos),
+            Plant("Aloe Vera", R.drawable.aloe_vera),
+            Plant("Bee Balm", R.drawable.bee_balm),
+            Plant("Chamomile", R.drawable.chamomile),
+            Plant("Cosmos", R.drawable.cosmos),
+            Plant("Dahlia", R.drawable.dahlia),
+            Plant("Marigold",R.drawable.cosmos)
         )
 
         plantAdapter = PlantAdapter(plants) { plant ->
