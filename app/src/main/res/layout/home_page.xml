@@ -13,7 +13,7 @@
     <!-- RecyclerView for Plant Items -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_height="68dp"
         android:background="@drawable/img"
         android:gravity="center_vertical"
         android:orientation="horizontal"
@@ -22,8 +22,8 @@
         <!-- Profile Picture -->
         <ImageView
             android:id="@+id/profileImage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="34dp"
+            android:layout_height="match_parent"
             android:background="@drawable/circle_background"
             android:padding="5dp"
             android:scaleType="centerCrop"

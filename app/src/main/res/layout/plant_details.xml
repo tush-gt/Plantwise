@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/overview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <!-- Header Image -->
+        <ImageView
+            android:id="@+id/plant_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_plant" />
+
+        <!-- Plant Details Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/plant_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aloe Vera"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/botanical_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Botanical Name: Aloe barbadensis miller"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_green" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Quick Actions (Care, Water, Sun) -->
+
+        <!-- Expandable Sections for Guides -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_care" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="Care"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_water" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="Water"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_sun" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="Sun"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/guide_title_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plant Overview"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/guide_content_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aloe Vera is a succulent plant species widely used for its medicinal properties."
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/guide_title_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How to Grow"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/guide_content_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aloe Vera thrives in well-drained soil and requires minimal watering."
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/guide_title_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Watering Guide"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/guide_content_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Water your Aloe Vera only when the soil is completely dry."
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/guide_title_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunlight Requirements"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/guide_content_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Place your Aloe Vera in bright, indirect sunlight for best growth."
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
