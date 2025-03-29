@@ -17,14 +17,15 @@
             android:theme="@style/Theme.Plantwise"/>
 
         <activity
-            android:name=".SignupActivity"
+            android:name=".SignUpActivity"
             android:exported="false"
             android:theme="@style/SignUpTheme"
             android:parentActivityName=".LoginActivity"/>
 
         <activity android:name=".LoginActivity"
             android:exported="true"
-            android:theme="@style/AppThemeSplash"/>
+            android:theme="@style/Theme.Plantwise"/>
+
 
 
         <activity

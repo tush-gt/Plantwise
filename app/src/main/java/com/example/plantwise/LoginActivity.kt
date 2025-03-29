@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.textviewsignup.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
 
@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
             if (email.isNotEmpty() && pass.isNotEmpty()) {
                 firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this@LoginActivity, HomeActivity::class.java)
                         startActivity(intent)
                         finish() // Prevent going back to login after sign-in
                     } else {

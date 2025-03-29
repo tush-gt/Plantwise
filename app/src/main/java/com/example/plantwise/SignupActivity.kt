@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.plantwise.databinding.ActivitySignupBinding
 import com.google.firebase.auth.FirebaseAuth
 
-class SignUpActivity : AppCompatActivity() {
+class SignupActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignupBinding
     private lateinit var firebaseAuth: FirebaseAuth
@@ -24,10 +24,10 @@ class SignUpActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
-        binding.SignupemailEt.setOnClickListener {
-            val email = binding.emailSignup.text.toString()
-            val pass = binding.nameSIGNUP.text.toString()
-            val confirmPass = binding.nameSIGNUP.text.toString()
+        binding.button.setOnClickListener {
+            val email = binding.emailEt.text.toString()
+            val pass = binding.passET.text.toString()
+            val confirmPass = binding.confirmPassEt.text.toString()
 
             if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
                 if (pass == confirmPass) {
