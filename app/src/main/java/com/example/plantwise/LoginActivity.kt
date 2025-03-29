@@ -2,43 +2,55 @@ package com.example.plantwise
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.plantwise.databinding.ActivityLoginBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
-
-    lateinit var loginBinding: ActivityLoginBinding
+    private lateinit var binding: ActivityLoginBinding
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        loginBinding = ActivityLoginBinding.inflate(layoutInflater)
-        val view = loginBinding.root
-        enableEdgeToEdge()
-        setContentView(view)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        // 🔹 Navigate to Home Page on Sign In Button Click
-        loginBinding.buttonSignin.setOnClickListener {
-            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+        firebaseAuth = FirebaseAuth.getInstance()
+
+        binding.textviewsignup.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
-            finish() // Close LoginActivity so user can't go back
         }
 
-        loginBinding.textviewsignup.setOnClickListener {
-            // TODO: Add navigation to Sign Up page
-        }
+        binding.buttonSignin.setOnClickListener {
+            val email = binding.edittextLoginEmail.text.toString()  // Fix: Use .text.toString()
+            val pass = binding.edittextLoginpassword.text.toString()
 
-        loginBinding.textViewForgotpassword.setOnClickListener {
-            // TODO: Add navigation to Forgot Password page
+            if (email.isNotEmpty() && pass.isNotEmpty()) {
+                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                        finish() // Prevent going back to login after sign-in
+                    } else {
+                        Toast.makeText(this, "Login Failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            } else {
+                Toast.makeText(this, "Empty Fields Are Not Allowed!", Toast.LENGTH_SHORT).show()
+            }
         }
+    }
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+    override fun onStart() {
+        super.onStart()
+
+        if (firebaseAuth.currentUser != null) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish() // Prevent going back to login screen if already signed in
         }
     }
 }
