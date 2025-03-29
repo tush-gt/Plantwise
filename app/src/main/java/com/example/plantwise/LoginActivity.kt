@@ -24,6 +24,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         binding.buttonSignin.setOnClickListener {
             val email = binding.edittextLoginEmail.text.toString()  // Fix: Use .text.toString()
             val pass = binding.edittextLoginpassword.text.toString()
@@ -31,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
             if (email.isNotEmpty() && pass.isNotEmpty()) {
                 firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, HomeActivity::class.java)
                         startActivity(intent)
                         finish() // Prevent going back to login after sign-in
                     } else {
@@ -48,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
 
         if (firebaseAuth.currentUser != null) {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish() // Prevent going back to login screen if already signed in
         }
