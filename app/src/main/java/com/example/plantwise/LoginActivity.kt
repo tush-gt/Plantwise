@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.textviewsignup.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 
@@ -49,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
 
         if (firebaseAuth.currentUser != null) {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
             finish() // Prevent going back to login screen if already signed in
         }
