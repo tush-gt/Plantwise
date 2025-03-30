@@ -29,7 +29,7 @@ class ProfileActivity : AppCompatActivity() {
         userName = findViewById(R.id.userName)
         userEmail = findViewById(R.id.userEmail)
         userPassword = findViewById(R.id.userPassword)
-        logoutButton = findViewById(R.id.logoutButton)
+        logoutButton = findViewById(R.id.buttonlogout)
 
         // Fetch user details
         loadUserData()
