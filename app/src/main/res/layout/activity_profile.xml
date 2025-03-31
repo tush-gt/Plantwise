@@ -6,24 +6,56 @@
     android:layout_height="match_parent">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/bg">
+        android:background="@drawable/bg"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/username"
-            android:layout_width="222dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="95dp"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/aladin"
-            android:textColor="@color/dark_green"
-            android:textSize="48sp" />
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="20dp"
+            android:text="John Doe"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="0dp"
+            android:text="johndoe@example.com"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/userPassword"
+            android:layout_width="241dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="textPassword"
+            android:text="securepassword123"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonlogout"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="56dp"
+            android:background="#093C26"
+            android:backgroundTint="#336A37"
+            android:text="Logout"
+            android:textColor="#FFFFFF"  />
     </LinearLayout>
+
 
 
 <!--    <ImageView-->
