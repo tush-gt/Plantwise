@@ -48,7 +48,7 @@
         android:text="@string/welcome"
         android:textAlignment="center"
         android:textColor="#123F22"
-        android:textSize="48sp"
+        android:textSize="42sp"
         android:textStyle="bold|italic" />
 
     <com.google.android.material.textfield.TextInputLayout
