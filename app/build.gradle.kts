@@ -4,6 +4,10 @@
         alias(libs.plugins.google.gms.google.services)
     //    id("com.google.gms.google-services")
 
+
+            id ("kotlin-kapt")
+
+
     }
 
     android {
@@ -40,7 +44,7 @@
         kotlinOptions {
             jvmTarget = "11"
         }
-        buildToolsVersion = "35.0.0"
+        buildToolsVersion = "35.0.1"
 
     //    configurations.all {
     //        resolutionStrategy.force("com.google.android.gms:play-services-auth:20.7.0")
@@ -66,6 +70,13 @@
         implementation("com.google.firebase:firebase-auth-ktx:23.2.0")
     //    implementation("com.google.firebase:firebase-auth-ktx:21.0.3")
     //    implementation("com.google.android.gms:play-services-auth:20.7.0")
+
+        implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+        implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+        implementation ("com.squareup.okhttp3:okhttp:4.9.0")
+        implementation ("com.github.bumptech.glide:glide:4.16.0")
+        annotationProcessor ("com.github.bumptech.glide:compiler:4.16.0")
+
 
 
 
