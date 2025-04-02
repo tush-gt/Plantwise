@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
 
+    <!-- Internet Permission for API Calls -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -14,9 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Plantwise"
         tools:targetApi="31">
-        <activity android:name=".HomeActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Plantwise"/>
+
+        <!-- HomeActivity is now the LAUNCHER -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Plantwise">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".SignupActivity"
@@ -24,27 +33,19 @@
             android:theme="@style/SignUpTheme"
             android:parentActivityName=".LoginActivity"/>
 
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.Plantwise"/>
-
-
 
         <activity
             android:name=".WelcomeActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppThemeSplash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/Theme.AppThemeSplash"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"/>
 
         <meta-data
             android:name="preloaded_fonts"

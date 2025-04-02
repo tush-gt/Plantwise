@@ -6,31 +6,36 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
-class PlantAdapter(
-    private val plantList: List<Plant>,
-    private val onItemClick: (Plant) -> Unit
-) : RecyclerView.Adapter<PlantAdapter.PlantViewHolder>() {
+class PlantAdapter(private val plantList: List<PlantData>, private val onItemClick: (PlantData) -> Unit) :
+    RecyclerView.Adapter<PlantAdapter.PlantViewHolder>() {
+
 
     class PlantViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val plantImage: ImageView = view.findViewById(R.id.plantImage)
-        val plantName: TextView = view.findViewById(R.id.plantName)
+        val plantName: TextView = view.findViewById(R.id.plant_name)
+        val plantImage: ImageView = view.findViewById(R.id.plant_image)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlantViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_plant, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.plant_item, parent, false)
         return PlantViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: PlantViewHolder, position: Int) {
         val plant = plantList[position]
-        holder.plantName.text = plant.name
-        holder.plantImage.setImageResource(plant.imageResId)
+        holder.plantName.text = plant.common_name
 
-        holder.itemView.setOnClickListener {
-            onItemClick(plant)
-        }
+        // ✅ Prevents crash if the image URL is null
+        Glide.with(holder.itemView.context)
+            .load(plant.image_url?.toString()) // ✅ Ensure it's a String
+            .placeholder(R.drawable.aloe_vera) // ✅ Placeholder image for null URLs
+            .error(R.drawable.bee_balm) // ✅ Show if image fails to load
+            .into(holder.plantImage)
+
+
+        // ✅ Handle item click
+        holder.itemView.setOnClickListener { onItemClick(plant) }
     }
 
     override fun getItemCount() = plantList.size

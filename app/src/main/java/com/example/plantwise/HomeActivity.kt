@@ -1,20 +1,20 @@
 package com.example.plantwise
-import com.example.plantwise.PlantAdapter
 
-import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.plantwise.Plant
-import com.example.plantwise.PlantDetailActivity
-import com.example.plantwise.R
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.gson.Gson
+import retrofit2.*
+import retrofit2.converter.gson.GsonConverterFactory
 
-class HomeActivity: AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var plantAdapter: PlantAdapter
-    private lateinit var bottomNav: BottomNavigationView
+
+    private val apiKey = "KccwIuRdQ5w8XNQCIFs9_1foHbHvi6aNH7UzrHPXbTE"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,49 +23,50 @@ class HomeActivity: AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = GridLayoutManager(this, 2)
 
-        bottomNav = findViewById(R.id.bottomNav)
-        bottomNav.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> {
-                    // Handle Home Click
-                    true
+        fetchPlants()
+    }
+
+    private fun fetchPlants() {
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://trefle.io/api/v1/") // ✅ Base URL
+            .addConverterFactory(GsonConverterFactory.create()) // ✅ Convert JSON to Kotlin objects
+            .build()
+
+        val apiService = retrofit.create(PlantApiService::class.java)
+        val call = apiService.getPlants(apiKey) // ✅ API call
+
+        call.enqueue(object : Callback<PlantResponse> {
+            override fun onResponse(call: Call<PlantResponse>, response: Response<PlantResponse>) {
+                Log.d("API_RESPONSE", "Response Code: ${response.code()}")
+
+                if (!response.isSuccessful) {
+                    Log.e("API_ERROR", "Failed: ${response.errorBody()?.string()}")
+                    return
                 }
-                R.id.nav_nursery -> {
-                    // Handle Earth Click
-                    true
+
+                val responseBody = response.body()
+                if (responseBody != null && responseBody.data.isNotEmpty()) {
+                    Log.d("API_JSON_RESPONSE", Gson().toJson(responseBody))
+
+                    val plantList = responseBody.data // ✅ Correctly accessing "data"
+
+                    plantAdapter = PlantAdapter(plantList) { plant ->
+                        Toast.makeText(
+                            this@HomeActivity,
+                            "Clicked on: ${plant.common_name ?: "Unknown"}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+
+                    recyclerView.adapter = plantAdapter
+                } else {
+                    Log.e("API_ERROR", "No data found in response")
                 }
-                R.id.nav_garden -> {
-                    // Handle Rectangle Click
-                    true
-                }
-                else -> false
             }
-        }
 
-        // Sample plant data
-        val plants = listOf(
-            Plant("Aloe Vera", R.drawable.aloe_vera),
-            Plant("Bee Balm", R.drawable.bee_balm),
-            Plant("Chamomile", R.drawable.chamomile),
-            Plant("Cosmos", R.drawable.cosmos),
-            Plant("Dahlia", R.drawable.dahlia),
-            Plant("Marigold",R.drawable.cosmos),
-            Plant("Aloe Vera", R.drawable.aloe_vera),
-            Plant("Bee Balm", R.drawable.bee_balm),
-            Plant("Chamomile", R.drawable.chamomile),
-            Plant("Cosmos", R.drawable.cosmos),
-            Plant("Dahlia", R.drawable.dahlia),
-            Plant("Marigold",R.drawable.cosmos)
-        )
-
-        plantAdapter = PlantAdapter(plants) { plant ->
-            // Open PlantDetailActivity when a plant is clicked
-            val intent = Intent(this, PlantDetailActivity::class.java)
-            intent.putExtra("plantName", plant.name)
-            intent.putExtra("plantImage", plant.imageResId)
-            startActivity(intent)
-        }
-
-        recyclerView.adapter = plantAdapter
+            override fun onFailure(call: Call<PlantResponse>, t: Throwable) {
+                Log.e("API_ERROR", "API failed: ${t.message}")
+            }
+        })
     }
 }

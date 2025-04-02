@@ -1,8 +1,9 @@
-package com.example.plantwise
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
+import com.example.plantwise.R
 
 class PlantDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,12 +11,12 @@ class PlantDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_plant_detail)
 
         val plantName = intent.getStringExtra("plantName")
-        val plantImage = intent.getIntExtra("plantImage", 0)
+        val plantImage = intent.getStringExtra("plantImage")
 
-        val nameTextView: TextView = findViewById(R.id.plantDetailName)
-        val imageView: ImageView = findViewById(R.id.plantDetailImage)
+        val plantNameTextView: TextView = findViewById(R.id.plant_detail_name)
+        val plantImageView: ImageView = findViewById(R.id.plant_detail_image)
 
-        nameTextView.text = plantName
-        imageView.setImageResource(plantImage)
+        plantNameTextView.text = plantName
+        Glide.with(this).load(plantImage).into(plantImageView)
     }
 }
