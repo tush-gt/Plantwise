@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.plantwise.databinding.ActivitySignupBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 
 class SignupActivity : AppCompatActivity() {
 
@@ -40,9 +41,16 @@ class SignupActivity : AppCompatActivity() {
 
                     firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            val intent = Intent(this, HomeActivity::class.java)
-                            startActivity(intent)
-                        } else {
+                            val user = firebaseAuth.currentUser
+                            val profileUpdates = UserProfileChangeRequest.Builder()
+                                .setDisplayName(binding.name.text.toString()) // Ensure correct ID
+                                .build()
+                            user?.updateProfile(profileUpdates)?.addOnCompleteListener {
+                                val intent = Intent(this, HomeActivity::class.java)
+                                startActivity(intent)
+                            }
+                        }
+                        else {
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
 
                         }

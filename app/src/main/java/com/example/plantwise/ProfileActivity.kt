@@ -3,35 +3,31 @@ package com.example.plantwise
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
 class ProfileActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var userName: TextView
-    private lateinit var userEmail: TextView
-    private lateinit var userPassword: EditText
+    private lateinit var nameTextView: TextView
+    private lateinit var emailTextView: TextView
     private lateinit var logoutButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile) // Ensure this matches your XML file name
+        setContentView(R.layout.activity_profile)
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
 
         // Bind UI elements
-        userName = findViewById(R.id.userName)
-        userEmail = findViewById(R.id.userEmail)
-        userPassword = findViewById(R.id.userPassword)
+        nameTextView = findViewById(R.id.userName)  // Fetch name
+        emailTextView = findViewById(R.id.userEmail) // Fetch email
         logoutButton = findViewById(R.id.buttonlogout)
 
-        // Fetch user details
+        // Load user details
         loadUserData()
 
         // Logout button click listener
@@ -44,11 +40,10 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun loadUserData() {
-        val user: FirebaseUser? = auth.currentUser
+        val user = auth.currentUser
         if (user != null) {
-            userName.text = user.displayName ?: "No Name"  // Firebase Auth doesn't store name by default
-            userEmail.text = user.email ?: "No Email"
-            userPassword.setText("********") // Do not show actual password for security
+            nameTextView.text = user.displayName ?: "No Name Found"  // Retrieve name from Firebase
+            emailTextView.text = user.email ?: "No Email Found"      // Retrieve email
         } else {
             Toast.makeText(this, "User not found!", Toast.LENGTH_SHORT).show()
         }
