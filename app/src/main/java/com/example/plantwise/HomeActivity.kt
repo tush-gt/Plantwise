@@ -9,10 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.plantwise.Plant
 import com.example.plantwise.PlantDetailActivity
 import com.example.plantwise.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity: AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var plantAdapter: PlantAdapter
+    private lateinit var bottomNav: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +22,25 @@ class HomeActivity: AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = GridLayoutManager(this, 2)
+
+        bottomNav = findViewById(R.id.bottomNav)
+        bottomNav.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    // Handle Home Click
+                    true
+                }
+                R.id.nav_nursery -> {
+                    // Handle Earth Click
+                    true
+                }
+                R.id.nav_garden -> {
+                    // Handle Rectangle Click
+                    true
+                }
+                else -> false
+            }
+        }
 
         // Sample plant data
         val plants = listOf(
