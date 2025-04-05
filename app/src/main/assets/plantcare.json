@@ -1,0 +1,354 @@
+[
+  {
+    "name": "Aloe Vera",
+    "scientific_name": "Aloe barbadensis miller",
+    "watering": "Water every 3 weeks; let soil dry completely",
+    "sunlight": "Bright, indirect sunlight",
+    "temperature": "18-29°C",
+    "image": "https://images.unsplash.com/photo-1591779051696-1c3fa1469a79"
+  },
+  {
+    "name": "Holy Basil (Tulsi)",
+    "scientific_name": "Ocimum tenuiflorum",
+    "watering": "Water when topsoil is dry (2-3 times/week)",
+    "sunlight": "Full sun (6-8 hours)",
+    "temperature": "21-32°C",
+    "image": "https://images.unsplash.com/photo-1621515378278-91fe29fce73e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Money Plant",
+    "scientific_name": "Epipremnum aureum",
+    "watering": "Weekly; tolerates neglect",
+    "sunlight": "Low to bright indirect light",
+    "temperature": "15-29°C",
+    "image": "https://images.unsplash.com/photo-1603921326210-6edd2d60ca68"
+  },
+  {
+    "name": "Curry Leaf",
+    "scientific_name": "Murraya koenigii",
+    "watering": "Keep soil moist (every 2-3 days)",
+    "sunlight": "Full sun to partial shade",
+    "temperature": "18-29°C",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Curry_Leaves.JPG"
+  },
+  {
+    "name": "Snake Plant",
+    "scientific_name": "Dracaena trifasciata",
+    "watering": "Every 2-3 weeks; drought-tolerant",
+    "sunlight": "Low to bright indirect light",
+    "temperature": "15-29°C",
+    "image": "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e"
+  },
+  {
+    "name": "Mint (Pudina)",
+    "scientific_name": "Mentha spicata",
+    "watering": "Keep soil moist (every 2 days)",
+    "sunlight": "Partial sun (4-6 hours)",
+    "temperature": "13-21°C",
+    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
+  },
+  {
+    "name": "Coriander (Dhania)",
+    "scientific_name": "Coriandrum sativum",
+    "watering": "Water every 2-3 days",
+    "sunlight": "Partial sun (4-5 hours)",
+    "temperature": "10-29°C",
+    "image": "https://images.unsplash.com/photo-1606419100580-3e770f1f0a2a"
+  },
+  {
+    "name": "Jade Plant",
+    "scientific_name": "Crassula ovata",
+    "watering": "Every 2-3 weeks; avoid overwatering",
+    "sunlight": "Bright light (4-6 hours)",
+    "temperature": "18-24°C",
+    "image": "https://images.unsplash.com/photo-1639754390580-2e7437267698"
+  },
+  {
+    "name": "Chili Pepper",
+    "scientific_name": "Capsicum annuum",
+    "watering": "When topsoil is dry (2-3 times/week)",
+    "sunlight": "Full sun (6-8 hours)",
+    "temperature": "21-29°C",
+    "image": "https://images.unsplash.com/photo-1603048719537-7a7a2a8a8a8a"
+  },
+  {
+    "name": "Peace Lily",
+    "scientific_name": "Spathiphyllum wallisii",
+    "watering": "Weekly; droops when thirsty",
+    "sunlight": "Low to medium indirect light",
+    "temperature": "18-27°C",
+    "image": "https://images.unsplash.com/photo-1593482776343-048a2e565c4a"
+  },
+  {
+    "name": "Tomato",
+    "scientific_name": "Solanum lycopersicum",
+    "watering": "Deep watering 2-3 times/week",
+    "sunlight": "Full sun (6-8 hours)",
+    "temperature": "18-27°C",
+    "image": "https://images.unsplash.com/photo-1594282486552-01a9e7a13e04"
+  },
+  {
+    "name": "Dwarf Lemon Tree",
+    "scientific_name": "Citrus limon",
+    "watering": "Water when top 2 inches are dry",
+    "sunlight": "Full sun (6-8 hours)",
+    "temperature": "15-30°C",
+    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7"
+  },
+  {
+    "name": "Spider Plant",
+    "scientific_name": "Chlorophytum comosum",
+    "watering": "Weekly; tolerates dry soil",
+    "sunlight": "Bright, indirect light",
+    "temperature": "15-27°C",
+    "image": "https://images.unsplash.com/photo-1593483316242-efb5420596ca"
+  },
+  {
+    "name": "Areca Palm",
+    "scientific_name": "Dypsis lutescens",
+    "watering": "Weekly; keep soil slightly moist",
+    "sunlight": "Bright, indirect light",
+    "temperature": "18-27°C",
+    "image": "https://images.unsplash.com/photo-1598880940080-ff9a29891b85"
+  },
+  {
+    "name": "Indian Borage (Ajwain)",
+    "scientific_name": "Plectranthus amboinicus",
+    "watering": "Twice a week; avoid soggy soil",
+    "sunlight": "Partial sun (4-6 hours)",
+    "temperature": "15-29°C",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Plectranthus_amboinicus_in_Hyderabad_W_IMG_0486.jpg"
+  },
+  {
+    "name": "Brahmi",
+    "scientific_name": "Bacopa monnieri",
+    "watering": "Keep soil moist (every 2 days)",
+    "sunlight": "Partial shade to full sun",
+    "temperature": "20-35°C",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Bacopa_monnieri_flowers.jpg"
+  },
+  {
+    "name": "Rose (Desi Gulab)",
+    "scientific_name": "Rosa indica",
+    "watering": "Deep watering twice a week",
+    "sunlight": "Full sun (6+ hours)",
+    "temperature": "15-28°C",
+    "image": "https://images.unsplash.com/photo-1597826368522-9f4cb5a6ba48"
+  },
+  {
+    "name": "Marigold (Genda)",
+    "scientific_name": "Tagetes erecta",
+    "watering": "Moderate; avoid waterlogging",
+    "sunlight": "Full sun (6-8 hours)",
+    "temperature": "15-30°C",
+    "image": "https://images.unsplash.com/photo-1600725935160-f67ee4f6084a"
+  },
+  {
+    "name": "Lavender",
+    "scientific_name": "Lavandula angustifolia",
+    "watering": "Light watering; drought-tolerant",
+    "sunlight": "Full sun (6+ hours)",
+    "temperature": "15-27°C",
+    "image": "https://images.unsplash.com/photo-1597843786271-1027c561c6fe"
+  },
+  {
+    "name": "Oregano",
+    "scientific_name": "Origanum vulgare",
+    "watering": "Let soil dry between watering",
+    "sunlight": "Full sun (6-8 hours)",
+    "temperature": "15-25°C",
+    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
+  },
+  {
+    "name": "Spinach (Palak)",
+    "scientific_name": "Spinacia oleracea",
+    "watering": "Keep soil consistently moist",
+    "sunlight": "Partial shade (3-5 hours)",
+    "temperature": "10-25°C",
+    "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb"
+  },
+  {
+    "name": "Fenugreek (Methi)",
+    "scientific_name": "Trigonella foenum-graecum",
+    "watering": "Light watering every 2 days",
+    "sunlight": "Partial sun (4-6 hours)",
+    "temperature": "15-30°C",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Fenugreek_seeds.jpg"
+  },
+  {
+    "name": "Okra (Bhindi)",
+    "scientific_name": "Abelmoschus esculentus",
+    "watering": "Deep watering twice a week",
+    "sunlight": "Full sun (6+ hours)",
+    "temperature": "25-35°C",
+    "image": "https://images.unsplash.com/photo-1603048719537-7a7a2a8a8a8a"
+  },
+  {
+    "name": "Brinjal (Eggplant)",
+    "scientific_name": "Solanum melongena",
+    "watering": "Regular watering; don't let dry out",
+    "sunlight": "Full sun (6-8 hours)",
+    "temperature": "22-30°C",
+    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
+  },
+  {
+    "name": "Rubber Plant",
+    "scientific_name": "Ficus elastica",
+    "watering": "Every 1-2 weeks; let soil dry",
+    "sunlight": "Bright, indirect light",
+    "temperature": "16-27°C",
+    "image": "https://images.unsplash.com/photo-1603921326210-6edd2d60ca68"
+  },
+  {
+    "name": "ZZ Plant",
+    "scientific_name": "Zamioculcas zamiifolia",
+    "watering": "Every 2-3 weeks; drought-tolerant",
+    "sunlight": "Low to bright indirect light",
+    "temperature": "18-26°C",
+    "image": "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e"
+  },
+  {
+    "name": "Jasmine (Mogra)",
+    "scientific_name": "Jasminum sambac",
+    "watering": "Keep soil moist; water when dry",
+    "sunlight": "Full sun to partial shade",
+    "temperature": "18-30°C",
+    "image": "https://images.unsplash.com/photo-1597826368522-9f4cb5a6ba48"
+  },
+  {
+    "name": "Hibiscus (Gudhal)",
+    "scientific_name": "Hibiscus rosa-sinensis",
+    "watering": "Water deeply 2-3 times/week",
+    "sunlight": "Full sun (6+ hours)",
+    "temperature": "16-32°C",
+    "image": "https://images.unsplash.com/photo-1600725935160-f67ee4f6084a"
+  },
+  {
+    "name": "Neem Tree",
+    "scientific_name": "Azadirachta indica",
+    "watering": "Drought-tolerant; water weekly",
+    "sunlight": "Full sun",
+    "temperature": "20-40°C",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Neem_tree_leaves.jpg"
+  },
+  {
+    "name": "Pothos (Devil's Ivy)",
+    "scientific_name": "Epipremnum aureum",
+    "watering": "Every 1-2 weeks; let dry between",
+    "sunlight": "Low to bright indirect light",
+    "temperature": "15-29°C",
+    "image": "https://images.unsplash.com/photo-1603921326210-6edd2d60ca68"
+  },
+  {
+    "name": "Basil (Sweet Basil)",
+    "scientific_name": "Ocimum basilicum",
+    "watering": "Keep soil moist; water when dry",
+    "sunlight": "Full sun (6-8 hours)",
+    "temperature": "18-30°C",
+    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
+  },
+  {
+    "name": "Thyme",
+    "scientific_name": "Thymus vulgaris",
+    "watering": "Let soil dry between watering",
+    "sunlight": "Full sun (6+ hours)",
+    "temperature": "15-25°C",
+    "image": "https://images.unsplash.com/photo-1597843786271-1027c561c6fe"
+  },
+  {
+    "name": "Parsley",
+    "scientific_name": "Petroselinum crispum",
+    "watering": "Keep soil consistently moist",
+    "sunlight": "Partial sun (4-6 hours)",
+    "temperature": "15-25°C",
+    "image": "https://images.unsplash.com/photo-1606419100580-3e770f1f0a2a"
+  },
+  {
+    "name": "Dill",
+    "scientific_name": "Anethum graveolens",
+    "watering": "Keep soil moist; don't overwater",
+    "sunlight": "Full sun (6-8 hours)",
+    "temperature": "15-25°C",
+    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
+  },
+  {
+    "name": "Chives",
+    "scientific_name": "Allium schoenoprasum",
+    "watering": "Keep soil moist; water when dry",
+    "sunlight": "Full sun to partial shade",
+    "temperature": "15-25°C",
+    "image": "https://images.unsplash.com/photo-1606419100580-3e770f1f0a2a"
+  },
+  {
+    "name": "Rosemary",
+    "scientific_name": "Salvia rosmarinus",
+    "watering": "Let soil dry between watering",
+    "sunlight": "Full sun (6+ hours)",
+    "temperature": "15-27°C",
+    "image": "https://images.unsplash.com/photo-1597843786271-1027c561c6fe"
+  },
+  {
+    "name": "Sage",
+    "scientific_name": "Salvia officinalis",
+    "watering": "Let soil dry between watering",
+    "sunlight": "Full sun (6+ hours)",
+    "temperature": "15-25°C",
+    "image": "https://images.unsplash.com/photo-1597843786271-1027c561c6fe"
+  },
+  {
+    "name": "Bay Leaf (Tej Patta)",
+    "scientific_name": "Laurus nobilis",
+    "watering": "Let soil dry between watering",
+    "sunlight": "Full sun to partial shade",
+    "temperature": "15-25°C",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Bay_laurel_leaves.jpg"
+  },
+  {
+    "name": "Lemongrass",
+    "scientific_name": "Cymbopogon citratus",
+    "watering": "Keep soil moist; water when dry",
+    "sunlight": "Full sun (6+ hours)",
+    "temperature": "20-30°C",
+    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
+  },
+  {
+    "name": "Stevia",
+    "scientific_name": "Stevia rebaudiana",
+    "watering": "Keep soil moist; don't overwater",
+    "sunlight": "Full sun to partial shade",
+    "temperature": "15-30°C",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Stevia_rebaudiana_leaves.jpg"
+  },
+  {
+    "name": "Gotu Kola",
+    "scientific_name": "Centella asiatica",
+    "watering": "Keep soil moist; water when dry",
+    "sunlight": "Partial shade to full sun",
+    "temperature": "20-35°C",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Centella_asiatica_leaves.jpg"
+  },
+  {
+    "name": "Ashwagandha",
+    "scientific_name": "Withania somnifera",
+    "watering": "Drought-tolerant; water weekly",
+    "sunlight": "Full sun (6+ hours)",
+    "temperature": "20-35°C",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Withania_somnifera_leaves.jpg"
+  },
+  {
+    "name": "Giloy",
+    "scientific_name": "Tinospora cordifolia",
+    "watering": "Keep soil moist; water when dry",
+    "sunlight": "Partial shade to full sun",
+    "temperature": "20-35°C",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Tinospora_cordifolia_leaves.jpg"
+  },
+  {
+    "name": "Shatavari",
+    "scientific_name": "Asparagus racemosus",
+    "watering": "Keep soil moist; water when dry",
+    "sunlight": "Partial shade to full sun",
+    "temperature": "20-35°C",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Asparagus_racemosus_leaves.jpg"
+  }
+]
