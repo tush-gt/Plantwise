@@ -200,6 +200,8 @@
                 android:layout_height="wrap_content"
                 android:text="Place your Aloe Vera in bright, indirect sunlight for best growth."
                 android:textSize="14sp"/>
+
+
         </LinearLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
