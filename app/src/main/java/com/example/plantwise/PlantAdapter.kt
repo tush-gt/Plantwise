@@ -1,5 +1,6 @@
 package com.example.plantwise
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,12 +32,22 @@ class PlantAdapter(private var plantList: List<Plant>) :
     inner class PlantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val plantImage: ImageView = itemView.findViewById(R.id.plantImage)
         private val plantName: TextView = itemView.findViewById(R.id.plantName)
-//        private val plantInfo: TextView = itemView.findViewById(R.id.plantInfo)
 
         fun bind(plant: Plant) {
             plantName.text = plant.name
-//            plantInfo.text = "Sunlight: ${plant.sunlight} • Water: ${plant.watering}"
             Glide.with(itemView.context).load(plant.image).into(plantImage)
+
+            itemView.setOnClickListener {
+                val context = itemView.context
+                val intent = Intent(context, PlantDetailsActivity::class.java).apply {
+                    putExtra("name", plant.name)
+                    putExtra("imageUrl", plant.image)
+                    putExtra("sunlight", plant.sunlight)
+                    putExtra("watering", plant.watering)
+//                    putExtra("spacing", plant.spacing)
+                }
+                context.startActivity(intent)
+            }
         }
     }
 
