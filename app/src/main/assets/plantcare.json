@@ -1,354 +1,340 @@
 [
-  {
-    "name": "Aloe Vera",
-    "scientific_name": "Aloe barbadensis miller",
-    "watering": "Water every 3 weeks; let soil dry completely",
-    "sunlight": "Bright, indirect sunlight",
-    "temperature": "18-29°C",
-    "image": "https://images.unsplash.com/photo-1591779051696-1c3fa1469a79"
-  },
-  {
-    "name": "Holy Basil (Tulsi)",
-    "scientific_name": "Ocimum tenuiflorum",
-    "watering": "Water when topsoil is dry (2-3 times/week)",
-    "sunlight": "Full sun (6-8 hours)",
-    "temperature": "21-32°C",
-    "image": "https://images.unsplash.com/photo-1621515378278-91fe29fce73e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Money Plant",
-    "scientific_name": "Epipremnum aureum",
-    "watering": "Weekly; tolerates neglect",
-    "sunlight": "Low to bright indirect light",
-    "temperature": "15-29°C",
-    "image": "https://images.unsplash.com/photo-1603921326210-6edd2d60ca68"
-  },
-  {
-    "name": "Curry Leaf",
-    "scientific_name": "Murraya koenigii",
-    "watering": "Keep soil moist (every 2-3 days)",
-    "sunlight": "Full sun to partial shade",
-    "temperature": "18-29°C",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Curry_Leaves.JPG"
-  },
-  {
-    "name": "Snake Plant",
-    "scientific_name": "Dracaena trifasciata",
-    "watering": "Every 2-3 weeks; drought-tolerant",
-    "sunlight": "Low to bright indirect light",
-    "temperature": "15-29°C",
-    "image": "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e"
-  },
-  {
-    "name": "Mint (Pudina)",
-    "scientific_name": "Mentha spicata",
-    "watering": "Keep soil moist (every 2 days)",
-    "sunlight": "Partial sun (4-6 hours)",
-    "temperature": "13-21°C",
-    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
-  },
-  {
-    "name": "Coriander (Dhania)",
-    "scientific_name": "Coriandrum sativum",
-    "watering": "Water every 2-3 days",
-    "sunlight": "Partial sun (4-5 hours)",
-    "temperature": "10-29°C",
-    "image": "https://images.unsplash.com/photo-1606419100580-3e770f1f0a2a"
-  },
-  {
-    "name": "Jade Plant",
-    "scientific_name": "Crassula ovata",
-    "watering": "Every 2-3 weeks; avoid overwatering",
-    "sunlight": "Bright light (4-6 hours)",
-    "temperature": "18-24°C",
-    "image": "https://images.unsplash.com/photo-1639754390580-2e7437267698"
-  },
-  {
-    "name": "Chili Pepper",
-    "scientific_name": "Capsicum annuum",
-    "watering": "When topsoil is dry (2-3 times/week)",
-    "sunlight": "Full sun (6-8 hours)",
-    "temperature": "21-29°C",
-    "image": "https://images.unsplash.com/photo-1603048719537-7a7a2a8a8a8a"
-  },
-  {
-    "name": "Peace Lily",
-    "scientific_name": "Spathiphyllum wallisii",
-    "watering": "Weekly; droops when thirsty",
-    "sunlight": "Low to medium indirect light",
-    "temperature": "18-27°C",
-    "image": "https://images.unsplash.com/photo-1593482776343-048a2e565c4a"
-  },
-  {
-    "name": "Tomato",
-    "scientific_name": "Solanum lycopersicum",
-    "watering": "Deep watering 2-3 times/week",
-    "sunlight": "Full sun (6-8 hours)",
-    "temperature": "18-27°C",
-    "image": "https://images.unsplash.com/photo-1594282486552-01a9e7a13e04"
-  },
-  {
-    "name": "Dwarf Lemon Tree",
-    "scientific_name": "Citrus limon",
-    "watering": "Water when top 2 inches are dry",
-    "sunlight": "Full sun (6-8 hours)",
-    "temperature": "15-30°C",
-    "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7"
-  },
-  {
-    "name": "Spider Plant",
-    "scientific_name": "Chlorophytum comosum",
-    "watering": "Weekly; tolerates dry soil",
-    "sunlight": "Bright, indirect light",
-    "temperature": "15-27°C",
-    "image": "https://images.unsplash.com/photo-1593483316242-efb5420596ca"
-  },
-  {
-    "name": "Areca Palm",
-    "scientific_name": "Dypsis lutescens",
-    "watering": "Weekly; keep soil slightly moist",
-    "sunlight": "Bright, indirect light",
-    "temperature": "18-27°C",
-    "image": "https://images.unsplash.com/photo-1598880940080-ff9a29891b85"
-  },
-  {
-    "name": "Indian Borage (Ajwain)",
-    "scientific_name": "Plectranthus amboinicus",
-    "watering": "Twice a week; avoid soggy soil",
-    "sunlight": "Partial sun (4-6 hours)",
-    "temperature": "15-29°C",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Plectranthus_amboinicus_in_Hyderabad_W_IMG_0486.jpg"
-  },
-  {
-    "name": "Brahmi",
-    "scientific_name": "Bacopa monnieri",
-    "watering": "Keep soil moist (every 2 days)",
-    "sunlight": "Partial shade to full sun",
-    "temperature": "20-35°C",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Bacopa_monnieri_flowers.jpg"
-  },
-  {
-    "name": "Rose (Desi Gulab)",
-    "scientific_name": "Rosa indica",
-    "watering": "Deep watering twice a week",
-    "sunlight": "Full sun (6+ hours)",
-    "temperature": "15-28°C",
-    "image": "https://images.unsplash.com/photo-1597826368522-9f4cb5a6ba48"
-  },
-  {
-    "name": "Marigold (Genda)",
-    "scientific_name": "Tagetes erecta",
-    "watering": "Moderate; avoid waterlogging",
-    "sunlight": "Full sun (6-8 hours)",
-    "temperature": "15-30°C",
-    "image": "https://images.unsplash.com/photo-1600725935160-f67ee4f6084a"
-  },
-  {
-    "name": "Lavender",
-    "scientific_name": "Lavandula angustifolia",
-    "watering": "Light watering; drought-tolerant",
-    "sunlight": "Full sun (6+ hours)",
-    "temperature": "15-27°C",
-    "image": "https://images.unsplash.com/photo-1597843786271-1027c561c6fe"
-  },
-  {
-    "name": "Oregano",
-    "scientific_name": "Origanum vulgare",
-    "watering": "Let soil dry between watering",
-    "sunlight": "Full sun (6-8 hours)",
-    "temperature": "15-25°C",
-    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
-  },
-  {
-    "name": "Spinach (Palak)",
-    "scientific_name": "Spinacia oleracea",
-    "watering": "Keep soil consistently moist",
-    "sunlight": "Partial shade (3-5 hours)",
-    "temperature": "10-25°C",
-    "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb"
-  },
-  {
-    "name": "Fenugreek (Methi)",
-    "scientific_name": "Trigonella foenum-graecum",
-    "watering": "Light watering every 2 days",
-    "sunlight": "Partial sun (4-6 hours)",
-    "temperature": "15-30°C",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Fenugreek_seeds.jpg"
-  },
-  {
-    "name": "Okra (Bhindi)",
-    "scientific_name": "Abelmoschus esculentus",
-    "watering": "Deep watering twice a week",
-    "sunlight": "Full sun (6+ hours)",
-    "temperature": "25-35°C",
-    "image": "https://images.unsplash.com/photo-1603048719537-7a7a2a8a8a8a"
-  },
-  {
-    "name": "Brinjal (Eggplant)",
-    "scientific_name": "Solanum melongena",
-    "watering": "Regular watering; don't let dry out",
-    "sunlight": "Full sun (6-8 hours)",
-    "temperature": "22-30°C",
-    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
-  },
-  {
-    "name": "Rubber Plant",
-    "scientific_name": "Ficus elastica",
-    "watering": "Every 1-2 weeks; let soil dry",
-    "sunlight": "Bright, indirect light",
-    "temperature": "16-27°C",
-    "image": "https://images.unsplash.com/photo-1603921326210-6edd2d60ca68"
-  },
-  {
-    "name": "ZZ Plant",
-    "scientific_name": "Zamioculcas zamiifolia",
-    "watering": "Every 2-3 weeks; drought-tolerant",
-    "sunlight": "Low to bright indirect light",
-    "temperature": "18-26°C",
-    "image": "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e"
-  },
-  {
-    "name": "Jasmine (Mogra)",
-    "scientific_name": "Jasminum sambac",
-    "watering": "Keep soil moist; water when dry",
-    "sunlight": "Full sun to partial shade",
-    "temperature": "18-30°C",
-    "image": "https://images.unsplash.com/photo-1597826368522-9f4cb5a6ba48"
-  },
-  {
-    "name": "Hibiscus (Gudhal)",
-    "scientific_name": "Hibiscus rosa-sinensis",
-    "watering": "Water deeply 2-3 times/week",
-    "sunlight": "Full sun (6+ hours)",
-    "temperature": "16-32°C",
-    "image": "https://images.unsplash.com/photo-1600725935160-f67ee4f6084a"
-  },
-  {
-    "name": "Neem Tree",
-    "scientific_name": "Azadirachta indica",
-    "watering": "Drought-tolerant; water weekly",
-    "sunlight": "Full sun",
-    "temperature": "20-40°C",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Neem_tree_leaves.jpg"
-  },
-  {
-    "name": "Pothos (Devil's Ivy)",
-    "scientific_name": "Epipremnum aureum",
-    "watering": "Every 1-2 weeks; let dry between",
-    "sunlight": "Low to bright indirect light",
-    "temperature": "15-29°C",
-    "image": "https://images.unsplash.com/photo-1603921326210-6edd2d60ca68"
-  },
-  {
-    "name": "Basil (Sweet Basil)",
-    "scientific_name": "Ocimum basilicum",
-    "watering": "Keep soil moist; water when dry",
-    "sunlight": "Full sun (6-8 hours)",
-    "temperature": "18-30°C",
-    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
-  },
-  {
-    "name": "Thyme",
-    "scientific_name": "Thymus vulgaris",
-    "watering": "Let soil dry between watering",
-    "sunlight": "Full sun (6+ hours)",
-    "temperature": "15-25°C",
-    "image": "https://images.unsplash.com/photo-1597843786271-1027c561c6fe"
-  },
-  {
-    "name": "Parsley",
-    "scientific_name": "Petroselinum crispum",
-    "watering": "Keep soil consistently moist",
-    "sunlight": "Partial sun (4-6 hours)",
-    "temperature": "15-25°C",
-    "image": "https://images.unsplash.com/photo-1606419100580-3e770f1f0a2a"
-  },
-  {
-    "name": "Dill",
-    "scientific_name": "Anethum graveolens",
-    "watering": "Keep soil moist; don't overwater",
-    "sunlight": "Full sun (6-8 hours)",
-    "temperature": "15-25°C",
-    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
-  },
-  {
-    "name": "Chives",
-    "scientific_name": "Allium schoenoprasum",
-    "watering": "Keep soil moist; water when dry",
-    "sunlight": "Full sun to partial shade",
-    "temperature": "15-25°C",
-    "image": "https://images.unsplash.com/photo-1606419100580-3e770f1f0a2a"
-  },
-  {
-    "name": "Rosemary",
-    "scientific_name": "Salvia rosmarinus",
-    "watering": "Let soil dry between watering",
-    "sunlight": "Full sun (6+ hours)",
-    "temperature": "15-27°C",
-    "image": "https://images.unsplash.com/photo-1597843786271-1027c561c6fe"
-  },
-  {
-    "name": "Sage",
-    "scientific_name": "Salvia officinalis",
-    "watering": "Let soil dry between watering",
-    "sunlight": "Full sun (6+ hours)",
-    "temperature": "15-25°C",
-    "image": "https://images.unsplash.com/photo-1597843786271-1027c561c6fe"
-  },
-  {
-    "name": "Bay Leaf (Tej Patta)",
-    "scientific_name": "Laurus nobilis",
-    "watering": "Let soil dry between watering",
-    "sunlight": "Full sun to partial shade",
-    "temperature": "15-25°C",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Bay_laurel_leaves.jpg"
-  },
-  {
-    "name": "Lemongrass",
-    "scientific_name": "Cymbopogon citratus",
-    "watering": "Keep soil moist; water when dry",
-    "sunlight": "Full sun (6+ hours)",
-    "temperature": "20-30°C",
-    "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a"
-  },
-  {
-    "name": "Stevia",
-    "scientific_name": "Stevia rebaudiana",
-    "watering": "Keep soil moist; don't overwater",
-    "sunlight": "Full sun to partial shade",
-    "temperature": "15-30°C",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Stevia_rebaudiana_leaves.jpg"
-  },
-  {
-    "name": "Gotu Kola",
-    "scientific_name": "Centella asiatica",
-    "watering": "Keep soil moist; water when dry",
-    "sunlight": "Partial shade to full sun",
-    "temperature": "20-35°C",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Centella_asiatica_leaves.jpg"
-  },
-  {
-    "name": "Ashwagandha",
-    "scientific_name": "Withania somnifera",
-    "watering": "Drought-tolerant; water weekly",
-    "sunlight": "Full sun (6+ hours)",
-    "temperature": "20-35°C",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Withania_somnifera_leaves.jpg"
-  },
-  {
-    "name": "Giloy",
-    "scientific_name": "Tinospora cordifolia",
-    "watering": "Keep soil moist; water when dry",
-    "sunlight": "Partial shade to full sun",
-    "temperature": "20-35°C",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Tinospora_cordifolia_leaves.jpg"
-  },
-  {
-    "name": "Shatavari",
-    "scientific_name": "Asparagus racemosus",
-    "watering": "Keep soil moist; water when dry",
-    "sunlight": "Partial shade to full sun",
-    "temperature": "20-35°C",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Asparagus_racemosus_leaves.jpg"
-  }
-]
+    {
+      "commonName": "Holy Basil (Tulsi)",
+      "scientificName": "Ocimum tenuiflorum",
+      "image": "https://images.unsplash.com/photo-1631452180519-c014fe7622e0",
+      "type": ["medicinal", "religious", "luck"],
+      "use": "Used in Ayurvedic medicine for colds, cough, and flu. Also has religious significance in Hindu households.",
+      "waterNeeds": "Moderate; water when top inch of soil feels dry",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Pinch off flower buds to encourage leaf growth. Prune regularly to maintain bushy growth. Protect from frost.",
+      "storageTips": "Dry leaves in shade and store in airtight container. Fresh leaves can be refrigerated for up to a week.",
+      "growthForm": "Perennial herb growing to 30-60 cm tall",
+      "specification": "Considered sacred in Hinduism. Different varieties include Krishna Tulsi (purple leaves) and Rama Tulsi (green leaves)."
+    },
+    {
+      "commonName": "Neem",
+      "scientificName": "Azadirachta indica",
+      "image": "https://images.unsplash.com/photo-1604339454409-701c5278c546",
+      "type": ["medicinal", "food"],
+      "use": "Used in traditional medicine for skin diseases, fever, and infections. Young leaves used in cooking. Oil used in cosmetics and as natural pesticide.",
+      "waterNeeds": "Low; drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Tolerates poor soil. Fertilize minimally. Protect young plants from frost.",
+      "storageTips": "Dry leaves in shade and store in airtight containers. Neem oil should be stored in dark bottles.",
+      "growthForm": "Evergreen tree growing up to 15-20 meters",
+      "specification": "Known as 'village pharmacy' due to its numerous medicinal properties. Can live for 150-200 years."
+    },
+    {
+      "commonName": "Turmeric",
+      "scientificName": "Curcuma longa",
+      "image": "https://images.unsplash.com/photo-1597362925123-77861d3fbac7",
+      "type": ["medicinal", "food"],
+      "use": "Rhizomes used as spice in cooking, in religious ceremonies, and for medicinal purposes like anti-inflammation and wound healing.",
+      "waterNeeds": "High; keep soil consistently moist but not waterlogged",
+      "sunlightNeeds": "Partial shade to full shade",
+      "careTips": "Plant in rich, well-draining soil. Mulch to retain moisture. Harvest when leaves turn yellow.",
+      "storageTips": "Store fresh rhizomes in a cool, dark place or refrigerate. Dried powder in airtight containers.",
+      "growthForm": "Perennial herb growing to 1 meter tall",
+      "specification": "Contains curcumin, which gives it bright yellow color and medicinal properties. Grows best in temperatures between 20-30°C."
+    },
+    {
+      "commonName": "Indian Gooseberry (Amla)",
+      "scientificName": "Phyllanthus emblica",
+      "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a",
+      "type": ["medicinal", "food"],
+      "use": "High in Vitamin C. Used in Ayurvedic medicine for digestion, diabetes, and immunity. Fruits eaten fresh or processed.",
+      "waterNeeds": "Moderate; water deeply but infrequently",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Prune after fruiting. Apply organic manure annually. Protect from strong winds.",
+      "storageTips": "Fresh fruits last 1-2 weeks in refrigeration. Can be preserved in salt water or made into preserves.",
+      "growthForm": "Deciduous tree growing up to 8-18 meters",
+      "specification": "Extremely high vitamin C content - one fruit contains as much vitamin C as 2-3 oranges. Fruits are harvested in autumn."
+    },
+    {
+      "commonName": "Aloe Vera",
+      "scientificName": "Aloe barbadensis miller",
+      "image": "https://images.unsplash.com/photo-1513531926349-466f15ec8cc7",
+      "type": ["medicinal", "decorative"],
+      "use": "Gel used for skin care, burns, and wounds. Also used in beverages and food products.",
+      "waterNeeds": "Low; allow soil to dry completely between watering",
+      "sunlightNeeds": "Bright indirect light to partial sun",
+      "careTips": "Plant in well-draining soil. Repot when rootbound. Protect from frost.",
+      "storageTips": "Fresh gel can be refrigerated for up to a week. Can be frozen in ice cube trays.",
+      "growthForm": "Succulent with thick, fleshy leaves growing in a rosette",
+      "specification": "Contains over 75 active compounds. Inner leaf gel is clear and soothing. Outer leaf contains aloin which has laxative properties."
+    },
+    {
+      "commonName": "Curry Leaf Plant",
+      "scientificName": "Murraya koenigii",
+      "image": "https://images.unsplash.com/photo-1603028460723-9a92b1d1e2a1",
+      "type": ["food", "medicinal"],
+      "use": "Leaves used as flavoring in South Indian cuisine. Also used in folk medicine for digestive problems.",
+      "waterNeeds": "Moderate; keep soil lightly moist",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Fertilize every 2-3 months. Prune to maintain shape. May drop leaves in winter.",
+      "storageTips": "Fresh leaves can be refrigerated for up to two weeks. Can be dried or frozen for longer storage.",
+      "growthForm": "Small evergreen tree or shrub growing up to 4-6 meters",
+      "specification": "Aromatic leaves with distinct curry-like fragrance. Seeds and bark also have medicinal properties."
+    },
+    {
+      "commonName": "Ashwagandha",
+      "scientificName": "Withania somnifera",
+      "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a",
+      "type": ["medicinal"],
+      "use": "Root used in Ayurveda as adaptogen for stress, anxiety, and improving energy levels.",
+      "waterNeeds": "Low; drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Grows in poor soil. Space plants 60 cm apart. Protect from excessive moisture.",
+      "storageTips": "Harvest roots after 1 year. Dry thoroughly and store in airtight containers.",
+      "growthForm": "Erect shrub growing up to 1.5 meters tall",
+      "specification": "Known as 'Indian Ginseng'. Berries can be used for seed propagation. Contains withanolides with medicinal properties."
+    },
+    {
+      "commonName": "Indian Marigold",
+      "scientificName": "Tagetes erecta",
+      "image": "https://images.unsplash.com/photo-1600725935160-f67ee4f6084a",
+      "type": ["decorative", "religious", "medicinal"],
+      "use": "Used in religious ceremonies, as garden ornamentals, and as companion plants to repel pests.",
+      "waterNeeds": "Moderate; allow top soil to dry between watering",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Deadhead spent flowers to encourage more blooms. Can be grown from seeds or cuttings.",
+      "storageTips": "Flowers can be dried and used for garlands. Seeds can be collected when flowers dry on the plant.",
+      "growthForm": "Annual herb growing up to 0.5-1 meter tall",
+      "specification": "Widely used in Diwali and other Hindu ceremonies. Contains lutein which is beneficial for eye health."
+    },
+    {
+      "commonName": "Indian Rosewood (Sheesham)",
+      "scientificName": "Dalbergia sissoo",
+      "image": "https://images.unsplash.com/photo-1604339454409-701c5278c546",
+      "type": ["decorative"],
+      "use": "Valued for its hard timber used in furniture making, carving, and construction.",
+      "waterNeeds": "Moderate; established trees are drought-tolerant",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Prune to maintain shape. Watch for pests like defoliators and borers.",
+      "storageTips": "Not applicable for home storage as it's primarily grown for timber.",
+      "growthForm": "Deciduous tree growing up to 25 meters tall",
+      "specification": "Fast-growing species that also helps in preventing soil erosion. Wood has a distinctive grain pattern and reddish-brown color."
+    },
+    {
+      "commonName": "Lemongrass",
+      "scientificName": "Cymbopogon citratus",
+      "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a",
+      "type": ["food", "medicinal"],
+      "use": "Used in cooking for its citrus flavor, in teas, and in essential oils for aromatherapy.",
+      "waterNeeds": "Moderate; keep soil consistently moist",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Divide clumps every 2-3 years. Cut back to 15 cm occasionally to promote fresh growth.",
+      "storageTips": "Fresh stalks can be refrigerated for up to 3 weeks. Can be frozen or dried for longer storage.",
+      "growthForm": "Perennial grass growing in clumps up to 1-1.5 meters tall",
+      "specification": "Contains citral which gives it distinctive lemon scent. Also acts as natural mosquito repellent."
+    },
+    {
+      "commonName": "Indian Lotus",
+      "scientificName": "Nelumbo nucifera",
+      "image": "https://images.unsplash.com/photo-1597826368522-9f4cb5a6ba48",
+      "type": ["decorative", "religious", "food", "medicinal"],
+      "use": "National flower of India. Used in religious ceremonies. Seeds, young leaves, and rhizomes eaten as food.",
+      "waterNeeds": "Very high; aquatic plant that needs standing water",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Plant in containers with no drainage holes filled with heavy clay soil. Water depth should be 15-30 cm above soil.",
+      "storageTips": "Seeds can be dried and stored. Rhizomes can be harvested and stored like potatoes.",
+      "growthForm": "Aquatic perennial with rhizomes anchored in mud",
+      "specification": "Flowers and leaves are water-repellent due to the 'lotus effect'. All parts of the plant are used in Ayurvedic medicine."
+    },
+    {
+      "commonName": "Indian Mustard",
+      "scientificName": "Brassica juncea",
+      "image": "https://images.unsplash.com/photo-1606419100580-3e770f1f0a2a",
+      "type": ["food", "medicinal"],
+      "use": "Seeds used for oil and spice. Leaves used as vegetable. Oil cake used as animal feed and fertilizer.",
+      "waterNeeds": "Moderate; sensitive to both drought and waterlogging",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Sow directly in well-draining soil. Thin seedlings to 15 cm apart. Harvest when pods turn yellow.",
+      "storageTips": "Store seeds in airtight containers in cool, dry place. Oil should be stored away from direct light.",
+      "growthForm": "Annual herb growing up to 1-2 meters tall",
+      "specification": "Cold-pressed mustard oil is commonly used in North Indian cooking. Also used in crop rotation for its bio-fumigation properties."
+    },
+    {
+      "commonName": "Banyan Tree",
+      "scientificName": "Ficus benghalensis",
+      "image": "https://images.unsplash.com/photo-1604339454409-701c5278c546",
+      "type": ["religious", "medicinal", "luck"],
+      "use": "National tree of India with religious significance. Bark and roots used in traditional medicine.",
+      "waterNeeds": "Moderate; established trees are drought-tolerant",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Not suitable for home growing due to massive size. Young plants need protection from frost.",
+      "storageTips": "Not applicable for home storage; primarily an outdoor specimen tree.",
+      "growthForm": "Evergreen tree with aerial roots that can spread over hectares",
+      "specification": "Can live for several hundred years. The Great Banyan in Howrah is over 250 years old and covers an area of 14,500 square meters."
+    },
+    {
+      "commonName": "Jasmine (Mogra)",
+      "scientificName": "Jasminum sambac",
+      "image": "https://images.unsplash.com/photo-1597826368522-9f4cb5a6ba48",
+      "type": ["decorative", "religious", "luck"],
+      "use": "Flowers used in religious ceremonies, perfumes, and garlands. Also used to flavor tea.",
+      "waterNeeds": "Moderate; keep soil evenly moist",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Regular pruning after flowering. Apply balanced fertilizer during growing season.",
+      "storageTips": "Fresh flowers last only a few days. Can be dried or used to make potpourri.",
+      "growthForm": "Evergreen vine or shrub growing up to 2-3 meters tall",
+      "specification": "Flowers open at night and release strongest fragrance in evening. Several varieties grown in India include single and double-flowered forms."
+    },
+    {
+      "commonName": "Indian Sandalwood",
+      "scientificName": "Santalum album",
+      "image": "https://images.unsplash.com/photo-1604339454409-701c5278c546",
+      "type": ["medicinal", "religious", "decorative"],
+      "use": "Heartwood and oil used in perfumes, religious ceremonies, and carving. Has cooling properties in Ayurveda.",
+      "waterNeeds": "Moderate; drought-tolerant once established",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Requires host plants initially as it's semi-parasitic. Grows slowly and needs protection from frost.",
+      "storageTips": "Heartwood can be stored indefinitely. Oil should be stored in dark glass bottles.",
+      "growthForm": "Evergreen tree growing up to 12-15 meters tall",
+      "specification": "Trees must be at least 30 years old before harvesting for quality heartwood. Protected species in India due to overexploitation."
+    },
+    {
+      "commonName": "Brahmi",
+      "scientificName": "Bacopa monnieri",
+      "image": "https://images.unsplash.com/photo-1606419100580-3e770f1f0a2a",
+      "type": ["medicinal"],
+      "use": "Used in Ayurveda for improving memory, reducing anxiety, and treating epilepsy.",
+      "waterNeeds": "High; prefers consistently wet soil",
+      "sunlightNeeds": "Partial shade",
+      "careTips": "Grows well in shallow water or very moist soil. Can be grown indoors in containers with no drainage.",
+      "storageTips": "Fresh leaves can be refrigerated briefly. Usually dried and stored in airtight containers for medicinal use.",
+      "growthForm": "Creeping herb with small white flowers",
+      "specification": "Contains bacosides which support cognitive function. Often confused with Centella asiatica, which is also called Brahmi in northern India."
+    },
+    {
+      "commonName": "Peepal Tree (Sacred Fig)",
+      "scientificName": "Ficus religiosa",
+      "image": "https://images.unsplash.com/photo-1604339454409-701c5278c546",
+      "type": ["religious", "medicinal", "luck"],
+      "use": "Sacred tree in Buddhism and Hinduism. Bark, fruit, and leaves used in traditional medicine.",
+      "waterNeeds": "Moderate; drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Not suitable for home growing due to massive size and invasive roots. Young plants need protection from frost.",
+      "storageTips": "Not applicable for home storage; primarily an outdoor specimen tree.",
+      "growthForm": "Deciduous tree growing up to 30 meters tall",
+      "specification": "Distinctive heart-shaped leaves with long drip tips. Buddha is said to have attained enlightenment under this tree."
+    },
+    {
+      "commonName": "Bitter Gourd (Karela)",
+      "scientificName": "Momordica charantia",
+      "image": "https://images.unsplash.com/photo-1603048719537-7a7a2a8a8a8a",
+      "type": ["food", "medicinal"],
+      "use": "Fruit used in cooking and traditional medicine, particularly for diabetes management.",
+      "waterNeeds": "Moderate; water when top inch of soil feels dry",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Provide trellis for climbing. Add compost before planting. Harvest when fruits are still green.",
+      "storageTips": "Fresh fruits can be refrigerated for up to a week. Can be blanched and frozen for longer storage.",
+      "growthForm": "Annual climbing vine growing up to 5 meters long",
+      "specification": "Contains charantin which helps lower blood glucose levels. Fruits become more bitter as they mature and turn orange."
+    },
+    {
+      "commonName": "Bael (Wood Apple)",
+      "scientificName": "Aegle marmelos",
+      "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a",
+      "type": ["religious", "food", "medicinal"],
+      "use": "Fruit used in religious offerings to Lord Shiva, in beverages, and for treating digestive disorders.",
+      "waterNeeds": "Low; drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Prune to maintain shape. Fertilize annually. Protect young plants from frost.",
+      "storageTips": "Fresh fruit can be stored up to 2 weeks. Pulp can be dried or made into preserves.",
+      "growthForm": "Deciduous tree growing up to 12-15 meters tall",
+      "specification": "Hard-shelled fruit with aromatic pulp. Slow-growing but can live for over 100 years."
+    },
+    {
+      "commonName": "Night Jasmine (Harsingar)",
+      "scientificName": "Nyctanthes arbor-tristis",
+      "image": "https://images.unsplash.com/photo-1597826368522-9f4cb5a6ba48",
+      "type": ["medicinal", "decorative", "religious"],
+      "use": "Flowers used for garlands and religious offerings. Leaves used in traditional medicine for sciatica and arthritis.",
+      "waterNeeds": "Moderate; tolerates brief drought periods",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Prune after flowering to maintain shape. Protect from frost in northern regions.",
+      "storageTips": "Flowers are highly perishable. Leaves can be dried and stored for medicinal use.",
+      "growthForm": "Large shrub or small tree growing up to 10 meters tall",
+      "specification": "Flowers bloom at night and drop in the morning. Orange flower tubes with white petals create a distinctive appearance."
+    },
+    {
+      "commonName": "Custard Apple (Sitaphal)",
+      "scientificName": "Annona squamosa",
+      "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a",
+      "type": ["food", "medicinal"],
+      "use": "Sweet fruit eaten fresh. Seeds and leaves used in traditional medicine to treat lice and skin conditions.",
+      "waterNeeds": "Moderate; water deeply and infrequently",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Prune to maintain size and shape. Apply mulch to retain moisture. Protect from frost.",
+      "storageTips": "Ripe fruits can be refrigerated for 2-3 days. Can be frozen as pulp.",
+      "growthForm": "Small deciduous tree growing up to 6-8 meters tall",
+      "specification": "Hand pollination may improve fruit set. Seeds are toxic and should not be consumed."
+    },
+    {
+      "commonName": "Drumstick Tree (Moringa)",
+      "scientificName": "Moringa oleifera",
+      "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a",
+      "type": ["food", "medicinal"],
+      "use": "Pods used as vegetable. Leaves, flowers, and seeds are edible and highly nutritious. Used in traditional medicine.",
+      "waterNeeds": "Low; drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Can be grown as annual or perennial. Prune regularly to promote branching. Protect from frost.",
+      "storageTips": "Fresh leaves last 3-4 days in refrigeration. Can be dried and powdered for longer storage.",
+      "growthForm": "Fast-growing deciduous tree up to 12 meters tall",
+      "specification": "Known as 'Miracle Tree' due to exceptional nutritional content. All parts of the plant are usable and beneficial."
+    },
+    {
+      "commonName": "Dhatura (Devil's Trumpet)",
+      "scientificName": "Datura metel",
+      "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a",
+      "type": ["medicinal", "poisonous", "religious"],
+      "use": "Used in religious ceremonies associated with Lord Shiva. Used externally in traditional medicine for pain relief.",
+      "waterNeeds": "Moderate; tolerates dry periods",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Keep away from children and pets due to high toxicity. Can become invasive in some areas.",
+      "storageTips": "Not recommended for home storage due to high toxicity.",
+      "growthForm": "Shrubby annual or short-lived perennial growing up to 1.5 meters tall",
+      "specification": "Highly toxic if ingested. Contains tropane alkaloids that can cause hallucinations, severe toxicity, and death."
+    },
+    {
+      "commonName": "Indian Bay Leaf (Tej Patta)",
+      "scientificName": "Cinnamomum tamala",
+      "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a",
+      "type": ["food", "medicinal"],
+      "use": "Leaves used as spice in Indian cooking. Also used in traditional medicine for digestion and diabetes.",
+      "waterNeeds": "Moderate; keep soil evenly moist",
+      "sunlightNeeds": "Partial shade to full sun",
+      "careTips": "Protect from frost. Apply balanced fertilizer during growing season. Prune to maintain shape.",
+      "storageTips": "Dried leaves can be stored in airtight containers for up to a year, away from direct light.",
+      "growthForm": "Evergreen tree growing up to 20 meters tall",
+      "specification": "Different from European bay leaf (Laurus nobilis). Has three prominent veins running along the length of the leaf."
+    },
+    {
+      "commonName": "Ajwain (Carom Seeds)",
+      "scientificName": "Trachyspermum ammi",
+      "image": "https://images.unsplash.com/photo-1606419100580-3e770f1f0a2a",
+      "type": ["food", "medicinal"],
+      "use": "Seeds used as spice in cooking and for medicinal purposes, particularly for digestive disorders.",
+      "waterNeeds": "Moderate; keep soil consistently moist until established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Sow directly in well-draining soil. Thin seedlings to 30 cm apart. Harvest when seeds turn brownish-gray.",
+      "storageTips": "Store dried seeds in airtight containers in cool, dry place for up to 3 years.",
+      "growthForm": "Annual herb growing up to 1-1.5 meters tall",
+      "specification": "Contains thymol which gives it distinctive aroma and medicinal properties. Often used in chutneys and pickles."
+    },
+    {
+      "commonName": "Money Plant",
+      "scientificName": "Epipremnum aureum",
+      "image": "https://images.unsplash.com/photo-1603921326210-6edd2d60ca68",
+      "type": ["decorative", "luck"],
+      "use": "Popular houseplant believed to bring wealth and prosperity. Also purifies indoor air.",
+      "waterNeeds": "Moderate; allow top inch of soil to dry between watering",
+      "sunlightNeeds": "Bright indirect light",
+      "careTips": "Grows well in hanging baskets or climbing up moss poles. Prune to control size and promote bushiness.",
+      "storageTips": "Not applicable for storage; grown as living plant.",
+      "growthForm": "Evergreen vine with heart-shaped variegated leaves",
+      "specification": "Mildly toxic if ingested. Can grow up to 20 meters in natural habitat. Easy to propagate from stem cuttings."
+    }
+  ]

@@ -34,16 +34,16 @@ class PlantAdapter(private var plantList: List<Plant>) :
         private val plantName: TextView = itemView.findViewById(R.id.plantName)
 
         fun bind(plant: Plant) {
-            plantName.text = plant.name
+            plantName.text = plant.commonName
             Glide.with(itemView.context).load(plant.image).into(plantImage)
 
             itemView.setOnClickListener {
                 val context = itemView.context
                 val intent = Intent(context, PlantDetailsActivity::class.java).apply {
-                    putExtra("name", plant.name)
+                    putExtra("name", plant.commonName)
                     putExtra("imageUrl", plant.image)
-                    putExtra("sunlight", plant.sunlight)
-                    putExtra("watering", plant.watering)
+                    putExtra("sunlight", plant.sunlightNeeds)
+                    putExtra("watering", plant.use)
 //                    putExtra("spacing", plant.spacing)
                 }
                 context.startActivity(intent)
@@ -59,7 +59,7 @@ class PlantAdapter(private var plantList: List<Plant>) :
                     plantList
                 } else {
                     plantList.filter {
-                        it.name.lowercase(Locale.getDefault()).contains(query)
+                        it.commonName.lowercase(Locale.getDefault()).contains(query)
                     }
                 }
 
