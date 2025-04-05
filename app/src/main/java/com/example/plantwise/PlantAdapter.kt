@@ -1,5 +1,6 @@
 package com.example.plantwise
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -23,6 +24,7 @@ class PlantAdapter(private var plantList: List<PlantData>) :
 
     override fun onBindViewHolder(holder: PlantViewHolder, position: Int) {
         val plant = filteredList[position]
+
         holder.plantName.text = plant.common_name ?: "Unknown Plant" // ✅ Handle null names safely
 
         // Load image using Glide
@@ -30,6 +32,13 @@ class PlantAdapter(private var plantList: List<PlantData>) :
             .load(plant.image_url ?: "") // ✅ Use safe call with default empty string
             .placeholder(R.drawable.aloe_vera)
             .into(holder.plantImage)
+
+        // ✅ Set Click Listener to open detail activity
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, PlantDetailActivity::class.java)
+            intent.putExtra("plantData", plant) // Pass the entire plant object
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = filteredList.size

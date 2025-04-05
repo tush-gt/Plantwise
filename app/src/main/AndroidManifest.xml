@@ -18,7 +18,7 @@
 
         <!-- HomeActivity is now the LAUNCHER -->
         <activity
-            android:name=".HomeActivity"
+            android:name=".WelcomeActivity"
             android:exported="true"
             android:theme="@style/Theme.Plantwise">
             <intent-filter>
@@ -39,7 +39,7 @@
             android:theme="@style/Theme.Plantwise"/>
 
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".HomeActivity"
             android:exported="true"
             android:theme="@style/Theme.AppThemeSplash"/>
 

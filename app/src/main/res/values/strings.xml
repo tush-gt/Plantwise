@@ -3,4 +3,6 @@
     <string name="account">Don\'t have an Account yet?<font color="#123F22"><b><u><i>Sign Up</i></u></b></font></string>
     <string name="password"><b><u>Forgot Password?</u></b></string>
     <string name="welcome"><b><i>WELCOME USER!</i></b></string>
+    <string name="loading">Loading....</string>
+    <string name="plant_image_description">Image of %1$s plant</string>
 </resources>

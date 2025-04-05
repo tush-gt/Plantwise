@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/sample_plant" />
+            android:contentDescription="@string/plant_image_description" />
 
         <!-- Plant Details Card -->
         <androidx.cardview.widget.CardView
@@ -36,170 +36,171 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:id="@+id/plant_name"
+                    android:id="@+id/common_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Aloe Vera"
                     android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:text="@string/loading" />
 
                 <TextView
-                    android:id="@+id/botanical_name"
+                    android:id="@+id/scientific_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Botanical Name: Aloe barbadensis miller"
                     android:textSize="14sp"
-                    android:textColor="@color/dark_green" />
+                    android:textColor="@color/dark_green"
+                    android:text="@string/loading" />
+
+                <TextView
+                    android:id="@+id/family_genus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/loading" />
+
+                <TextView
+                    android:id="@+id/edible_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/loading" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Quick Actions (Care, Water, Sun) -->
-
-        <!-- Expandable Sections for Guides -->
-        <LinearLayout
+        <!-- Quick Facts Section -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:orientation="vertical">
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
 
-            <GridLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:columnCount="3"
+                android:orientation="vertical"
                 android:padding="16dp">
 
-                <LinearLayout
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:text="Quick Facts"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/ic_care" />
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="3"
+                    android:layout_marginTop="8dp">
 
                     <TextView
-                        android:gravity="center"
-                        android:text="Care"
-                        android:textSize="14sp" />
-                </LinearLayout>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Growth Form:"
+                        android:textStyle="bold"/>
 
-                <LinearLayout
+                    <TextView
+                        android:id="@+id/growth_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Growth Habit:"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/growth_habit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toxicity:"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/toxicity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"/>
+                </GridLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Observations/Overview Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:text="Observations"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/ic_water" />
+                <TextView
+                    android:id="@+id/observations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/loading"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                    <TextView
-                        android:gravity="center"
-                        android:text="Water"
-                        android:textSize="14sp" />
-                </LinearLayout>
+        <!-- Care Instructions Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
 
-                <LinearLayout
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:text="Care Instructions"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/ic_sun" />
+                <!-- You can add more detailed care info here -->
+                <TextView
+                    android:id="@+id/care_instructions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/loading"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                    <TextView
-                        android:gravity="center"
-                        android:text="Sun"
-                        android:textSize="14sp" />
-                </LinearLayout>
-            </GridLayout>
-
-            <TextView
-                android:id="@+id/guide_title_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Plant Overview"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/guide_content_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Aloe Vera is a succulent plant species widely used for its medicinal properties."
-                android:textSize="14sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/guide_title_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="How to Grow"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/guide_content_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Aloe Vera thrives in well-drained soil and requires minimal watering."
-                android:textSize="14sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/guide_title_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Watering Guide"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/guide_content_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Water your Aloe Vera only when the soil is completely dry."
-                android:textSize="14sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/guide_title_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sunlight Requirements"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/guide_content_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Place your Aloe Vera in bright, indirect sunlight for best growth."
-                android:textSize="14sp"/>
-        </LinearLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
