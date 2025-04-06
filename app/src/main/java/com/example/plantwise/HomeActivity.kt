@@ -43,7 +43,7 @@ class HomeActivity : AppCompatActivity() {
 
             // 💡 Pass the click listener here
             plantAdapter = PlantAdapter(plantList) { selectedPlant ->
-                val intent = Intent(this, PlantDetailsActivity::class.java).apply {
+                val intent = Intent(this, PlantDetailActivity::class.java).apply {
                     putExtra("name", selectedPlant.commonName)
                     putExtra("imageUrl", selectedPlant.image)
                     putExtra("sunlight", selectedPlant.sunlightNeeds)
