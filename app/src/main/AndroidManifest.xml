@@ -16,6 +16,11 @@
         android:theme="@style/Theme.Plantwise"
         tools:targetApi="31">
 
+        <!-- Receiver for Notifications -->
+        <receiver
+            android:name=".ReminderReceiver"
+            android:exported="true" />
+
         <!-- HomeActivity is now the LAUNCHER -->
         <activity
             android:name=".WelcomeActivity"

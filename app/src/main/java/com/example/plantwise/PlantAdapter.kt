@@ -14,53 +14,46 @@ import java.util.*
 
 class PlantAdapter(
     private var plantList: List<Plant>,
-    private val onItemClick: (Plant) -> Unit // <- click callback
+    private val onItemClick: (Plant) -> Unit
 ) : RecyclerView.Adapter<PlantAdapter.PlantViewHolder>(), Filterable {
 
-    private var filteredPlantList: List<Plant> = plantList
+    private var filteredList: List<Plant> = plantList
 
     inner class PlantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val plantImage: ImageView = itemView.findViewById(R.id.plant_image)
-        val plantName: TextView = itemView.findViewById(R.id.plant_name)
+        val plantImage: ImageView = itemView.findViewById(R.id.plantImage)
+        val plantName: TextView = itemView.findViewById(R.id.plantName)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlantViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.plant_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_plant, parent, false)
         return PlantViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: PlantViewHolder, position: Int) {
-        val plant = filteredPlantList[position]
-
+        val plant = filteredList[position]
         holder.plantName.text = plant.commonName
         Glide.with(holder.itemView.context).load(plant.image).into(holder.plantImage)
 
-        // 🔥 Click listener!
-        holder.itemView.setOnClickListener {
+        holder.plantImage.setOnClickListener {
             onItemClick(plant)
         }
     }
 
-    override fun getItemCount(): Int = filteredPlantList.size
+    override fun getItemCount(): Int = filteredList.size
 
     override fun getFilter(): Filter {
         return object : Filter() {
-            override fun performFiltering(charSequence: CharSequence?): FilterResults {
-                val query = charSequence.toString().lowercase()
-                val filtered = if (query.isEmpty()) {
-                    plantList
-                } else {
-                    plantList.filter {
-                        it.commonName.lowercase().contains(query)
-                    }
+            override fun performFiltering(constraint: CharSequence?): FilterResults {
+                val searchText = constraint?.toString()?.lowercase()?.trim() ?: ""
+                val results = if (searchText.isEmpty()) plantList
+                else plantList.filter {
+                    it.commonName.lowercase().contains(searchText)
                 }
-                val results = FilterResults()
-                results.values = filtered
-                return results
+                return FilterResults().apply { values = results }
             }
 
-            override fun publishResults(charSequence: CharSequence?, results: FilterResults?) {
-                filteredPlantList = results?.values as List<Plant>
+            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                filteredList = results?.values as List<Plant>
                 notifyDataSetChanged()
             }
         }
