@@ -1,5 +1,6 @@
 package com.example.plantwise
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -32,6 +33,9 @@ class MyPlantsActivity : AppCompatActivity() {
                         val minute = document.getLong("minute")?.toInt() ?: 0
 
                         Log.d("Plant", "$name - $desc at $hour:$minute")
+
+
+
                     }
                 }
                 .addOnFailureListener { e ->

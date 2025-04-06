@@ -59,6 +59,9 @@
         <activity
             android:name=".AddPlantActivity"
             android:exported="true"/>
+        <activity
+            android:name=".MyPlantsActivity"
+            android:exported="true"/>
 
         <meta-data
             android:name="preloaded_fonts"
