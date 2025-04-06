@@ -4,6 +4,8 @@
 
     <!-- Internet Permission for API Calls -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
 
     <application
         android:allowBackup="true"
@@ -18,7 +20,7 @@
 
         <!-- HomeActivity is now the LAUNCHER -->
         <activity
-            android:name=".HomeActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.Plantwise">
             <intent-filter>

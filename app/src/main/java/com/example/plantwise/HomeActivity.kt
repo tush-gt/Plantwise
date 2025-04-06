@@ -1,5 +1,6 @@
 package com.example.plantwise
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -39,7 +40,19 @@ class HomeActivity : AppCompatActivity() {
     private fun fetchPlants() {
         try {
             plantList = JsonUtils.loadPlantCareData(this)
-            plantAdapter = PlantAdapter(plantList)
+
+            // 💡 Pass the click listener here
+            plantAdapter = PlantAdapter(plantList) { selectedPlant ->
+                val intent = Intent(this, PlantDetailsActivity::class.java).apply {
+                    putExtra("name", selectedPlant.commonName)
+                    putExtra("imageUrl", selectedPlant.image)
+                    putExtra("sunlight", selectedPlant.sunlightNeeds)
+                    putExtra("watering", selectedPlant.waterNeeds)
+                    putExtra("spacing", selectedPlant.use)
+                }
+                startActivity(intent)
+            }
+
             recyclerView.adapter = plantAdapter
         } catch (e: Exception) {
             Log.e("JSON_ERROR", "Failed to load plantcare.json: ${e.message}")

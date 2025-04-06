@@ -12,61 +12,54 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import java.util.*
 
-class PlantAdapter(private var plantList: List<Plant>) :
-    RecyclerView.Adapter<PlantAdapter.PlantViewHolder>(), Filterable {
+class PlantAdapter(
+    private var plantList: List<Plant>,
+    private val onItemClick: (Plant) -> Unit // <- click callback
+) : RecyclerView.Adapter<PlantAdapter.PlantViewHolder>(), Filterable {
 
     private var filteredPlantList: List<Plant> = plantList
 
+    inner class PlantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val plantImage: ImageView = itemView.findViewById(R.id.plant_image)
+        val plantName: TextView = itemView.findViewById(R.id.plant_name)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlantViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_plant, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.plant_item, parent, false)
         return PlantViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: PlantViewHolder, position: Int) {
         val plant = filteredPlantList[position]
-        holder.bind(plant)
+
+        holder.plantName.text = plant.commonName
+        Glide.with(holder.itemView.context).load(plant.image).into(holder.plantImage)
+
+        // 🔥 Click listener!
+        holder.itemView.setOnClickListener {
+            onItemClick(plant)
+        }
     }
 
     override fun getItemCount(): Int = filteredPlantList.size
 
-    inner class PlantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val plantImage: ImageView = itemView.findViewById(R.id.plantImage)
-        private val plantName: TextView = itemView.findViewById(R.id.plantName)
-
-        fun bind(plant: Plant) {
-            plantName.text = plant.commonName
-            Glide.with(itemView.context).load(plant.image).into(plantImage)
-
-            itemView.setOnClickListener {
-                val context = itemView.context
-                val intent = Intent(context, PlantDetailsActivity::class.java).apply {
-                    putExtra("name", plant.commonName)
-                    putExtra("imageUrl", plant.image)
-                    putExtra("sunlight", plant.sunlightNeeds)
-                    putExtra("watering", plant.use)
-//                    putExtra("spacing", plant.spacing)
-                }
-                context.startActivity(intent)
-            }
-        }
-    }
-
     override fun getFilter(): Filter {
         return object : Filter() {
-            override fun performFiltering(constraint: CharSequence?): FilterResults {
-                val query = constraint?.toString()?.lowercase(Locale.getDefault()) ?: ""
-                val result = if (query.isEmpty()) {
+            override fun performFiltering(charSequence: CharSequence?): FilterResults {
+                val query = charSequence.toString().lowercase()
+                val filtered = if (query.isEmpty()) {
                     plantList
                 } else {
                     plantList.filter {
-                        it.commonName.lowercase(Locale.getDefault()).contains(query)
+                        it.commonName.lowercase().contains(query)
                     }
                 }
-
-                return FilterResults().apply { values = result }
+                val results = FilterResults()
+                results.values = filtered
+                return results
             }
 
-            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+            override fun publishResults(charSequence: CharSequence?, results: FilterResults?) {
                 filteredPlantList = results?.values as List<Plant>
                 notifyDataSetChanged()
             }
