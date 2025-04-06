@@ -41,7 +41,6 @@ class HomeActivity : AppCompatActivity() {
         try {
             plantList = JsonUtils.loadPlantCareData(this)
 
-            // 💡 Pass the click listener here
             plantAdapter = PlantAdapter(plantList) { selectedPlant ->
                 val intent = Intent(this, PlantDetailActivity::class.java).apply {
                     putExtra("name", selectedPlant.commonName)
