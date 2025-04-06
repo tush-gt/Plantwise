@@ -25,7 +25,7 @@ class WelcomeActivity : AppCompatActivity() {
         val alphaAnimation = AnimationUtils.loadAnimation(applicationContext, R.anim.splah_anim)
         splashBinding.textViewSplash.startAnimation(alphaAnimation)
 
-        // Delay and navigate to LoginActivity
+        // Delay and navigate to LoginActivity3
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this@WelcomeActivity, LoginActivity::class.java)
             startActivity(intent)
