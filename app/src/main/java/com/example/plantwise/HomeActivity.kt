@@ -69,6 +69,14 @@ class HomeActivity : AppCompatActivity() {
                     // you're already on Home, do nothing or refresh maybe
                     true
                 }
+
+                R.id.nav_nursery -> {
+                    val intent = Intent(this, NurseryActivity::class.java)
+                    startActivity(intent)
+                    true
+
+                }
+
                 R.id.nav_garden -> {
                     // Navigate to ReminderActivity when "My Garden" is tapped
                     val intent = Intent(this, AddPlantActivity::class.java)

@@ -5,4 +5,6 @@
     <string name="welcome"><b><i>WELCOME USER!</i></b></string>
     <string name="loading">Loading....</string>
     <string name="plant_image_description">Image of %1$s plant</string>
+    <string name="nursery_list_description">List of plant nurseries in Mumbai</string>
+
 </resources>
