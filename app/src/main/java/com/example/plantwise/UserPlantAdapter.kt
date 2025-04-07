@@ -8,12 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-data class PlantModel(
-    val name: String = "",
-    val desc: String = "",
-    val hour: Int = 0,
-    val minute: Int = 0
-)
+
 
 class UserPlantAdapter(
     private var userPlants: List<PlantModel>,
