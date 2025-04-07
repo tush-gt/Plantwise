@@ -4,6 +4,7 @@ package com.example.plantwise
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -15,7 +16,8 @@ data class PlantModel(
 )
 
 class UserPlantAdapter(
-    private var userPlants: List<PlantModel>
+    private var userPlants: List<PlantModel>,
+    private val onEditClick: (PlantModel) -> Unit
 ) : RecyclerView.Adapter<UserPlantAdapter.MyPlantViewHolder>() {
 
     inner class MyPlantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -35,6 +37,9 @@ class UserPlantAdapter(
         holder.plantName.text = plant.name
         holder.plantDesc.text = plant.desc
         holder.plantTime.text = "💧 ${"%02d".format(plant.hour)}:${"%02d".format(plant.minute)}"
+        holder.itemView.findViewById<Button>(R.id.editButton).setOnClickListener {
+            onEditClick(plant)
+        }
     }
 
     override fun getItemCount(): Int = userPlants.size

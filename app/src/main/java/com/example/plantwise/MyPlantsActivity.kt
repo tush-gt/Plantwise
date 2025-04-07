@@ -22,7 +22,16 @@ class MyPlantsActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.plantsRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = UserPlantAdapter(plantList)
+        adapter = UserPlantAdapter(plantList) { plant ->
+            // Handle the edit button click!
+            val intent = Intent(this, MyPlantsActivity::class.java)
+            intent.putExtra("name", plant.name)
+            intent.putExtra("desc", plant.desc)
+            intent.putExtra("hour", plant.hour)
+            intent.putExtra("minute", plant.minute)
+            startActivity(intent)
+        }
+
         recyclerView.adapter = adapter
 
         loadUserPlants()
