@@ -67,7 +67,10 @@ class AddPlantActivity : AppCompatActivity() {
                     .addOnSuccessListener {
                         Toast.makeText(this, "Plant saved! 🪴", Toast.LENGTH_SHORT).show()
                         scheduleWateringReminder(hour, minute, name)
+                        val intent = Intent(this, MyPlantsActivity::class.java)
+                        startActivity(intent)
                         finish()
+
                     }
                     .addOnFailureListener {
                         Toast.makeText(this, "Failed to save 🌧️", Toast.LENGTH_SHORT).show()

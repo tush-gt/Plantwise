@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
 
@@ -30,6 +31,7 @@ class HomeActivity : AppCompatActivity() {
 
         // Load plant list from JSON
         fetchPlants()
+        setupBottomNav()
 
         // Setup search
         searchBar.addTextChangedListener(object : TextWatcher {
@@ -55,6 +57,26 @@ class HomeActivity : AppCompatActivity() {
         } catch (e: Exception) {
             Log.e("JSON_ERROR", "Failed to load json file: ${e.message}")
             Toast.makeText(this, "Oops! Couldn't load plant data 😢", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun setupBottomNav() {
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+
+        bottomNav.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_home -> {
+                    // you're already on Home, do nothing or refresh maybe
+                    true
+                }
+                R.id.nav_garden -> {
+                    // Navigate to ReminderActivity when "My Garden" is tapped
+                    val intent = Intent(this, AddPlantActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
         }
     }
 }
