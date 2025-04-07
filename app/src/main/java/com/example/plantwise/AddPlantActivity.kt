@@ -110,11 +110,11 @@ class AddPlantActivity : AppCompatActivity() {
         )
 
         val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
-        alarmManager.setExactAndAllowWhileIdle(
+        alarmManager.setRepeating(
             AlarmManager.RTC_WAKEUP,
             calendar.timeInMillis,
+            AlarmManager.INTERVAL_DAY,
             pendingIntent
         )
-
     }
 }
