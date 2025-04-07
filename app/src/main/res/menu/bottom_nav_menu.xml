@@ -12,8 +12,8 @@
 
     <item
         android:id="@+id/nav_garden"
-        android:icon="@drawable/baseline_auto_stories_24"
-        android:title="Make Garden" />
+        android:icon="@drawable/baseline_add_task_24"
+        android:title="Add plant" />
     <item
         android:id="@+id/nav_garden1"
         android:icon="@drawable/baseline_auto_stories_24"
