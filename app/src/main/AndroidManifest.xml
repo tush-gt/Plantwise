@@ -65,8 +65,15 @@
             android:name=".MyPlantsActivity"
             android:exported="true"/>
 
-        <activity android:name=".NurseryActivity"
-android:exported="true"/>
+        <activity
+            android:name=".NurseryActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".EditPlantActivity"
+            android:exported="true"/>
+
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

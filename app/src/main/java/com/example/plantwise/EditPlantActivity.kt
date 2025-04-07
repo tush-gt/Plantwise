@@ -1,9 +1,8 @@
 package com.example.plantwise
 
-
-
 import android.app.TimePickerDialog
 import android.os.Bundle
+import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
@@ -28,14 +27,25 @@ class EditPlantActivity : AppCompatActivity() {
         timeTextView = findViewById(R.id.wateringTimePicker)
         saveButton = findViewById(R.id.savePlantBtn)
 
-        // Get plant data from intent
+        // 🌟 Get plant data from intent
         plantId = intent.getStringExtra("plantId") ?: ""
-        nameEditText.setText(intent.getStringExtra("name"))
-        descEditText.setText(intent.getStringExtra("desc"))
+
+        if (plantId.isEmpty()) {
+            Toast.makeText(this, "Oops! Missing plant ID 😖", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+
+        Log.d("EditPlantActivity", "Editing plant with ID: $plantId")
+
+        // 🪴 Pre-fill data from intent
+        nameEditText.setText(intent.getStringExtra("name") ?: "")
+        descEditText.setText(intent.getStringExtra("desc") ?: "")
         hour = intent.getIntExtra("hour", 0)
         minute = intent.getIntExtra("minute", 0)
         updateTimeText()
 
+        // ⏰ Time picker dialog
         timeTextView.setOnClickListener {
             TimePickerDialog(this, { _, selectedHour, selectedMinute ->
                 hour = selectedHour
@@ -44,6 +54,7 @@ class EditPlantActivity : AppCompatActivity() {
             }, hour, minute, true).show()
         }
 
+        // 💾 Save updated data
         saveButton.setOnClickListener {
             val updatedData = mapOf(
                 "name" to nameEditText.text.toString(),
@@ -60,7 +71,8 @@ class EditPlantActivity : AppCompatActivity() {
                     Toast.makeText(this, "Plant updated 🌿", Toast.LENGTH_SHORT).show()
                     finish()
                 }
-                .addOnFailureListener {
+                .addOnFailureListener { error ->
+                    Log.e("EditPlantActivity", "Update failed: ${error.message}")
                     Toast.makeText(this, "Update failed 😢", Toast.LENGTH_SHORT).show()
                 }
         }
