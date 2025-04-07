@@ -33,15 +33,15 @@ class NurseryActivity : AppCompatActivity() {
 
             var line: String?
             while (reader.readLine().also { line = it } != null) {
-                val tokens = line!!.split(",")
+                val tokens = Regex(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)").split(line!!)
 
                 if (tokens.size >= 6) {
-                    val address = tokens[0].trim()
-                    val justdialPhone = tokens[1].trim()
-                    val businessPhone = tokens[2].trim()
-                    val name = tokens[3].trim()
-                    val rating = tokens[4].trim()
-                    val reviews = tokens[5].trim()
+                    val name = tokens[0].trim().removeSurrounding("\"")
+                    val address = tokens[1].trim().removeSurrounding("\"")
+                    val justdialPhone = tokens[2].trim().removeSurrounding("\"")
+                    val businessPhone = tokens[3].trim().removeSurrounding("\"")
+                    val rating = tokens[4].trim().removeSurrounding("\"")
+                    val reviews = tokens[5].trim().removeSurrounding("\"")
 
                     val nursery = Nursery(name, address, justdialPhone, businessPhone, rating, reviews)
                     nurseryList.add(nursery)
@@ -56,4 +56,5 @@ class NurseryActivity : AppCompatActivity() {
 
         return nurseryList
     }
+
 }
