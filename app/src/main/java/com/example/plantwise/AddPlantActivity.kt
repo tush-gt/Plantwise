@@ -1,8 +1,6 @@
 package com.example.plantwise
 
 import android.Manifest
-import android.app.AlarmManager
-import android.app.PendingIntent
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
@@ -14,9 +12,10 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.plantwise.ReminderUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import java.util.Calendar
+import com.google.firebase.messaging.FirebaseMessaging
 
 class AddPlantActivity : AppCompatActivity() {
 
@@ -46,6 +45,7 @@ class AddPlantActivity : AppCompatActivity() {
         val saveBtn: Button = findViewById(R.id.savePlantBtn)
 
         checkNotificationPermission()
+        saveFcmTokenToFirestore() // 🔥 Save FCM token if not already saved
 
         saveBtn.setOnClickListener {
             val name = nameInput.text.toString()
@@ -66,11 +66,9 @@ class AddPlantActivity : AppCompatActivity() {
                 firestore.collection("user_plants").add(plant)
                     .addOnSuccessListener {
                         Toast.makeText(this, "Plant saved! 🪴", Toast.LENGTH_SHORT).show()
-                        scheduleWateringReminder(hour, minute, name)
-                        val intent = Intent(this, MyPlantsActivity::class.java)
-                        startActivity(intent)
+                        ReminderUtils.scheduleWateringReminder(this, hour, minute, name)
+                        startActivity(Intent(this, MyPlantsActivity::class.java))
                         finish()
-
                     }
                     .addOnFailureListener {
                         Toast.makeText(this, "Failed to save 🌧️", Toast.LENGTH_SHORT).show()
@@ -90,31 +88,27 @@ class AddPlantActivity : AppCompatActivity() {
         }
     }
 
-    private fun scheduleWateringReminder(hour: Int, minute: Int, plantName: String) {
-        val calendar = Calendar.getInstance().apply {
-            set(Calendar.HOUR_OF_DAY, hour)
-            set(Calendar.MINUTE, minute)
-            set(Calendar.SECOND, 0)
-            if (before(Calendar.getInstance())) {
-                add(Calendar.DATE, 1)
+    // 🌟 Save FCM token to Firestore
+    private fun saveFcmTokenToFirestore() {
+        val user = FirebaseAuth.getInstance().currentUser ?: return
+
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val token = task.result
+                    val db = FirebaseFirestore.getInstance()
+                    val tokenData = hashMapOf("fcmToken" to token)
+
+                    db.collection("user_tokens")
+                        .document(user.uid)
+                        .set(tokenData)
+                        .addOnSuccessListener {
+                            // Optional: log it or toast it
+                        }
+                        .addOnFailureListener { e ->
+                            e.printStackTrace()
+                        }
+                }
             }
-        }
-
-        val intent = Intent(this, ReminderReceiver::class.java).apply {
-            putExtra("plantName", plantName)
-        }
-
-        val pendingIntent = PendingIntent.getBroadcast(
-            this, plantName.hashCode(), intent,
-            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        )
-
-        val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
-        alarmManager.setRepeating(
-            AlarmManager.RTC_WAKEUP,
-            calendar.timeInMillis,
-            AlarmManager.INTERVAL_DAY,
-            pendingIntent
-        )
     }
 }

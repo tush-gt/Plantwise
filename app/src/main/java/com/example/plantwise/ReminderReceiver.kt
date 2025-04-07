@@ -6,16 +6,12 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import android.util.Log
 import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
-import androidx.core.content.ContextCompat
-import android.Manifest
-import android.content.pm.PackageManager
 
 class ReminderReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val plantName = intent.getStringExtra("plantName") ?: "your plant"
+        val plantId = intent.getStringExtra("plantId") // 🌟 get plantId
 
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val channelId = "watering_reminder_channel"
@@ -32,13 +28,15 @@ class ReminderReceiver : BroadcastReceiver() {
         }
 
         val notification = NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(R.drawable.ic_water_drop) // make sure this icon exists!
+            .setSmallIcon(R.drawable.ic_water_drop)
             .setContentTitle("Time to water 💧")
             .setContentText("Don't forget to water $plantName!")
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setAutoCancel(true)
             .build()
 
-        notificationManager.notify(plantName.hashCode(), notification)
+        // 🌟 use plantId's hashCode to uniquely identify the notification
+        val notificationId = plantId?.hashCode() ?: plantName.hashCode()
+        notificationManager.notify(notificationId, notification)
     }
 }
