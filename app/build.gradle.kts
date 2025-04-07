@@ -2,10 +2,13 @@
         alias(libs.plugins.android.application)
         alias(libs.plugins.kotlin.android)
         alias(libs.plugins.google.gms.google.services)
-    //    id("com.google.gms.google-services")
+//        alias(libs.plugins.kotlin.parcelize)
+
+        //    id("com.google.gms.google-services")
 
 
             id ("kotlin-kapt")
+//            id ('kotlin-parcelize')
 
 
     }

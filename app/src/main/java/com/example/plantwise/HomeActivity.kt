@@ -12,22 +12,26 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class HomeActivity : AppCompatActivity() {
+
     private lateinit var recyclerView: RecyclerView
     private lateinit var searchBar: EditText
     private lateinit var plantAdapter: PlantAdapter
-    private var plantList: List<Plant> = listOf()
+    private var plantList: List<PlantData> = listOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home_page)
+        setContentView(R.layout.home_page)  // Make sure this matches your XML file name
 
         recyclerView = findViewById(R.id.recyclerView)
         searchBar = findViewById(R.id.searchBar)
 
+        // 2-column grid layout
         recyclerView.layoutManager = GridLayoutManager(this, 2)
 
+        // Load plant list from JSON
         fetchPlants()
 
+        // Setup search
         searchBar.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -42,19 +46,14 @@ class HomeActivity : AppCompatActivity() {
             plantList = JsonUtils.loadPlantCareData(this)
 
             plantAdapter = PlantAdapter(plantList) { selectedPlant ->
-                val intent = Intent(this, PlantDetailActivity::class.java).apply {
-                    putExtra("name", selectedPlant.commonName)
-                    putExtra("imageUrl", selectedPlant.image)
-                    putExtra("sunlight", selectedPlant.sunlightNeeds)
-                    putExtra("watering", selectedPlant.waterNeeds)
-                    putExtra("spacing", selectedPlant.use)
-                }
+                val intent = Intent(this, PlantDetailActivity::class.java)
+                intent.putExtra("plantData", selectedPlant)
                 startActivity(intent)
             }
 
             recyclerView.adapter = plantAdapter
         } catch (e: Exception) {
-            Log.e("JSON_ERROR", "Failed to load plantcare.json: ${e.message}")
+            Log.e("JSON_ERROR", "Failed to load json file: ${e.message}")
             Toast.makeText(this, "Oops! Couldn't load plant data 😢", Toast.LENGTH_SHORT).show()
         }
     }

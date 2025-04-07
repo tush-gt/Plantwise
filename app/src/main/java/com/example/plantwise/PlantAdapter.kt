@@ -1,6 +1,5 @@
 package com.example.plantwise
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,15 +8,13 @@ import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import java.util.*
 
 class PlantAdapter(
-    private var plantList: List<Plant>,
-    private val onItemClick: (Plant) -> Unit
+    private var plantList: List<PlantData>,
+    private val onItemClick: (PlantData) -> Unit
 ) : RecyclerView.Adapter<PlantAdapter.PlantViewHolder>(), Filterable {
 
-    private var filteredList: List<Plant> = plantList
+    private var filteredList: List<PlantData> = plantList
 
     inner class PlantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val plantImage: ImageView = itemView.findViewById(R.id.plantImage)
@@ -32,9 +29,19 @@ class PlantAdapter(
     override fun onBindViewHolder(holder: PlantViewHolder, position: Int) {
         val plant = filteredList[position]
         holder.plantName.text = plant.commonName
-        Glide.with(holder.itemView.context).load(plant.image).into(holder.plantImage)
 
-        holder.plantImage.setOnClickListener {
+        // Set image based on image name string from drawable
+        val context = holder.itemView.context
+        val imageResId = context.resources.getIdentifier(plant.image, "drawable", context.packageName)
+
+        if (imageResId != 0) {
+            holder.plantImage.setImageResource(imageResId)
+        } else {
+            holder.plantImage.setImageResource(R.drawable.aloe_vera) // fallback image
+        }
+
+        // Handle click to redirect to detail screen
+        holder.itemView.setOnClickListener {
             onItemClick(plant)
         }
     }
@@ -45,15 +52,18 @@ class PlantAdapter(
         return object : Filter() {
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 val searchText = constraint?.toString()?.lowercase()?.trim() ?: ""
-                val results = if (searchText.isEmpty()) plantList
-                else plantList.filter {
-                    it.commonName.lowercase().contains(searchText)
+                val results = if (searchText.isEmpty()) {
+                    plantList
+                } else {
+                    plantList.filter {
+                        it.commonName?.lowercase()?.contains(searchText) == true
+                    }
                 }
                 return FilterResults().apply { values = results }
             }
 
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-                filteredList = results?.values as List<Plant>
+                filteredList = results?.values as List<PlantData>
                 notifyDataSetChanged()
             }
         }
