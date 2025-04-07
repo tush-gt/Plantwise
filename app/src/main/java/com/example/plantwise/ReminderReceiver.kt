@@ -15,40 +15,30 @@ import android.content.pm.PackageManager
 
 class ReminderReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        val plantName = intent.getStringExtra("plantName") ?: "Your plant"
+        val plantName = intent.getStringExtra("plantName") ?: "your plant"
 
-        val channelId = "plantwise_channel"
+        val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val channelId = "watering_reminder_channel"
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 channelId,
-                "Water Reminder",
+                "Watering Reminders",
                 NotificationManager.IMPORTANCE_HIGH
             ).apply {
-                description = "Time to water your plants!"
+                description = "Reminders to water your plant 🌱"
             }
-            val manager = context.getSystemService(NotificationManager::class.java)
-            manager.createNotificationChannel(channel)
+            notificationManager.createNotificationChannel(channel)
         }
 
         val notification = NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(R.drawable.ic_water_drop)// change this to your icon
-            .setContentTitle("🌱 Water Reminder")
-            .setContentText("Time to water $plantName!")
+            .setSmallIcon(R.drawable.ic_water_drop) // make sure this icon exists!
+            .setContentTitle("Time to water 💧")
+            .setContentText("Don't forget to water $plantName!")
             .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setAutoCancel(true)
             .build()
 
-        try {
-            if (ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) ==
-                PackageManager.PERMISSION_GRANTED) {
-                NotificationManagerCompat.from(context).notify(
-                    System.currentTimeMillis().toInt(),
-                    notification
-                )
-            } else {
-                Log.w("ReminderReceiver", "Notification permission not granted")
-            }
-        } catch (e: SecurityException) {
-            Log.e("ReminderReceiver", "SecurityException: ${e.message}")
-        }
+        notificationManager.notify(plantName.hashCode(), notification)
     }
 }
