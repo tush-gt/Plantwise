@@ -15,7 +15,7 @@
     {
       "commonName": "Neem",
       "scientificName": "Azadirachta indica",
-      "image": "tulsi",
+      "image": "neem",
       "type": ["medicinal", "food"],
       "use": "Used in traditional medicine for skin diseases, fever, and infections. Young leaves used in cooking. Oil used in cosmetics and as natural pesticide.",
       "waterNeeds": "Low; drought-tolerant once established",
@@ -28,7 +28,7 @@
     {
       "commonName": "Turmeric",
       "scientificName": "Curcuma longa",
-      "image": "tulsi",
+      "image": "turmeric",
       "type": ["medicinal", "food"],
       "use": "Rhizomes used as spice in cooking, in religious ceremonies, and for medicinal purposes like anti-inflammation and wound healing.",
       "waterNeeds": "High; keep soil consistently moist but not waterlogged",
@@ -41,7 +41,7 @@
     {
       "commonName": "Indian Gooseberry (Amla)",
       "scientificName": "Phyllanthus emblica",
-      "image": "tulsi",
+      "image": "amla",
       "type": ["medicinal", "food"],
       "use": "High in Vitamin C. Used in Ayurvedic medicine for digestion, diabetes, and immunity. Fruits eaten fresh or processed.",
       "waterNeeds": "Moderate; water deeply but infrequently",
@@ -54,7 +54,7 @@
     {
       "commonName": "Aloe Vera",
       "scientificName": "Aloe barbadensis miller",
-      "image": "tulsi",
+      "image": "aloe_vera",
       "type": ["medicinal", "decorative"],
       "use": "Gel used for skin care, burns, and wounds. Also used in beverages and food products.",
       "waterNeeds": "Low; allow soil to dry completely between watering",
@@ -67,7 +67,7 @@
     {
       "commonName": "Curry Leaf Plant",
       "scientificName": "Murraya koenigii",
-      "image": "tulsi",
+      "image": "curryleaf",
       "type": ["food", "medicinal"],
       "use": "Leaves used as flavoring in South Indian cuisine. Also used in folk medicine for digestive problems.",
       "waterNeeds": "Moderate; keep soil lightly moist",
@@ -80,7 +80,7 @@
     {
       "commonName": "Ashwagandha",
       "scientificName": "Withania somnifera",
-      "image": "tulsi",
+      "image": "ashwagandha",
       "type": ["medicinal"],
       "use": "Root used in Ayurveda as adaptogen for stress, anxiety, and improving energy levels.",
       "waterNeeds": "Low; drought-tolerant once established",
@@ -93,7 +93,7 @@
     {
       "commonName": "Indian Marigold",
       "scientificName": "Tagetes erecta",
-      "image": "tulsi",
+      "image": "marigold",
       "type": ["decorative", "religious", "medicinal"],
       "use": "Used in religious ceremonies, as garden ornamentals, and as companion plants to repel pests.",
       "waterNeeds": "Moderate; allow top soil to dry between watering",
@@ -106,7 +106,7 @@
     {
       "commonName": "Indian Rosewood (Sheesham)",
       "scientificName": "Dalbergia sissoo",
-      "image": "tulsi",
+      "image": "rosewood",
       "type": ["decorative"],
       "use": "Valued for its hard timber used in furniture making, carving, and construction.",
       "waterNeeds": "Moderate; established trees are drought-tolerant",
@@ -119,7 +119,7 @@
     {
       "commonName": "Lemongrass",
       "scientificName": "Cymbopogon citratus",
-      "image": "tulsi",
+      "image": "lemongrass",
       "type": ["food", "medicinal"],
       "use": "Used in cooking for its citrus flavor, in teas, and in essential oils for aromatherapy.",
       "waterNeeds": "Moderate; keep soil consistently moist",
@@ -132,7 +132,7 @@
     {
       "commonName": "Indian Lotus",
       "scientificName": "Nelumbo nucifera",
-      "image": "tulsi",
+      "image": "lotus",
       "type": ["decorative", "religious", "food", "medicinal"],
       "use": "National flower of India. Used in religious ceremonies. Seeds, young leaves, and rhizomes eaten as food.",
       "waterNeeds": "Very high; aquatic plant that needs standing water",
@@ -145,7 +145,7 @@
     {
       "commonName": "Indian Mustard",
       "scientificName": "Brassica juncea",
-      "image": "tulsi",
+      "image": "mustard",
       "type": ["food", "medicinal"],
       "use": "Seeds used for oil and spice. Leaves used as vegetable. Oil cake used as animal feed and fertilizer.",
       "waterNeeds": "Moderate; sensitive to both drought and waterlogging",
@@ -158,7 +158,7 @@
     {
       "commonName": "Banyan Tree",
       "scientificName": "Ficus benghalensis",
-      "image": "tulsi",
+      "image": "banyantree",
       "type": ["religious", "medicinal", "luck"],
       "use": "National tree of India with religious significance. Bark and roots used in traditional medicine.",
       "waterNeeds": "Moderate; established trees are drought-tolerant",
@@ -171,7 +171,7 @@
     {
       "commonName": "Jasmine (Mogra)",
       "scientificName": "Jasminum sambac",
-      "image": "tulsi",
+      "image": "jasmine",
       "type": ["decorative", "religious", "luck"],
       "use": "Flowers used in religious ceremonies, perfumes, and garlands. Also used to flavor tea.",
       "waterNeeds": "Moderate; keep soil evenly moist",
@@ -184,7 +184,7 @@
     {
       "commonName": "Indian Sandalwood",
       "scientificName": "Santalum album",
-      "image": "tulsi",
+      "image": "sandalwood",
       "type": ["medicinal", "religious", "decorative"],
       "use": "Heartwood and oil used in perfumes, religious ceremonies, and carving. Has cooling properties in Ayurveda.",
       "waterNeeds": "Moderate; drought-tolerant once established",
@@ -197,7 +197,7 @@
     {
       "commonName": "Brahmi",
       "scientificName": "Bacopa monnieri",
-      "image": "tulsi",
+      "image": "brahmi",
       "type": ["medicinal"],
       "use": "Used in Ayurveda for improving memory, reducing anxiety, and treating epilepsy.",
       "waterNeeds": "High; prefers consistently wet soil",
@@ -210,7 +210,7 @@
     {
       "commonName": "Peepal Tree (Sacred Fig)",
       "scientificName": "Ficus religiosa",
-      "image": "tulsi",
+      "image": "peepaltree",
       "type": ["religious", "medicinal", "luck"],
       "use": "Sacred tree in Buddhism and Hinduism. Bark, fruit, and leaves used in traditional medicine.",
       "waterNeeds": "Moderate; drought-tolerant once established",
@@ -221,9 +221,9 @@
       "specification": "Distinctive heart-shaped leaves with long drip tips. Buddha is said to have attained enlightenment under this tree."
     },
     {
-      "commonName": "Bitter Gourd (Karela)",
+        "commonName": "Bitter Gourd (Karela)",
       "scientificName": "Momordica charantia",
-      "image": "tulsi",
+      "image": "karela",
       "type": ["food", "medicinal"],
       "use": "Fruit used in cooking and traditional medicine, particularly for diabetes management.",
       "waterNeeds": "Moderate; water when top inch of soil feels dry",
@@ -249,7 +249,7 @@
     {
       "commonName": "Night Jasmine (Harsingar)",
       "scientificName": "Nyctanthes arbor-tristis",
-      "image": "tulsi",
+      "image": "harsingar",
       "type": ["medicinal", "decorative", "religious"],
       "use": "Flowers used for garlands and religious offerings. Leaves used in traditional medicine for sciatica and arthritis.",
       "waterNeeds": "Moderate; tolerates brief drought periods",
@@ -262,7 +262,7 @@
     {
       "commonName": "Custard Apple (Sitaphal)",
       "scientificName": "Annona squamosa",
-      "image": "tulsi",
+      "image": "sitaphal",
       "type": ["food", "medicinal"],
       "use": "Sweet fruit eaten fresh. Seeds and leaves used in traditional medicine to treat lice and skin conditions.",
       "waterNeeds": "Moderate; water deeply and infrequently",
@@ -275,7 +275,7 @@
     {
       "commonName": "Drumstick Tree (Moringa)",
       "scientificName": "Moringa oleifera",
-      "image": "tulsi",
+      "image": "drumstick",
       "type": ["food", "medicinal"],
       "use": "Pods used as vegetable. Leaves, flowers, and seeds are edible and highly nutritious. Used in traditional medicine.",
       "waterNeeds": "Low; drought-tolerant once established",
@@ -288,7 +288,7 @@
     {
       "commonName": "Dhatura (Devil's Trumpet)",
       "scientificName": "Datura metel",
-      "image": "tulsi",
+      "image": "dhatura",
       "type": ["medicinal", "poisonous", "religious"],
       "use": "Used in religious ceremonies associated with Lord Shiva. Used externally in traditional medicine for pain relief.",
       "waterNeeds": "Moderate; tolerates dry periods",
@@ -301,7 +301,7 @@
     {
       "commonName": "Indian Bay Leaf (Tej Patta)",
       "scientificName": "Cinnamomum tamala",
-      "image": "tulsi",
+      "image": "tejpatta",
       "type": ["food", "medicinal"],
       "use": "Leaves used as spice in Indian cooking. Also used in traditional medicine for digestion and diabetes.",
       "waterNeeds": "Moderate; keep soil evenly moist",
@@ -314,7 +314,7 @@
     {
       "commonName": "Ajwain (Carom Seeds)",
       "scientificName": "Trachyspermum ammi",
-      "image": "tulsi",
+      "image": "ova",
       "type": ["food", "medicinal"],
       "use": "Seeds used as spice in cooking and for medicinal purposes, particularly for digestive disorders.",
       "waterNeeds": "Moderate; keep soil consistently moist until established",
@@ -327,7 +327,7 @@
     {
       "commonName": "Money Plant",
       "scientificName": "Epipremnum aureum",
-      "image": "tulsi",
+      "image": "moneyplant",
       "type": ["decorative", "luck"],
       "use": "Popular houseplant believed to bring wealth and prosperity. Also purifies indoor air.",
       "waterNeeds": "Moderate; allow top inch of soil to dry between watering",
@@ -340,7 +340,7 @@
     {
       "commonName": "Snake Plant",
       "scientificName": "Dracaena trifasciata",
-      "image": "tulsi",
+      "image": "snakeplant",
       "type": ["decorative", "air-purifying"],
       "use": "Popular houseplant known for air purification qualities. Tolerates low light and irregular watering.",
       "waterNeeds": "Low; water every 2-3 weeks",
@@ -353,7 +353,7 @@
     {
       "commonName": "Mint (Pudina)",
       "scientificName": "Mentha spicata",
-      "image": "tulsi",
+      "image": "pudina",
       "type": ["food", "medicinal"],
       "use": "Leaves used in chutneys, drinks, and as digestive aid. Has cooling properties.",
       "waterNeeds": "High; keep soil moist (water every 2 days)",
@@ -366,7 +366,7 @@
     {
       "commonName": "Coriander (Dhania)",
       "scientificName": "Coriandrum sativum",
-      "image": "tulsi",
+      "image": "kothimbir",
       "type": ["food", "medicinal"],
       "use": "Leaves used as garnish and in chutneys. Seeds used as spice. Has digestive benefits.",
       "waterNeeds": "Moderate; water every 2-3 days",
@@ -379,7 +379,7 @@
     {
       "commonName": "Jade Plant",
       "scientificName": "Crassula ovata",
-      "image": "tulsi",
+      "image": "jadeplant",
       "type": ["decorative", "luck"],
       "use": "Popular succulent believed to bring good luck and prosperity. Often gifted for housewarmings.",
       "waterNeeds": "Low; water every 2-3 weeks",
@@ -392,7 +392,7 @@
     {
       "commonName": "Chili Pepper",
       "scientificName": "Capsicum annuum",
-      "image": "tulsi",
+      "image": "mirchi",
       "type": ["food", "medicinal"],
       "use": "Fruits used in cooking for heat and flavor. Contains capsaicin with pain-relieving properties.",
       "waterNeeds": "Moderate; water when topsoil is dry",
@@ -405,7 +405,7 @@
     {
       "commonName": "Peace Lily",
       "scientificName": "Spathiphyllum wallisii",
-      "image": "tulsi",
+      "image": "peacelily",
       "type": ["decorative", "air-purifying"],
       "use": "Popular indoor plant known for air purification and elegant white flowers. Helps remove toxins from air.",
       "waterNeeds": "Moderate; water when soil feels dry",
@@ -418,7 +418,7 @@
     {
       "commonName": "Tomato",
       "scientificName": "Solanum lycopersicum",
-      "image": "tulsi",
+      "image": "tomatos",
       "type": ["food", "medicinal"],
       "use": "Fruits used widely in Indian cuisine. Rich in lycopene with antioxidant properties.",
       "waterNeeds": "Moderate; deep watering 2-3 times/week",
@@ -431,7 +431,7 @@
     {
       "commonName": "Dwarf Lemon Tree",
       "scientificName": "Citrus limon",
-      "image": "tulsi",
+      "image": "lemon",
       "type": ["food", "medicinal"],
       "use": "Fruits used for juice, flavoring and medicinal purposes. High in vitamin C.",
       "waterNeeds": "Moderate; water when top 2 inches are dry",
@@ -444,7 +444,7 @@
     {
       "commonName": "Spider Plant",
       "scientificName": "Chlorophytum comosum",
-      "image": "tulsi",
+      "image": "spiderplant",
       "type": ["decorative", "air-purifying"],
       "use": "Popular hanging plant known for air purification and easy propagation via plantlets.",
       "waterNeeds": "Moderate; water weekly",
@@ -457,7 +457,7 @@
     {
       "commonName": "Areca Palm",
       "scientificName": "Dypsis lutescens",
-      "image": "tulsi",
+      "image": "palmtree",
       "type": ["decorative", "air-purifying"],
       "use": "Popular indoor palm that adds tropical feel to spaces. Helps humidify indoor air.",
       "waterNeeds": "Moderate; keep soil slightly moist",
@@ -470,7 +470,7 @@
     {
       "commonName": "Indian Borage (Ajwain)",
       "scientificName": "Plectranthus amboinicus",
-      "image": "tulsi",
+      "image": "ova",
       "type": ["food", "medicinal"],
       "use": "Leaves used for flavoring and medicinal purposes, especially for cough and cold relief.",
       "waterNeeds": "Moderate; water twice a week",
@@ -483,7 +483,7 @@
     {
       "commonName": "Rose (Desi Gulab)",
       "scientificName": "Rosa indica",
-      "image": "tulsi",
+      "image": "rose",
       "type": ["decorative", "religious", "medicinal"],
       "use": "Flowers used in religious ceremonies, perfumes, and traditional medicine. Rose water used in cooking.",
       "waterNeeds": "Moderate; deep watering twice a week",
@@ -496,7 +496,7 @@
     {
       "commonName": "Lavender",
       "scientificName": "Lavandula angustifolia",
-      "image": "tulsi",
+      "image": "lavender",
       "type": ["decorative", "medicinal"],
       "use": "Flowers used for fragrance, relaxation, and in traditional medicine for anxiety relief.",
       "waterNeeds": "Low; light watering",
@@ -509,7 +509,7 @@
     {
       "commonName": "Oregano",
       "scientificName": "Origanum vulgare",
-      "image": "tulsi",
+      "image": "oregano",
       "type": ["food", "medicinal"],
       "use": "Leaves used as culinary herb and in traditional medicine for respiratory ailments.",
       "waterNeeds": "Low; let soil dry between watering",
@@ -522,7 +522,7 @@
     {
       "commonName": "Spinach (Palak)",
       "scientificName": "Spinacia oleracea",
-      "image": "tulsi",
+      "image": "palak",
       "type": ["food", "medicinal"],
       "use": "Leafy green used in saag, curries, and parathas. Rich in iron and calcium for bone health.",
       "waterNeeds": "High; keep soil consistently moist",
@@ -535,7 +535,7 @@
     {
       "commonName": "Fenugreek (Methi)",
       "scientificName": "Trigonella foenum-graecum",
-      "image": "tulsi",
+      "image": "methi",
       "type": ["food", "medicinal"],
       "use": "Leaves used fresh/dried in curries. Seeds for tempering and diabetes management.",
       "waterNeeds": "Moderate; light watering every 2 days",
@@ -548,7 +548,7 @@
     {
       "commonName": "Okra (Bhindi)",
       "scientificName": "Abelmoschus esculentus",
-      "image": "tulsi",
+      "image": "bhindii",
       "type": ["food", "medicinal"],
       "use": "Pods used in sambar, stir-fries, and kurma. Mucilage aids digestion.",
       "waterNeeds": "Moderate; deep watering twice weekly",
@@ -561,7 +561,7 @@
     {
       "commonName": "Brinjal (Eggplant)",
       "scientificName": "Solanum melongena",
-      "image": "tulsi",
+      "image": "brinjal",
       "type": ["food", "medicinal"],
       "use": "Fruits used in baingan bharta, curries. Nasunin in skin is potent antioxidant.",
       "waterNeeds": "High; don't let soil dry out",
@@ -574,7 +574,7 @@
     {
       "commonName": "Rubber Plant",
       "scientificName": "Ficus elastica",
-      "image": "tulsi",
+      "image": "rubber",
       "type": ["decorative", "air-purifying"],
       "use": "Ornamental plant with large glossy leaves. Removes indoor air pollutants.",
       "waterNeeds": "Moderate; let soil dry between watering",
@@ -587,7 +587,7 @@
     {
       "commonName": "ZZ Plant",
       "scientificName": "Zamioculcas zamiifolia",
-      "image": "tulsi",
+      "image": "zz",
       "type": ["decorative", "luck"],
       "use": "Low-maintenance houseplant believed to bring prosperity. Thrives in neglect.",
       "waterNeeds": "Low; water every 2-3 weeks",
@@ -600,7 +600,7 @@
     {
       "commonName": "Hibiscus (Gudhal)",
       "scientificName": "Hibiscus rosa-sinensis",
-      "image": "tulsi",
+      "image": "hibiscus",
       "type": ["decorative", "religious", "medicinal"],
       "use": "Flowers offered to deities. Used in hair oils and herbal teas for hypertension.",
       "waterNeeds": "Moderate; water deeply 2-3 times weekly",
@@ -613,7 +613,7 @@
     {
       "commonName": "Pothos (Devil's Ivy)",
       "scientificName": "Epipremnum aureum",
-      "image": "tulsi",
+      "image": "devilsivy",
       "type": ["decorative", "air-purifying"],
       "use": "Trailing vine for shelves/walls. Removes formaldehyde from air.",
       "waterNeeds": "Low; let soil dry between watering",
@@ -626,7 +626,7 @@
     {
       "commonName": "Basil (Sweet Basil)",
       "scientificName": "Ocimum basilicum",
-      "image": "tulsi",
+      "image": "basil",
       "type": ["food", "medicinal"],
       "use": "Leaves for Italian dishes and Thai curries. Essential oil has anti-microbial properties.",
       "waterNeeds": "Moderate; keep soil moist",
@@ -639,7 +639,7 @@
     {
       "commonName": "Thyme",
       "scientificName": "Thymus vulgaris",
-      "image": "tulsi",
+      "image": "thyme",
       "type": ["food", "medicinal"],
       "use": "Culinary herb for meats/stews. Thymol in oil is potent antiseptic.",
       "waterNeeds": "Low; let soil dry between watering",
@@ -652,7 +652,7 @@
     {
       "commonName": "Parsley",
       "scientificName": "Petroselinum crispum",
-      "image": "tulsi",
+      "image": "parsley",
       "type": ["food", "medicinal"],
       "use": "Garnish and flavoring. High in vitamin K for blood clotting.",
       "waterNeeds": "Moderate; keep soil consistently moist",
@@ -665,7 +665,7 @@
     {
       "commonName": "Dill",
       "scientificName": "Anethum graveolens",
-      "image": "tulsi",
+      "image": "dill",
       "type": ["food", "medicinal"],
       "use": "Leaves/flavor pickles (dill pickles). Seeds for digestive tea.",
       "waterNeeds": "Moderate; don't overwater",
@@ -678,7 +678,7 @@
     {
       "commonName": "Chives",
       "scientificName": "Allium schoenoprasum",
-      "image": "tulsi",
+      "image": "chives",
       "type": ["food", "medicinal"],
       "use": "Mild onion-flavored garnish. Contains allicin with cardiovascular benefits.",
       "waterNeeds": "Moderate; water when dry",
@@ -691,7 +691,7 @@
     {
       "commonName": "Rosemary",
       "scientificName": "Salvia rosmarinus",
-      "image": "tulsi",
+      "image": "rosemary",
       "type": ["food", "medicinal"],
       "use": "Aromatic herb for meats/breads. Improves memory and concentration.",
       "waterNeeds": "Low; drought-tolerant",
@@ -704,7 +704,7 @@
     {
       "commonName": "Sage",
       "scientificName": "Salvia officinalis",
-      "image": "tulsi",
+      "image": "sage",
       "type": ["food", "medicinal"],
       "use": "Thanksgiving stuffing herb. Sage tea for sore throats.",
       "waterNeeds": "Low; let soil dry between watering",
@@ -717,7 +717,7 @@
     {
       "commonName": "Bay Leaf (Tej Patta)",
       "scientificName": "Laurus nobilis",
-      "image": "tulsi",
+      "image": "tejpatta",
       "type": ["food", "medicinal"],
       "use": "Aromatic leaves for biryanis and stews. Helps regulate blood sugar.",
       "waterNeeds": "Moderate; let soil dry between watering",
@@ -730,7 +730,7 @@
     {
       "commonName": "Stevia",
       "scientificName": "Stevia rebaudiana",
-      "image": "tulsi",
+      "image": "stevia",
       "type": ["medicinal", "food"],
       "use": "Natural zero-calorie sweetener. Helps manage diabetes.",
       "waterNeeds": "Moderate; don't overwater",
@@ -743,7 +743,7 @@
     {
       "commonName": "Gotu Kola",
       "scientificName": "Centella asiatica",
-      "image": "tulsi",
+      "image": "gotukola",
       "type": ["medicinal"],
       "use": "Ayurvedic brain tonic. Promotes wound healing and vein health.",
       "waterNeeds": "High; keep soil moist",
@@ -756,7 +756,7 @@
     {
       "commonName": "Giloy",
       "scientificName": "Tinospora cordifolia",
-      "image": "tulsi",
+      "image": "giloy",
       "type": ["medicinal"],
       "use": "Ayurvedic immunity booster. Used for fever, diabetes and arthritis.",
       "waterNeeds": "Moderate; water when dry",
@@ -769,7 +769,7 @@
     {
       "commonName": "Shatavari",
       "scientificName": "Asparagus racemosus",
-      "image": "tulsi",
+      "image": "shatavari",
       "type": ["medicinal"],
       "use": "Women's health tonic. Galactagogue and hormonal balancer.",
       "waterNeeds": "Moderate; drought-tolerant",
