@@ -29,9 +29,9 @@ class SignupActivity : AppCompatActivity() {
         }
         binding.signup.setOnClickListener {
 
-            val email = binding.email.text.toString()
-            val pass = binding.password.text.toString()
-            val confirmPass = binding.confirmPassword.text.toString()
+            val email = binding.email.toString()
+            val pass = binding.password.toString()
+            val confirmPass = binding.confirmPassword.toString()
 
             if (email.isEmpty() || pass.isEmpty() || confirmPass.isEmpty()){
                 Toast.makeText(this, "Please fill the fields!", Toast.LENGTH_SHORT).show()
@@ -45,7 +45,7 @@ class SignupActivity : AppCompatActivity() {
                         if (it.isSuccessful) {
                             val user = firebaseAuth.currentUser
                             val profileUpdates = UserProfileChangeRequest.Builder()
-                                .setDisplayName(binding.name.text.toString()) // Ensure correct ID
+                                .setDisplayName(binding.name.toString()) // Ensure correct ID
                                 .build()
                             user?.updateProfile(profileUpdates)?.addOnCompleteListener {
                                 val intent = Intent(this, HomeActivity::class.java)
