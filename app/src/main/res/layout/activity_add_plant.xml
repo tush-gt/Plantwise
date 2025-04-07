@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="24dp"
     android:background="@color/white"
-    tools:context=".YourActivity">
+    tools:context=".MyPlantsActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/plantNameLayout"
@@ -60,17 +60,18 @@
         android:layout_height="wrap_content"
         android:text="Save Plant 🌱"
         android:textAllCaps="false"
-        android:icon="@drawable/ic_save"
-        android:iconPadding="8dp"
-        app:cornerRadius="16dp"
-        app:iconTint="@android:color/white"
-        app:backgroundTint="@color/green_500"
-        android:textColor="@android:color/white"
-        android:padding="12dp"
-        app:rippleColor="@color/green_700"
-        app:layout_constraintTop_toBottomOf="@id/wateringTimePicker"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+        android:icon="@drawable/ic_water"
+        app:iconPadding="8dp"
+    app:cornerRadius="16dp"
+    app:iconTint="@android:color/white"
+    app:backgroundTint="@color/dark_green"
+    android:textColor="@android:color/white"
+    android:padding="12dp"
+    app:rippleColor="@color/dark_green"
+    app:layout_constraintTop_toBottomOf="@id/wateringTimePicker"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="32dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
