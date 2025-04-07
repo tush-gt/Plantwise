@@ -75,6 +75,12 @@ class HomeActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.nav_garden1 -> {
+                    // Navigate to ReminderActivity when "My Garden" is tapped
+                    val intent = Intent(this, MyPlantsActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }

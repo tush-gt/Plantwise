@@ -13,5 +13,9 @@
     <item
         android:id="@+id/nav_garden"
         android:icon="@drawable/baseline_auto_stories_24"
-        android:title="My Garden" />
+        android:title="Make Garden" />
+    <item
+        android:id="@+id/nav_garden1"
+        android:icon="@drawable/baseline_auto_stories_24"
+        android:title="Your Garden" />
 </menu>
