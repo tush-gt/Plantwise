@@ -7,6 +7,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,6 +19,15 @@ class MyPlantsActivity : AppCompatActivity() {
 
     private lateinit var adapter: UserPlantAdapter
     private lateinit var recyclerView: RecyclerView
+
+    val launcher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == RESULT_OK) {
+            loadUserPlants()  // 🌟 Refresh after edit!
+        }
+    }
+
     private val plantList = mutableListOf<PlantModel>()  // store the data
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +45,8 @@ class MyPlantsActivity : AppCompatActivity() {
             intent.putExtra("desc", plant.desc)
             intent.putExtra("hour", plant.hour)
             intent.putExtra("minute", plant.minute)
-            startActivity(intent)
+            launcher.launch(intent)
+
 
         }
 

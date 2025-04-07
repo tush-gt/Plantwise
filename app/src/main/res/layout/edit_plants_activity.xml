@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/plantNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Plant Name 🌱"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:background="@drawable/rouunded_bg" />
+
+    <EditText
+        android:id="@+id/plantDescInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description 📝"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:background="@drawable/rouunded_bg"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/wateringTimePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Watering Time: 00:00"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:padding="12dp"
+        android:background="@drawable/rouunded_bg"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <Button
+        android:id="@+id/savePlantBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Changes 💾"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/dark_green"
+        android:textColor="@android:color/white" />
+</LinearLayout>
