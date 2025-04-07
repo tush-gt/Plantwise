@@ -7,7 +7,10 @@ import android.os.Looper
 import android.view.animation.AnimationUtils
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.plantwise.databinding.ActivityWelcomeBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class WelcomeActivity : AppCompatActivity() {
 
@@ -25,11 +28,12 @@ class WelcomeActivity : AppCompatActivity() {
         val alphaAnimation = AnimationUtils.loadAnimation(applicationContext, R.anim.splah_anim)
         splashBinding.textViewSplash.startAnimation(alphaAnimation)
 
-        // Delay and navigate to LoginActivity3
-        Handler(Looper.getMainLooper()).postDelayed({
+        // Delay and navigate to LoginActivity
+        lifecycleScope.launch {
+            delay(3000)
             val intent = Intent(this@WelcomeActivity, LoginActivity::class.java)
             startActivity(intent)
             finish()
-        }, 5000) // 5-second delay
+        }
     }
 }
