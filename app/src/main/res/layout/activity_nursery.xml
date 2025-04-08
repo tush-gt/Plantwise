@@ -10,7 +10,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white">
+        android:background="@drawable/nurserybg">
 
         <TextView
             android:id="@+id/titleText"
@@ -46,7 +46,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleText"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/nurserybg" />
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
