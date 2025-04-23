@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@drawable/items_background">
+    android:background="@drawable/plantgraphicbackground">
 
     <!-- Search Bar -->
 

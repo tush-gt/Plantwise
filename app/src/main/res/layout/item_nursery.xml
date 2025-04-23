@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    android:background="@drawable/bg_nursery">
+    android:background="@drawable/item_bg">
 
     <!-- Main container for all nursery details -->
     <LinearLayout
