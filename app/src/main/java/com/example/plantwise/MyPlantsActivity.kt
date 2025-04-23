@@ -33,22 +33,25 @@ class MyPlantsActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.plantsRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        adapter = UserPlantAdapter(plantList) { plant ->
-            val intent = Intent(this, EditPlantActivity::class.java)
-            intent.putExtra("plantId", plant.id)
-            intent.putExtra("name", plant.name)
-            intent.putExtra("desc", plant.desc)
-            intent.putExtra("hour", plant.hour)
-            intent.putExtra("minute", plant.minute)
-            launcher.launch(intent)
-        }
+        adapter = UserPlantAdapter(
+            userPlants = plantList,
+            onEditClick = { plant ->
+                val intent = Intent(this, EditPlantActivity::class.java)
+                intent.putExtra("plantId", plant.id)
+                intent.putExtra("name", plant.name)
+                intent.putExtra("desc", plant.desc)
+                intent.putExtra("hour", plant.hour)
+                intent.putExtra("minute", plant.minute)
+                launcher.launch(intent)
+            },
+            onDeleteClick = { plant ->
+                deletePlantFromFirestore(plant)
+            }
+        )
 
         recyclerView.adapter = adapter
 
-        // 🧠 Load user plants and schedule reminders
         loadUserPlants()
-
-        // 🌟 Save the user's FCM token to Firestore
         saveFcmTokenToFirestore()
     }
 
@@ -72,7 +75,6 @@ class MyPlantsActivity : AppCompatActivity() {
                         val plant = PlantModel(name, desc, hour, minute, id)
                         plantList.add(plant)
 
-                        // 🌿 Schedule local reminders
                         ReminderUtils.scheduleWateringReminder(this, hour, minute, name)
                     }
                     adapter.notifyDataSetChanged()
@@ -87,7 +89,22 @@ class MyPlantsActivity : AppCompatActivity() {
         }
     }
 
-    // 🚀 Save the FCM token to Firestore
+    private fun deletePlantFromFirestore(plant: PlantModel) {
+        FirebaseFirestore.getInstance()
+            .collection("user_plants")
+            .document(plant.id)
+            .delete()
+            .addOnSuccessListener {
+                plantList.remove(plant)
+                adapter.notifyDataSetChanged()
+                Toast.makeText(this, "Deleted 🌿", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener { e ->
+                Log.e("DeleteError", "Failed to delete plant 😢", e)
+                Toast.makeText(this, "Failed to delete 🥲", Toast.LENGTH_SHORT).show()
+            }
+    }
+
     private fun saveFcmTokenToFirestore() {
         val user = FirebaseAuth.getInstance().currentUser ?: return
 
