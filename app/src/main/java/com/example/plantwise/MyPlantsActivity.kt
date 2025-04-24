@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.messaging.FirebaseMessaging
-
 class MyPlantsActivity : AppCompatActivity() {
 
     private lateinit var adapter: UserPlantAdapter
@@ -78,7 +77,7 @@ class MyPlantsActivity : AppCompatActivity() {
                         ReminderUtils.scheduleWateringReminder(this, hour, minute, name)
                     }
                     adapter.notifyDataSetChanged()
-                    Toast.makeText(this, "Reminders set for all plants 🌱💧", Toast.LENGTH_SHORT).show()
+//                  Toast.makeText(this, "Reminders set for all plants 🌱💧", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener { e ->
                     Log.e("PlantError", "Failed to fetch plants: ", e)

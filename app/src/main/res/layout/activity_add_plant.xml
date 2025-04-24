@@ -59,10 +59,11 @@
         android:background="@drawable/rouunded_bg"
         android:padding="16dp"
         android:timePickerMode="spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plantDescLayout" />
+        android:theme="@style/TimePickerTheme"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.493"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/plantDescLayout" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/savePlantBtn"
