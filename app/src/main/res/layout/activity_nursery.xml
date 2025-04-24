@@ -10,16 +10,18 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/nurserybg">
+        android:background="@drawable/plantgraphicbackground">
 
         <TextView
             android:id="@+id/titleText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/img"
+            android:fontFamily="@font/amaranth"
             android:gravity="center"
             android:padding="16dp"
             android:text="Nurseries in Mumbai 🌿"
-            android:textColor="#2E7D32"
+            android:textColor="#FAFBFA"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

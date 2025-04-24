@@ -1,0 +1,13 @@
+<resources>
+    <style name="TimePickerTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:timePickerStyle">@style/CustomTimePickerDark</item>
+    </style>
+
+    <style name="CustomTimePickerDark" parent="android:Widget.Material.TimePicker">
+        <item name="android:theme">@style/NumberPickerStyle</item> <!-- force internal styling -->
+    </style>
+
+    <style name="NumberPickerStyle" parent="ThemeOverlay.MaterialComponents.TimePicker">
+        <item name="android:textColorPrimary">@android:color/white</item> <!-- try white first -->
+    </style>
+</resources>
