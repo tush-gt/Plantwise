@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 
 class ProfileActivity : AppCompatActivity() {
@@ -46,6 +47,40 @@ class ProfileActivity : AppCompatActivity() {
             emailTextView.text = user.email ?: "No Email Found 📭"
         } else {
             Toast.makeText(this, "User not found! 🚨", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun setupBottomNav() {
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+
+        bottomNav.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_home -> {
+                    // you're already on Home, do nothing or refresh maybe
+                    true
+                }
+
+                R.id.nav_nursery -> {
+                    val intent = Intent(this, NurseryActivity::class.java)
+                    startActivity(intent)
+                    true
+
+                }
+
+                R.id.nav_garden -> {
+                    // Navigate to ReminderActivity when "My Garden" is tapped
+                    val intent = Intent(this, AddPlantActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.nav_garden1 -> {
+                    // Navigate to ReminderActivity when "My Garden" is tapped
+                    val intent = Intent(this, MyPlantsActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
         }
     }
 }

@@ -13,6 +13,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.plantwise.ReminderUtils
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.messaging.FirebaseMessaging
@@ -110,5 +111,39 @@ class AddPlantActivity : AppCompatActivity() {
                         }
                 }
             }
+    }
+
+    private fun setupBottomNav() {
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+
+        bottomNav.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_home -> {
+                    // you're already on Home, do nothing or refresh maybe
+                    true
+                }
+
+                R.id.nav_nursery -> {
+                    val intent = Intent(this, NurseryActivity::class.java)
+                    startActivity(intent)
+                    true
+
+                }
+
+                R.id.nav_garden -> {
+                    // Navigate to ReminderActivity when "My Garden" is tapped
+                    val intent = Intent(this, AddPlantActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.nav_garden1 -> {
+                    // Navigate to ReminderActivity when "My Garden" is tapped
+                    val intent = Intent(this, MyPlantsActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 }
