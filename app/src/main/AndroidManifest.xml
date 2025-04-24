@@ -34,7 +34,7 @@
             </intent-filter>
         </receiver>
 
-
+        <activity android:name=".ProfileActivity" />
         <!-- HomeActivity is now the LAUNCHER -->
         <activity
             android:name=".WelcomeActivity"

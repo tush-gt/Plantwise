@@ -19,21 +19,21 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        // Initialize Firebase Auth
+        // Firebase Auth init
         auth = FirebaseAuth.getInstance()
 
-        // Bind UI elements
-        nameTextView = findViewById(R.id.userName)  // Fetch name
-        emailTextView = findViewById(R.id.userEmail) // Fetch email
-        logoutButton = findViewById(R.id.buttonlogout)
+        // Bind UI views to code (make sure IDs match layout)
+        nameTextView = findViewById(R.id.userName)
+        emailTextView = findViewById(R.id.userEmail)
+        logoutButton = findViewById(R.id.logoutBtn) // ✅ Corrected ID
 
-        // Load user details
+        // Show current user data
         loadUserData()
 
-        // Logout button click listener
+        // Logout logic
         logoutButton.setOnClickListener {
             auth.signOut()
-            Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Logged out successfully 💨", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
@@ -42,10 +42,10 @@ class ProfileActivity : AppCompatActivity() {
     private fun loadUserData() {
         val user = auth.currentUser
         if (user != null) {
-            nameTextView.text = user.displayName ?: "No Name Found"  // Retrieve name from Firebase
-            emailTextView.text = user.email ?: "No Email Found"      // Retrieve email
+            nameTextView.text = user.displayName ?: "No Name Found 😢"
+            emailTextView.text = user.email ?: "No Email Found 📭"
         } else {
-            Toast.makeText(this, "User not found!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "User not found! 🚨", Toast.LENGTH_SHORT).show()
         }
     }
 }
