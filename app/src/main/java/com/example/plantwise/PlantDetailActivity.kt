@@ -1,7 +1,9 @@
 package com.example.plantwise
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.bumptech.glide.Glide
 import com.example.plantwise.databinding.PlantDetailsBinding
 
@@ -15,6 +17,12 @@ class PlantDetailActivity : AppCompatActivity() {
         // ViewBinding init
         binding = PlantDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val toolbar = findViewById<Toolbar>(R.id.detail_toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
 
         // Get PlantData from intent
         val plant: PlantData? = intent.getParcelableExtra("plantData")
@@ -36,5 +44,13 @@ class PlantDetailActivity : AppCompatActivity() {
                 .placeholder(R.drawable.sample_plant)
                 .into(binding.plantImage)
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            onBackPressedDispatcher.onBackPressed() // exits like a true main character
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
