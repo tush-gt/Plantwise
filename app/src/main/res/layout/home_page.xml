@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@drawable/plantgraphicbackground">
+    android:background="@drawable/plantgraphic">
 
     <!-- Search Bar -->
 
@@ -45,10 +45,11 @@
 
     <EditText
         android:id="@+id/searchBar"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
+        android:layout_width="372dp"
+        android:layout_height="61dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/search_bar_white"
+        android:layout_marginLeft="20dp"
+        android:background="@color/material_dynamic_neutral100"
         android:drawableStart="@drawable/search_icon"
         android:drawablePadding="10dp"
         android:focusableInTouchMode="true"

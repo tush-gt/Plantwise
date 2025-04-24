@@ -6,6 +6,7 @@ plugins {
 
 
     id ("kotlin-kapt")
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 
 
 }
@@ -66,6 +67,7 @@ dependencies {
     implementation(libs.googleid)
     implementation(libs.firebase.firestore.ktx)
     implementation("com.google.firebase:firebase-messaging-ktx:24.1.1")
+    implementation(libs.play.services.maps)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -79,6 +81,7 @@ dependencies {
     implementation ("com.squareup.okhttp3:okhttp:4.9.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.16.0")
     implementation ("com.google.firebase:firebase-messaging:23.4.1")
+    implementation ("org.osmdroid:osmdroid-android:6.1.10")
 
 
 
