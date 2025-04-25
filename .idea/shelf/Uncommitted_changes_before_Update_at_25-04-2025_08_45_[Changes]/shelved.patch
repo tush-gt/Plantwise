@@ -1,0 +1,904 @@
+Index: app/src/main/res/layout/activity_nursery.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\">\r\n\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:id=\"@+id/constraintLayout\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:background=\"@drawable/plantgraphic\">\r\n\r\n        <org.osmdroid.views.MapView\r\n            android:id=\"@+id/mapView\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\" />\r\n\r\n        <com.google.android.material.floatingactionbutton.FloatingActionButton\r\n            android:id=\"@+id/fab\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginEnd=\"16dp\"\r\n            android:layout_marginBottom=\"16dp\"\r\n            android:src=\"@android:drawable/ic_menu_mapmode\"\r\n            android:contentDescription=\"@string/show_map\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\" />\r\n\r\n\r\n\r\n        <TextView\r\n            android:id=\"@+id/titleText\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:background=\"@drawable/img\"\r\n            android:fontFamily=\"@font/amaranth\"\r\n            android:gravity=\"center\"\r\n            android:padding=\"16dp\"\r\n            android:text=\"Nurseries in Mumbai \uD83C\uDF3F\"\r\n            android:textColor=\"#FAFBFA\"\r\n            android:textSize=\"24sp\"\r\n            android:textStyle=\"bold\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n        <androidx.recyclerview.widget.RecyclerView\r\n            android:id=\"@+id/recyclerView\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"0dp\"\r\n            android:contentDescription=\"@string/nursery_list_description\"\r\n            android:paddingBottom=\"8dp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@id/titleText\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView3\"\r\n            android:layout_width=\"696dp\"\r\n            android:layout_height=\"864dp\"\r\n            android:layout_marginStart=\"-120dp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/titleText\"\r\n            app:layout_constraintVertical_bias=\"0.0\"\r\n            />\r\n\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_nursery.xml b/app/src/main/res/layout/activity_nursery.xml
+--- a/app/src/main/res/layout/activity_nursery.xml	(revision 29cc249e624f63b44dd98ada6848a53ba47d3126)
++++ b/app/src/main/res/layout/activity_nursery.xml	(date 1745526672194)
+@@ -68,6 +68,18 @@
+             app:layout_constraintVertical_bias="0.0"
+             />
+ 
++        <com.google.android.material.bottomnavigation.BottomNavigationView
++            android:id="@+id/bottomNav"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:background="@color/dark_green"
++            app:itemIconTint="@color/black"
++            app:itemTextColor="@color/white"
++            app:labelVisibilityMode="labeled"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:menu="@menu/bottom_nav_menu" />
++
+     </androidx.constraintlayout.widget.ConstraintLayout>
+ 
+ 
+Index: app/src/main/res/layout/edit_plants_activity.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:orientation=\"vertical\"\r\n    android:padding=\"24dp\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@drawable/ek_bg\"\r\n    android:gravity=\"center\">\r\n\r\n    <EditText\r\n        android:id=\"@+id/plantNameInput\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:hint=\"Plant Name \uD83C\uDF31\"\r\n        android:textSize=\"16sp\"\r\n        android:padding=\"12dp\"\r\n        android:background=\"@drawable/rouunded_bg\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/plantDescInput\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:hint=\"Description \uD83D\uDCDD\"\r\n        android:textSize=\"16sp\"\r\n        android:padding=\"12dp\"\r\n        android:background=\"@drawable/rouunded_bg\"\r\n        android:layout_marginTop=\"12dp\"/>\r\n\r\n    <TextView\r\n        android:id=\"@+id/wateringTimePicker\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Watering Time: 00:00\"\r\n        android:textSize=\"16sp\"\r\n        android:textColor=\"@android:color/black\"\r\n        android:padding=\"12dp\"\r\n        android:background=\"@drawable/rouunded_bg\"\r\n        android:layout_marginTop=\"12dp\"\r\n        android:gravity=\"center\"\r\n        android:clickable=\"true\"\r\n        android:focusable=\"true\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/savePlantBtn\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Save Changes \uD83D\uDCBE\"\r\n        android:layout_marginTop=\"24dp\"\r\n        android:backgroundTint=\"@color/dark_green\"\r\n        android:textColor=\"@android:color/white\" />\r\n</LinearLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/edit_plants_activity.xml b/app/src/main/res/layout/edit_plants_activity.xml
+--- a/app/src/main/res/layout/edit_plants_activity.xml	(revision 29cc249e624f63b44dd98ada6848a53ba47d3126)
++++ b/app/src/main/res/layout/edit_plants_activity.xml	(date 1745526672201)
+@@ -10,35 +10,35 @@
+     <EditText
+         android:id="@+id/plantNameInput"
+         android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
++        android:layout_height="59dp"
++        android:background="@drawable/rouunded_bg"
+         android:hint="Plant Name 🌱"
+-        android:textSize="16sp"
+         android:padding="12dp"
+-        android:background="@drawable/rouunded_bg" />
++        android:textSize="16sp" />
+ 
+     <EditText
+         android:id="@+id/plantDescInput"
+         android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
++        android:layout_height="60dp"
++        android:layout_marginTop="12dp"
++        android:background="@drawable/rouunded_bg"
+         android:hint="Description 📝"
+-        android:textSize="16sp"
+         android:padding="12dp"
+-        android:background="@drawable/rouunded_bg"
+-        android:layout_marginTop="12dp"/>
++        android:textSize="16sp" />
+ 
+     <TextView
+         android:id="@+id/wateringTimePicker"
+         android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:text="Watering Time: 00:00"
+-        android:textSize="16sp"
+-        android:textColor="@android:color/black"
+-        android:padding="12dp"
+-        android:background="@drawable/rouunded_bg"
++        android:layout_height="57dp"
+         android:layout_marginTop="12dp"
++        android:background="@drawable/rouunded_bg"
++        android:clickable="true"
++        android:focusable="true"
+         android:gravity="center"
+-        android:clickable="true"
+-        android:focusable="true" />
++        android:padding="12dp"
++        android:text="Watering Time: 00:00"
++        android:textColor="@android:color/black"
++        android:textSize="16sp" />
+ 
+     <Button
+         android:id="@+id/savePlantBtn"
+@@ -48,4 +48,6 @@
+         android:layout_marginTop="24dp"
+         android:backgroundTint="@color/dark_green"
+         android:textColor="@android:color/white" />
++
++
+ </LinearLayout>
+Index: app/src/main/assets/indian-plants-data.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[\r\n    {\r\n      \"commonName\": \"Tulsi (Holi Basil)\",\r\n      \"scientificName\": \"Ocimum tenuiflorum\",\r\n      \"image\": \"tulsi\",\r\n      \"type\": [\"medicinal\", \"religious\", \"luck\"],\r\n      \"use\": \"Used in Ayurvedic medicine for colds, cough, and flu. Also has religious significance in Hindu households.\",\r\n      \"waterNeeds\": \"Moderate; water when top inch of soil feels dry\",\r\n      \"sunlightNeeds\": \"Full sun to partial shade\",\r\n      \"careTips\": \"Pinch off flower buds to encourage leaf growth. Prune regularly to maintain bushy growth. Protect from frost.\",\r\n      \"storageTips\": \"Dry leaves in shade and store in airtight container. Fresh leaves can be refrigerated for up to a week.\",\r\n      \"growthForm\": \"Perennial herb growing to 30-60 cm tall\",\r\n      \"specification\": \"Considered sacred in Hinduism. Different varieties include Krishna Tulsi (purple leaves) and Rama Tulsi (green leaves).\"\r\n    },\r\n    {\r\n      \"commonName\": \"Neem\",\r\n      \"scientificName\": \"Azadirachta indica\",\r\n      \"image\": \"neem\",\r\n      \"type\": [\"medicinal\", \"food\"],\r\n      \"use\": \"Used in traditional medicine for skin diseases, fever, and infections. Young leaves used in cooking. Oil used in cosmetics and as natural pesticide.\",\r\n      \"waterNeeds\": \"Low; drought-tolerant once established\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Tolerates poor soil. Fertilize minimally. Protect young plants from frost.\",\r\n      \"storageTips\": \"Dry leaves in shade and store in airtight containers. Neem oil should be stored in dark bottles.\",\r\n      \"growthForm\": \"Evergreen tree growing up to 15-20 meters\",\r\n      \"specification\": \"Known as 'village pharmacy' due to its numerous medicinal properties. Can live for 150-200 years.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Turmeric\",\r\n      \"scientificName\": \"Curcuma longa\",\r\n      \"image\": \"turmeric\",\r\n      \"type\": [\"medicinal\", \"food\"],\r\n      \"use\": \"Rhizomes used as spice in cooking, in religious ceremonies, and for medicinal purposes like anti-inflammation and wound healing.\",\r\n      \"waterNeeds\": \"High; keep soil consistently moist but not waterlogged\",\r\n      \"sunlightNeeds\": \"Partial shade to full shade\",\r\n      \"careTips\": \"Plant in rich, well-draining soil. Mulch to retain moisture. Harvest when leaves turn yellow.\",\r\n      \"storageTips\": \"Store fresh rhizomes in a cool, dark place or refrigerate. Dried powder in airtight containers.\",\r\n      \"growthForm\": \"Perennial herb growing to 1 meter tall\",\r\n      \"specification\": \"Contains curcumin, which gives it bright yellow color and medicinal properties. Grows best in temperatures between 20-30°C.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Indian Gooseberry (Amla)\",\r\n      \"scientificName\": \"Phyllanthus emblica\",\r\n      \"image\": \"amla\",\r\n      \"type\": [\"medicinal\", \"food\"],\r\n      \"use\": \"High in Vitamin C. Used in Ayurvedic medicine for digestion, diabetes, and immunity. Fruits eaten fresh or processed.\",\r\n      \"waterNeeds\": \"Moderate; water deeply but infrequently\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Prune after fruiting. Apply organic manure annually. Protect from strong winds.\",\r\n      \"storageTips\": \"Fresh fruits last 1-2 weeks in refrigeration. Can be preserved in salt water or made into preserves.\",\r\n      \"growthForm\": \"Deciduous tree growing up to 8-18 meters\",\r\n      \"specification\": \"Extremely high vitamin C content - one fruit contains as much vitamin C as 2-3 oranges. Fruits are harvested in autumn.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Aloe Vera\",\r\n      \"scientificName\": \"Aloe barbadensis miller\",\r\n      \"image\": \"aloe_vera\",\r\n      \"type\": [\"medicinal\", \"decorative\"],\r\n      \"use\": \"Gel used for skin care, burns, and wounds. Also used in beverages and food products.\",\r\n      \"waterNeeds\": \"Low; allow soil to dry completely between watering\",\r\n      \"sunlightNeeds\": \"Bright indirect light to partial sun\",\r\n      \"careTips\": \"Plant in well-draining soil. Repot when rootbound. Protect from frost.\",\r\n      \"storageTips\": \"Fresh gel can be refrigerated for up to a week. Can be frozen in ice cube trays.\",\r\n      \"growthForm\": \"Succulent with thick, fleshy leaves growing in a rosette\",\r\n      \"specification\": \"Contains over 75 active compounds. Inner leaf gel is clear and soothing. Outer leaf contains aloin which has laxative properties.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Curry Leaf Plant\",\r\n      \"scientificName\": \"Murraya koenigii\",\r\n      \"image\": \"curryleaf\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Leaves used as flavoring in South Indian cuisine. Also used in folk medicine for digestive problems.\",\r\n      \"waterNeeds\": \"Moderate; keep soil lightly moist\",\r\n      \"sunlightNeeds\": \"Full sun to partial shade\",\r\n      \"careTips\": \"Fertilize every 2-3 months. Prune to maintain shape. May drop leaves in winter.\",\r\n      \"storageTips\": \"Fresh leaves can be refrigerated for up to two weeks. Can be dried or frozen for longer storage.\",\r\n      \"growthForm\": \"Small evergreen tree or shrub growing up to 4-6 meters\",\r\n      \"specification\": \"Aromatic leaves with distinct curry-like fragrance. Seeds and bark also have medicinal properties.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Ashwagandha\",\r\n      \"scientificName\": \"Withania somnifera\",\r\n      \"image\": \"ashwagandha\",\r\n      \"type\": [\"medicinal\"],\r\n      \"use\": \"Root used in Ayurveda as adaptogen for stress, anxiety, and improving energy levels.\",\r\n      \"waterNeeds\": \"Low; drought-tolerant once established\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Grows in poor soil. Space plants 60 cm apart. Protect from excessive moisture.\",\r\n      \"storageTips\": \"Harvest roots after 1 year. Dry thoroughly and store in airtight containers.\",\r\n      \"growthForm\": \"Erect shrub growing up to 1.5 meters tall\",\r\n      \"specification\": \"Known as 'Indian Ginseng'. Berries can be used for seed propagation. Contains withanolides with medicinal properties.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Indian Marigold\",\r\n      \"scientificName\": \"Tagetes erecta\",\r\n      \"image\": \"marigold\",\r\n      \"type\": [\"decorative\", \"religious\", \"medicinal\"],\r\n      \"use\": \"Used in religious ceremonies, as garden ornamentals, and as companion plants to repel pests.\",\r\n      \"waterNeeds\": \"Moderate; allow top soil to dry between watering\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Deadhead spent flowers to encourage more blooms. Can be grown from seeds or cuttings.\",\r\n      \"storageTips\": \"Flowers can be dried and used for garlands. Seeds can be collected when flowers dry on the plant.\",\r\n      \"growthForm\": \"Annual herb growing up to 0.5-1 meter tall\",\r\n      \"specification\": \"Widely used in Diwali and other Hindu ceremonies. Contains lutein which is beneficial for eye health.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Indian Rosewood (Sheesham)\",\r\n      \"scientificName\": \"Dalbergia sissoo\",\r\n      \"image\": \"rosewood\",\r\n      \"type\": [\"decorative\"],\r\n      \"use\": \"Valued for its hard timber used in furniture making, carving, and construction.\",\r\n      \"waterNeeds\": \"Moderate; established trees are drought-tolerant\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Prune to maintain shape. Watch for pests like defoliators and borers.\",\r\n      \"storageTips\": \"Not applicable for home storage as it's primarily grown for timber.\",\r\n      \"growthForm\": \"Deciduous tree growing up to 25 meters tall\",\r\n      \"specification\": \"Fast-growing species that also helps in preventing soil erosion. Wood has a distinctive grain pattern and reddish-brown color.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Lemongrass\",\r\n      \"scientificName\": \"Cymbopogon citratus\",\r\n      \"image\": \"lemongrass\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Used in cooking for its citrus flavor, in teas, and in essential oils for aromatherapy.\",\r\n      \"waterNeeds\": \"Moderate; keep soil consistently moist\",\r\n      \"sunlightNeeds\": \"Full sun to partial shade\",\r\n      \"careTips\": \"Divide clumps every 2-3 years. Cut back to 15 cm occasionally to promote fresh growth.\",\r\n      \"storageTips\": \"Fresh stalks can be refrigerated for up to 3 weeks. Can be frozen or dried for longer storage.\",\r\n      \"growthForm\": \"Perennial grass growing in clumps up to 1-1.5 meters tall\",\r\n      \"specification\": \"Contains citral which gives it distinctive lemon scent. Also acts as natural mosquito repellent.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Indian Lotus\",\r\n      \"scientificName\": \"Nelumbo nucifera\",\r\n      \"image\": \"lotus\",\r\n      \"type\": [\"decorative\", \"religious\", \"food\", \"medicinal\"],\r\n      \"use\": \"National flower of India. Used in religious ceremonies. Seeds, young leaves, and rhizomes eaten as food.\",\r\n      \"waterNeeds\": \"Very high; aquatic plant that needs standing water\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Plant in containers with no drainage holes filled with heavy clay soil. Water depth should be 15-30 cm above soil.\",\r\n      \"storageTips\": \"Seeds can be dried and stored. Rhizomes can be harvested and stored like potatoes.\",\r\n      \"growthForm\": \"Aquatic perennial with rhizomes anchored in mud\",\r\n      \"specification\": \"Flowers and leaves are water-repellent due to the 'lotus effect'. All parts of the plant are used in Ayurvedic medicine.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Indian Mustard\",\r\n      \"scientificName\": \"Brassica juncea\",\r\n      \"image\": \"mustard\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Seeds used for oil and spice. Leaves used as vegetable. Oil cake used as animal feed and fertilizer.\",\r\n      \"waterNeeds\": \"Moderate; sensitive to both drought and waterlogging\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Sow directly in well-draining soil. Thin seedlings to 15 cm apart. Harvest when pods turn yellow.\",\r\n      \"storageTips\": \"Store seeds in airtight containers in cool, dry place. Oil should be stored away from direct light.\",\r\n      \"growthForm\": \"Annual herb growing up to 1-2 meters tall\",\r\n      \"specification\": \"Cold-pressed mustard oil is commonly used in North Indian cooking. Also used in crop rotation for its bio-fumigation properties.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Banyan Tree\",\r\n      \"scientificName\": \"Ficus benghalensis\",\r\n      \"image\": \"banyantree\",\r\n      \"type\": [\"religious\", \"medicinal\", \"luck\"],\r\n      \"use\": \"National tree of India with religious significance. Bark and roots used in traditional medicine.\",\r\n      \"waterNeeds\": \"Moderate; established trees are drought-tolerant\",\r\n      \"sunlightNeeds\": \"Full sun to partial shade\",\r\n      \"careTips\": \"Not suitable for home growing due to massive size. Young plants need protection from frost.\",\r\n      \"storageTips\": \"Not applicable for home storage; primarily an outdoor specimen tree.\",\r\n      \"growthForm\": \"Evergreen tree with aerial roots that can spread over hectares\",\r\n      \"specification\": \"Can live for several hundred years. The Great Banyan in Howrah is over 250 years old and covers an area of 14,500 square meters.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Jasmine (Mogra)\",\r\n      \"scientificName\": \"Jasminum sambac\",\r\n      \"image\": \"jasmine\",\r\n      \"type\": [\"decorative\", \"religious\", \"luck\"],\r\n      \"use\": \"Flowers used in religious ceremonies, perfumes, and garlands. Also used to flavor tea.\",\r\n      \"waterNeeds\": \"Moderate; keep soil evenly moist\",\r\n      \"sunlightNeeds\": \"Full sun to partial shade\",\r\n      \"careTips\": \"Regular pruning after flowering. Apply balanced fertilizer during growing season.\",\r\n      \"storageTips\": \"Fresh flowers last only a few days. Can be dried or used to make potpourri.\",\r\n      \"growthForm\": \"Evergreen vine or shrub growing up to 2-3 meters tall\",\r\n      \"specification\": \"Flowers open at night and release strongest fragrance in evening. Several varieties grown in India include single and double-flowered forms.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Indian Sandalwood\",\r\n      \"scientificName\": \"Santalum album\",\r\n      \"image\": \"sandalwood\",\r\n      \"type\": [\"medicinal\", \"religious\", \"decorative\"],\r\n      \"use\": \"Heartwood and oil used in perfumes, religious ceremonies, and carving. Has cooling properties in Ayurveda.\",\r\n      \"waterNeeds\": \"Moderate; drought-tolerant once established\",\r\n      \"sunlightNeeds\": \"Full sun to partial shade\",\r\n      \"careTips\": \"Requires host plants initially as it's semi-parasitic. Grows slowly and needs protection from frost.\",\r\n      \"storageTips\": \"Heartwood can be stored indefinitely. Oil should be stored in dark glass bottles.\",\r\n      \"growthForm\": \"Evergreen tree growing up to 12-15 meters tall\",\r\n      \"specification\": \"Trees must be at least 30 years old before harvesting for quality heartwood. Protected species in India due to overexploitation.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Brahmi\",\r\n      \"scientificName\": \"Bacopa monnieri\",\r\n      \"image\": \"brahmi\",\r\n      \"type\": [\"medicinal\"],\r\n      \"use\": \"Used in Ayurveda for improving memory, reducing anxiety, and treating epilepsy.\",\r\n      \"waterNeeds\": \"High; prefers consistently wet soil\",\r\n      \"sunlightNeeds\": \"Partial shade\",\r\n      \"careTips\": \"Grows well in shallow water or very moist soil. Can be grown indoors in containers with no drainage.\",\r\n      \"storageTips\": \"Fresh leaves can be refrigerated briefly. Usually dried and stored in airtight containers for medicinal use.\",\r\n      \"growthForm\": \"Creeping herb with small white flowers\",\r\n      \"specification\": \"Contains bacosides which support cognitive function. Often confused with Centella asiatica, which is also called Brahmi in northern India.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Peepal Tree (Sacred Fig)\",\r\n      \"scientificName\": \"Ficus religiosa\",\r\n      \"image\": \"peepaltree\",\r\n      \"type\": [\"religious\", \"medicinal\", \"luck\"],\r\n      \"use\": \"Sacred tree in Buddhism and Hinduism. Bark, fruit, and leaves used in traditional medicine.\",\r\n      \"waterNeeds\": \"Moderate; drought-tolerant once established\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Not suitable for home growing due to massive size and invasive roots. Young plants need protection from frost.\",\r\n      \"storageTips\": \"Not applicable for home storage; primarily an outdoor specimen tree.\",\r\n      \"growthForm\": \"Deciduous tree growing up to 30 meters tall\",\r\n      \"specification\": \"Distinctive heart-shaped leaves with long drip tips. Buddha is said to have attained enlightenment under this tree.\"\r\n    },\r\n    {\r\n        \"commonName\": \"Bitter Gourd (Karela)\",\r\n      \"scientificName\": \"Momordica charantia\",\r\n      \"image\": \"karela\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Fruit used in cooking and traditional medicine, particularly for diabetes management.\",\r\n      \"waterNeeds\": \"Moderate; water when top inch of soil feels dry\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Provide trellis for climbing. Add compost before planting. Harvest when fruits are still green.\",\r\n      \"storageTips\": \"Fresh fruits can be refrigerated for up to a week. Can be blanched and frozen for longer storage.\",\r\n      \"growthForm\": \"Annual climbing vine growing up to 5 meters long\",\r\n      \"specification\": \"Contains charantin which helps lower blood glucose levels. Fruits become more bitter as they mature and turn orange.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Bael (Wood Apple)\",\r\n      \"scientificName\": \"Aegle marmelos\",\r\n      \"image\": \"tulsi\",\r\n      \"type\": [\"religious\", \"food\", \"medicinal\"],\r\n      \"use\": \"Fruit used in religious offerings to Lord Shiva, in beverages, and for treating digestive disorders.\",\r\n      \"waterNeeds\": \"Low; drought-tolerant once established\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Prune to maintain shape. Fertilize annually. Protect young plants from frost.\",\r\n      \"storageTips\": \"Fresh fruit can be stored up to 2 weeks. Pulp can be dried or made into preserves.\",\r\n      \"growthForm\": \"Deciduous tree growing up to 12-15 meters tall\",\r\n      \"specification\": \"Hard-shelled fruit with aromatic pulp. Slow-growing but can live for over 100 years.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Night Jasmine (Harsingar)\",\r\n      \"scientificName\": \"Nyctanthes arbor-tristis\",\r\n      \"image\": \"harsingar\",\r\n      \"type\": [\"medicinal\", \"decorative\", \"religious\"],\r\n      \"use\": \"Flowers used for garlands and religious offerings. Leaves used in traditional medicine for sciatica and arthritis.\",\r\n      \"waterNeeds\": \"Moderate; tolerates brief drought periods\",\r\n      \"sunlightNeeds\": \"Full sun to partial shade\",\r\n      \"careTips\": \"Prune after flowering to maintain shape. Protect from frost in northern regions.\",\r\n      \"storageTips\": \"Flowers are highly perishable. Leaves can be dried and stored for medicinal use.\",\r\n      \"growthForm\": \"Large shrub or small tree growing up to 10 meters tall\",\r\n      \"specification\": \"Flowers bloom at night and drop in the morning. Orange flower tubes with white petals create a distinctive appearance.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Custard Apple (Sitaphal)\",\r\n      \"scientificName\": \"Annona squamosa\",\r\n      \"image\": \"sitaphal\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Sweet fruit eaten fresh. Seeds and leaves used in traditional medicine to treat lice and skin conditions.\",\r\n      \"waterNeeds\": \"Moderate; water deeply and infrequently\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Prune to maintain size and shape. Apply mulch to retain moisture. Protect from frost.\",\r\n      \"storageTips\": \"Ripe fruits can be refrigerated for 2-3 days. Can be frozen as pulp.\",\r\n      \"growthForm\": \"Small deciduous tree growing up to 6-8 meters tall\",\r\n      \"specification\": \"Hand pollination may improve fruit set. Seeds are toxic and should not be consumed.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Drumstick Tree (Moringa)\",\r\n      \"scientificName\": \"Moringa oleifera\",\r\n      \"image\": \"drumstick\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Pods used as vegetable. Leaves, flowers, and seeds are edible and highly nutritious. Used in traditional medicine.\",\r\n      \"waterNeeds\": \"Low; drought-tolerant once established\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Can be grown as annual or perennial. Prune regularly to promote branching. Protect from frost.\",\r\n      \"storageTips\": \"Fresh leaves last 3-4 days in refrigeration. Can be dried and powdered for longer storage.\",\r\n      \"growthForm\": \"Fast-growing deciduous tree up to 12 meters tall\",\r\n      \"specification\": \"Known as 'Miracle Tree' due to exceptional nutritional content. All parts of the plant are usable and beneficial.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Dhatura (Devil's Trumpet)\",\r\n      \"scientificName\": \"Datura metel\",\r\n      \"image\": \"dhatura\",\r\n      \"type\": [\"medicinal\", \"poisonous\", \"religious\"],\r\n      \"use\": \"Used in religious ceremonies associated with Lord Shiva. Used externally in traditional medicine for pain relief.\",\r\n      \"waterNeeds\": \"Moderate; tolerates dry periods\",\r\n      \"sunlightNeeds\": \"Full sun to partial shade\",\r\n      \"careTips\": \"Keep away from children and pets due to high toxicity. Can become invasive in some areas.\",\r\n      \"storageTips\": \"Not recommended for home storage due to high toxicity.\",\r\n      \"growthForm\": \"Shrubby annual or short-lived perennial growing up to 1.5 meters tall\",\r\n      \"specification\": \"Highly toxic if ingested. Contains tropane alkaloids that can cause hallucinations, severe toxicity, and death.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Indian Bay Leaf (Tej Patta)\",\r\n      \"scientificName\": \"Cinnamomum tamala\",\r\n      \"image\": \"tejpatta\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Leaves used as spice in Indian cooking. Also used in traditional medicine for digestion and diabetes.\",\r\n      \"waterNeeds\": \"Moderate; keep soil evenly moist\",\r\n      \"sunlightNeeds\": \"Partial shade to full sun\",\r\n      \"careTips\": \"Protect from frost. Apply balanced fertilizer during growing season. Prune to maintain shape.\",\r\n      \"storageTips\": \"Dried leaves can be stored in airtight containers for up to a year, away from direct light.\",\r\n      \"growthForm\": \"Evergreen tree growing up to 20 meters tall\",\r\n      \"specification\": \"Different from European bay leaf (Laurus nobilis). Has three prominent veins running along the length of the leaf.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Ajwain (Carom Seeds)\",\r\n      \"scientificName\": \"Trachyspermum ammi\",\r\n      \"image\": \"ova\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Seeds used as spice in cooking and for medicinal purposes, particularly for digestive disorders.\",\r\n      \"waterNeeds\": \"Moderate; keep soil consistently moist until established\",\r\n      \"sunlightNeeds\": \"Full sun\",\r\n      \"careTips\": \"Sow directly in well-draining soil. Thin seedlings to 30 cm apart. Harvest when seeds turn brownish-gray.\",\r\n      \"storageTips\": \"Store dried seeds in airtight containers in cool, dry place for up to 3 years.\",\r\n      \"growthForm\": \"Annual herb growing up to 1-1.5 meters tall\",\r\n      \"specification\": \"Contains thymol which gives it distinctive aroma and medicinal properties. Often used in chutneys and pickles.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Money Plant\",\r\n      \"scientificName\": \"Epipremnum aureum\",\r\n      \"image\": \"moneyplant\",\r\n      \"type\": [\"decorative\", \"luck\"],\r\n      \"use\": \"Popular houseplant believed to bring wealth and prosperity. Also purifies indoor air.\",\r\n      \"waterNeeds\": \"Moderate; allow top inch of soil to dry between watering\",\r\n      \"sunlightNeeds\": \"Bright indirect light\",\r\n      \"careTips\": \"Grows well in hanging baskets or climbing up moss poles. Prune to control size and promote bushiness.\",\r\n      \"storageTips\": \"Not applicable for storage; grown as living plant.\",\r\n      \"growthForm\": \"Evergreen vine with heart-shaped variegated leaves\",\r\n      \"specification\": \"Mildly toxic if ingested. Can grow up to 20 meters in natural habitat. Easy to propagate from stem cuttings.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Snake Plant\",\r\n      \"scientificName\": \"Dracaena trifasciata\",\r\n      \"image\": \"snakeplant\",\r\n      \"type\": [\"decorative\", \"air-purifying\"],\r\n      \"use\": \"Popular houseplant known for air purification qualities. Tolerates low light and irregular watering.\",\r\n      \"waterNeeds\": \"Low; water every 2-3 weeks\",\r\n      \"sunlightNeeds\": \"Low to bright indirect light\",\r\n      \"careTips\": \"Avoid overwatering as it's susceptible to root rot. Wipe leaves occasionally to remove dust.\",\r\n      \"storageTips\": \"Not applicable; grown as living plant.\",\r\n      \"growthForm\": \"Evergreen perennial with upright, sword-like leaves\",\r\n      \"specification\": \"Also called Mother-in-Law's Tongue. Removes toxins like formaldehyde and benzene from air.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Mint (Pudina)\",\r\n      \"scientificName\": \"Mentha spicata\",\r\n      \"image\": \"pudina\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Leaves used in chutneys, drinks, and as digestive aid. Has cooling properties.\",\r\n      \"waterNeeds\": \"High; keep soil moist (water every 2 days)\",\r\n      \"sunlightNeeds\": \"Partial sun (4-6 hours)\",\r\n      \"careTips\": \"Grows aggressively; best grown in containers. Pinch back regularly to promote bushiness.\",\r\n      \"storageTips\": \"Fresh leaves last about a week refrigerated in damp paper towel. Can be frozen in ice cubes.\",\r\n      \"growthForm\": \"Fast-growing perennial herb spreading by runners\",\r\n      \"specification\": \"Several varieties grown in India including peppermint and spearmint. Used in traditional remedies for indigestion.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Coriander (Dhania)\",\r\n      \"scientificName\": \"Coriandrum sativum\",\r\n      \"image\": \"kothimbir\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Leaves used as garnish and in chutneys. Seeds used as spice. Has digestive benefits.\",\r\n      \"waterNeeds\": \"Moderate; water every 2-3 days\",\r\n      \"sunlightNeeds\": \"Partial sun (4-5 hours)\",\r\n      \"careTips\": \"Sow seeds directly as it doesn't transplant well. Harvest leaves regularly to delay bolting.\",\r\n      \"storageTips\": \"Fresh leaves last about a week in refrigerator. Seeds can be dried and stored for years.\",\r\n      \"growthForm\": \"Annual herb growing up to 50 cm tall\",\r\n      \"specification\": \"Whole plant is edible - leaves, stems, seeds and roots. Quick-growing crop ready in 3-4 weeks.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Jade Plant\",\r\n      \"scientificName\": \"Crassula ovata\",\r\n      \"image\": \"jadeplant\",\r\n      \"type\": [\"decorative\", \"luck\"],\r\n      \"use\": \"Popular succulent believed to bring good luck and prosperity. Often gifted for housewarmings.\",\r\n      \"waterNeeds\": \"Low; water every 2-3 weeks\",\r\n      \"sunlightNeeds\": \"Bright light (4-6 hours)\",\r\n      \"careTips\": \"Allow soil to dry completely between watering. Prune to maintain shape. Protect from frost.\",\r\n      \"storageTips\": \"Not applicable; grown as living plant.\",\r\n      \"growthForm\": \"Evergreen succulent with thick, glossy leaves\",\r\n      \"specification\": \"Also called Money Plant or Dollar Plant. Can live for decades with proper care.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Chili Pepper\",\r\n      \"scientificName\": \"Capsicum annuum\",\r\n      \"image\": \"mirchi\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Fruits used in cooking for heat and flavor. Contains capsaicin with pain-relieving properties.\",\r\n      \"waterNeeds\": \"Moderate; water when topsoil is dry\",\r\n      \"sunlightNeeds\": \"Full sun (6-8 hours)\",\r\n      \"careTips\": \"Support plants with stakes when fruiting. Harvest regularly to encourage more production.\",\r\n      \"storageTips\": \"Fresh chilies last about a week refrigerated. Can be dried or frozen for longer storage.\",\r\n      \"growthForm\": \"Annual shrub growing up to 1 meter tall\",\r\n      \"specification\": \"Many varieties grown in India from mild to extremely hot. Includes popular types like Guntur and Kashmiri.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Peace Lily\",\r\n      \"scientificName\": \"Spathiphyllum wallisii\",\r\n      \"image\": \"peacelily\",\r\n      \"type\": [\"decorative\", \"air-purifying\"],\r\n      \"use\": \"Popular indoor plant known for air purification and elegant white flowers. Helps remove toxins from air.\",\r\n      \"waterNeeds\": \"Moderate; water when soil feels dry\",\r\n      \"sunlightNeeds\": \"Low to medium indirect light\",\r\n      \"careTips\": \"Dust leaves regularly. Repot when rootbound. Remove spent flowers to encourage new blooms.\",\r\n      \"storageTips\": \"Not applicable; grown as living plant.\",\r\n      \"growthForm\": \"Herbaceous perennial with glossy leaves and white spathes\",\r\n      \"specification\": \"Dramatic drooping when thirsty makes watering needs obvious. NASA-certified air purifier.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Tomato\",\r\n      \"scientificName\": \"Solanum lycopersicum\",\r\n      \"image\": \"tomatos\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Fruits used widely in Indian cuisine. Rich in lycopene with antioxidant properties.\",\r\n      \"waterNeeds\": \"Moderate; deep watering 2-3 times/week\",\r\n      \"sunlightNeeds\": \"Full sun (6-8 hours)\",\r\n      \"careTips\": \"Provide support for vines. Remove suckers for better fruit production. Rotate crops annually.\",\r\n      \"storageTips\": \"Store ripe tomatoes at room temperature. Can be preserved as sauce, paste or sun-dried.\",\r\n      \"growthForm\": \"Annual vine growing up to 2 meters tall\",\r\n      \"specification\": \"Many varieties grown in India including cherry, roma and beefsteak types. Technically a fruit but used as vegetable.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Dwarf Lemon Tree\",\r\n      \"scientificName\": \"Citrus limon\",\r\n      \"image\": \"lemon\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Fruits used for juice, flavoring and medicinal purposes. High in vitamin C.\",\r\n      \"waterNeeds\": \"Moderate; water when top 2 inches are dry\",\r\n      \"sunlightNeeds\": \"Full sun (6-8 hours)\",\r\n      \"careTips\": \"Fertilize regularly with citrus-specific fertilizer. Protect from frost. Prune to maintain size.\",\r\n      \"storageTips\": \"Fruits can be stored at room temperature or refrigerated. Juice can be frozen.\",\r\n      \"growthForm\": \"Small evergreen tree growing up to 2-3 meters\",\r\n      \"specification\": \"Popular dwarf varieties suitable for container growing. Flowers are fragrant and attract pollinators.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Spider Plant\",\r\n      \"scientificName\": \"Chlorophytum comosum\",\r\n      \"image\": \"spiderplant\",\r\n      \"type\": [\"decorative\", \"air-purifying\"],\r\n      \"use\": \"Popular hanging plant known for air purification and easy propagation via plantlets.\",\r\n      \"waterNeeds\": \"Moderate; water weekly\",\r\n      \"sunlightNeeds\": \"Bright, indirect light\",\r\n      \"careTips\": \"Remove brown tips by trimming. Repot when rootbound. Propagate by planting the baby spiderettes.\",\r\n      \"storageTips\": \"Not applicable; grown as living plant.\",\r\n      \"growthForm\": \"Herbaceous perennial with arching leaves and dangling plantlets\",\r\n      \"specification\": \"One of the easiest houseplants to grow. Effective at removing formaldehyde from indoor air.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Areca Palm\",\r\n      \"scientificName\": \"Dypsis lutescens\",\r\n      \"image\": \"palmtree\",\r\n      \"type\": [\"decorative\", \"air-purifying\"],\r\n      \"use\": \"Popular indoor palm that adds tropical feel to spaces. Helps humidify indoor air.\",\r\n      \"waterNeeds\": \"Moderate; keep soil slightly moist\",\r\n      \"sunlightNeeds\": \"Bright, indirect light\",\r\n      \"careTips\": \"Mist leaves regularly. Wipe leaves to remove dust. Fertilize during growing season.\",\r\n      \"storageTips\": \"Not applicable; grown as living plant.\",\r\n      \"growthForm\": \"Clustering palm with feathery fronds growing up to 2-3 meters indoors\",\r\n      \"specification\": \"Also called Butterfly Palm. NASA-certified air purifier. Prefers humid conditions.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Indian Borage (Ajwain)\",\r\n      \"scientificName\": \"Plectranthus amboinicus\",\r\n      \"image\": \"ova\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Leaves used for flavoring and medicinal purposes, especially for cough and cold relief.\",\r\n      \"waterNeeds\": \"Moderate; water twice a week\",\r\n      \"sunlightNeeds\": \"Partial sun (4-6 hours)\",\r\n      \"careTips\": \"Pinch back regularly to encourage bushiness. Can be grown in containers. Protect from frost.\",\r\n      \"storageTips\": \"Fresh leaves last about a week refrigerated. Can be dried for longer storage.\",\r\n      \"growthForm\": \"Succulent perennial herb growing up to 1 meter tall\",\r\n      \"specification\": \"Also called Cuban Oregano. Leaves have strong oregano-like flavor with hint of thyme.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Rose (Desi Gulab)\",\r\n      \"scientificName\": \"Rosa indica\",\r\n      \"image\": \"rose\",\r\n      \"type\": [\"decorative\", \"religious\", \"medicinal\"],\r\n      \"use\": \"Flowers used in religious ceremonies, perfumes, and traditional medicine. Rose water used in cooking.\",\r\n      \"waterNeeds\": \"Moderate; deep watering twice a week\",\r\n      \"sunlightNeeds\": \"Full sun (6+ hours)\",\r\n      \"careTips\": \"Prune after flowering. Remove dead wood. Watch for pests like aphids and black spot.\",\r\n      \"storageTips\": \"Fresh flowers last a few days. Petals can be dried for potpourri or made into rose water.\",\r\n      \"growthForm\": \"Deciduous shrub with thorny stems growing up to 2 meters\",\r\n      \"specification\": \"Many traditional Indian varieties with strong fragrance. Flowers used in Ayurvedic preparations.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Lavender\",\r\n      \"scientificName\": \"Lavandula angustifolia\",\r\n      \"image\": \"lavender\",\r\n      \"type\": [\"decorative\", \"medicinal\"],\r\n      \"use\": \"Flowers used for fragrance, relaxation, and in traditional medicine for anxiety relief.\",\r\n      \"waterNeeds\": \"Low; light watering\",\r\n      \"sunlightNeeds\": \"Full sun (6+ hours)\",\r\n      \"careTips\": \"Prune after flowering to maintain shape. Plant in well-draining soil. Protect from excessive humidity.\",\r\n      \"storageTips\": \"Dry flower spikes upside down in bunches. Store dried flowers in airtight containers.\",\r\n      \"growthForm\": \"Aromatic perennial shrub growing up to 1 meter tall\",\r\n      \"specification\": \"Essential oil has calming properties. Flowers attract pollinators like bees and butterflies.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Oregano\",\r\n      \"scientificName\": \"Origanum vulgare\",\r\n      \"image\": \"oregano\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Leaves used as culinary herb and in traditional medicine for respiratory ailments.\",\r\n      \"waterNeeds\": \"Low; let soil dry between watering\",\r\n      \"sunlightNeeds\": \"Full sun (6-8 hours)\",\r\n      \"careTips\": \"Harvest leaves before flowering for best flavor. Divide plants every few years to rejuvenate.\",\r\n      \"storageTips\": \"Dry leaves and store in airtight containers. Fresh sprigs can be refrigerated for a week.\",\r\n      \"growthForm\": \"Perennial herb growing up to 60 cm tall\",\r\n      \"specification\": \"Contains thymol and carvacrol with antimicrobial properties. Flavor intensifies when dried.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Spinach (Palak)\",\r\n      \"scientificName\": \"Spinacia oleracea\",\r\n      \"image\": \"palak\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Leafy green used in saag, curries, and parathas. Rich in iron and calcium for bone health.\",\r\n      \"waterNeeds\": \"High; keep soil consistently moist\",\r\n      \"sunlightNeeds\": \"Partial shade (3-5 hours)\",\r\n      \"careTips\": \"Harvest outer leaves first to prolong production. Plant in cool seasons for best yield.\",\r\n      \"storageTips\": \"Refrigerate in airtight bags for up to 1 week. Blanch and freeze for long-term storage.\",\r\n      \"growthForm\": \"Annual leafy vegetable growing up to 30 cm tall\",\r\n      \"specification\": \"Traditional winter crop in North India. Contains oxalic acid which reduces when cooked.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Fenugreek (Methi)\",\r\n      \"scientificName\": \"Trigonella foenum-graecum\",\r\n      \"image\": \"methi\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Leaves used fresh/dried in curries. Seeds for tempering and diabetes management.\",\r\n      \"waterNeeds\": \"Moderate; light watering every 2 days\",\r\n      \"sunlightNeeds\": \"Partial sun (4-6 hours)\",\r\n      \"careTips\": \"Soak seeds overnight before sowing. Harvest leaves when young for best flavor.\",\r\n      \"storageTips\": \"Dry leaves can be stored for months. Seeds last 2-3 years in airtight containers.\",\r\n      \"growthForm\": \"Annual herb growing up to 60 cm tall\",\r\n      \"specification\": \"Sprouted seeds (methi microgreens) are highly nutritious. Traditional galactagogue for nursing mothers.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Okra (Bhindi)\",\r\n      \"scientificName\": \"Abelmoschus esculentus\",\r\n      \"image\": \"bhindii\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Pods used in sambar, stir-fries, and kurma. Mucilage aids digestion.\",\r\n      \"waterNeeds\": \"Moderate; deep watering twice weekly\",\r\n      \"sunlightNeeds\": \"Full sun (6+ hours)\",\r\n      \"careTips\": \"Wear gloves when harvesting to avoid irritation from tiny spines. Remove old pods to prolong fruiting.\",\r\n      \"storageTips\": \"Store unwashed in paper towels in fridge for 3-4 days. Can be pickled or frozen.\",\r\n      \"growthForm\": \"Annual flowering plant growing up to 2 meters\",\r\n      \"specification\": \"Heat-loving crop with varieties like Pusa Sawani. Flowers resemble hibiscus (same family).\"\r\n    },\r\n    {\r\n      \"commonName\": \"Brinjal (Eggplant)\",\r\n      \"scientificName\": \"Solanum melongena\",\r\n      \"image\": \"brinjal\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Fruits used in baingan bharta, curries. Nasunin in skin is potent antioxidant.\",\r\n      \"waterNeeds\": \"High; don't let soil dry out\",\r\n      \"sunlightNeeds\": \"Full sun (6-8 hours)\",\r\n      \"careTips\": \"Stake plants to support heavy fruits. Rotate crops to prevent verticillium wilt.\",\r\n      \"storageTips\": \"Store at cool room temperature (not fridge). Best used within 2-3 days of harvest.\",\r\n      \"growthForm\": \"Perennial grown as annual, up to 1.5 meters tall\",\r\n      \"specification\": \"Many Indian varieties: round purple (Bharwa), long green (Hyderabad), and tiny pea brinjal.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Rubber Plant\",\r\n      \"scientificName\": \"Ficus elastica\",\r\n      \"image\": \"rubber\",\r\n      \"type\": [\"decorative\", \"air-purifying\"],\r\n      \"use\": \"Ornamental plant with large glossy leaves. Removes indoor air pollutants.\",\r\n      \"waterNeeds\": \"Moderate; let soil dry between watering\",\r\n      \"sunlightNeeds\": \"Bright, indirect light\",\r\n      \"careTips\": \"Wipe leaves monthly to remove dust. Prune top to encourage bushiness. Avoid cold drafts.\",\r\n      \"storageTips\": \"Not applicable; grown as living plant.\",\r\n      \"growthForm\": \"Evergreen tree up to 2-3 meters indoors\",\r\n      \"specification\": \"Sap was historically used for rubber production. Burgundy varieties popular in Indian homes.\"\r\n    },\r\n    {\r\n      \"commonName\": \"ZZ Plant\",\r\n      \"scientificName\": \"Zamioculcas zamiifolia\",\r\n      \"image\": \"zz\",\r\n      \"type\": [\"decorative\", \"luck\"],\r\n      \"use\": \"Low-maintenance houseplant believed to bring prosperity. Thrives in neglect.\",\r\n      \"waterNeeds\": \"Low; water every 2-3 weeks\",\r\n      \"sunlightNeeds\": \"Low to bright indirect light\",\r\n      \"careTips\": \"Overwatering is main killer. Tolerates fluorescent lighting. Dust leaves occasionally.\",\r\n      \"storageTips\": \"Not applicable; grown as living plant.\",\r\n      \"growthForm\": \"Herbaceous perennial with glossy pinnate leaves\",\r\n      \"specification\": \"Drought-resistant due to rhizomes that store water. All parts are mildly toxic if ingested.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Hibiscus (Gudhal)\",\r\n      \"scientificName\": \"Hibiscus rosa-sinensis\",\r\n      \"image\": \"hibiscus\",\r\n      \"type\": [\"decorative\", \"religious\", \"medicinal\"],\r\n      \"use\": \"Flowers offered to deities. Used in hair oils and herbal teas for hypertension.\",\r\n      \"waterNeeds\": \"Moderate; water deeply 2-3 times weekly\",\r\n      \"sunlightNeeds\": \"Full sun (6+ hours)\",\r\n      \"careTips\": \"Deadhead spent blooms. Prune in early spring. Watch for hibiscus beetle.\",\r\n      \"storageTips\": \"Fresh flowers last 1 day. Dry petals for tea in shade and store airtight.\",\r\n      \"growthForm\": \"Evergreen shrub up to 3 meters tall\",\r\n      \"specification\": \"National flower of Malaysia. Double-petal varieties popular in temple offerings.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Pothos (Devil's Ivy)\",\r\n      \"scientificName\": \"Epipremnum aureum\",\r\n      \"image\": \"devilsivy\",\r\n      \"type\": [\"decorative\", \"air-purifying\"],\r\n      \"use\": \"Trailing vine for shelves/walls. Removes formaldehyde from air.\",\r\n      \"waterNeeds\": \"Low; let soil dry between watering\",\r\n      \"sunlightNeeds\": \"Low to bright indirect light\",\r\n      \"careTips\": \"Trim long vines to encourage fullness. Can grow in water indefinitely.\",\r\n      \"storageTips\": \"Not applicable; grown as living plant.\",\r\n      \"growthForm\": \"Evergreen vine with heart-shaped leaves\",\r\n      \"specification\": \"Variegated varieties (Golden Pothos) brighten dim corners. One of most forgiving houseplants.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Basil (Sweet Basil)\",\r\n      \"scientificName\": \"Ocimum basilicum\",\r\n      \"image\": \"basil\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Leaves for Italian dishes and Thai curries. Essential oil has anti-microbial properties.\",\r\n      \"waterNeeds\": \"Moderate; keep soil moist\",\r\n      \"sunlightNeeds\": \"Full sun (6-8 hours)\",\r\n      \"careTips\": \"Pinch off flower buds to prolong leaf production. Grow indoors in winters.\",\r\n      \"storageTips\": \"Freeze leaves in oil or dry them. Fresh lasts 1 week in fridge with stems in water.\",\r\n      \"growthForm\": \"Annual herb up to 60 cm tall\",\r\n      \"specification\": \"Different from holy basil (Tulsi). Large-leaf Genovese type used in pesto.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Thyme\",\r\n      \"scientificName\": \"Thymus vulgaris\",\r\n      \"image\": \"thyme\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Culinary herb for meats/stews. Thymol in oil is potent antiseptic.\",\r\n      \"waterNeeds\": \"Low; let soil dry between watering\",\r\n      \"sunlightNeeds\": \"Full sun (6+ hours)\",\r\n      \"careTips\": \"Prune woody stems to encourage new growth. Prefers slightly alkaline soil.\",\r\n      \"storageTips\": \"Dry sprigs upside down. Store leaves whole to retain flavor, crush when needed.\",\r\n      \"growthForm\": \"Perennial subshrub up to 30 cm tall\",\r\n      \"specification\": \"Creeping varieties make aromatic ground cover. Flowers attract bees.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Parsley\",\r\n      \"scientificName\": \"Petroselinum crispum\",\r\n      \"image\": \"parsley\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Garnish and flavoring. High in vitamin K for blood clotting.\",\r\n      \"waterNeeds\": \"Moderate; keep soil consistently moist\",\r\n      \"sunlightNeeds\": \"Partial sun (4-6 hours)\",\r\n      \"careTips\": \"Soak seeds overnight to speed germination. Biennial but grown as annual.\",\r\n      \"storageTips\": \"Store stems in water in fridge like flowers. Can be frozen in oil cubes.\",\r\n      \"growthForm\": \"Biennial herb up to 30 cm tall\",\r\n      \"specification\": \"Two types: flat-leaf (Italian) and curly. Former has stronger flavor.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Dill\",\r\n      \"scientificName\": \"Anethum graveolens\",\r\n      \"image\": \"dill\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Leaves/flavor pickles (dill pickles). Seeds for digestive tea.\",\r\n      \"waterNeeds\": \"Moderate; don't overwater\",\r\n      \"sunlightNeeds\": \"Full sun (6-8 hours)\",\r\n      \"careTips\": \"Plant away from fennel to prevent cross-pollination. Stake tall varieties.\",\r\n      \"storageTips\": \"Freeze leaves in water cubes. Dry seeds in paper bags before storing.\",\r\n      \"growthForm\": \"Annual herb up to 1.5 meters tall\",\r\n      \"specification\": \"Feathery leaves are larval food for swallowtail butterflies.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Chives\",\r\n      \"scientificName\": \"Allium schoenoprasum\",\r\n      \"image\": \"chives\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Mild onion-flavored garnish. Contains allicin with cardiovascular benefits.\",\r\n      \"waterNeeds\": \"Moderate; water when dry\",\r\n      \"sunlightNeeds\": \"Full sun to partial shade\",\r\n      \"careTips\": \"Divide clumps every 3-4 years. Cut back to 5 cm to rejuvenate growth.\",\r\n      \"storageTips\": \"Refrigerate in damp paper towel. Freeze chopped leaves in oil.\",\r\n      \"growthForm\": \"Perennial bulb-forming herb up to 50 cm tall\",\r\n      \"specification\": \"Edible purple flowers attract pollinators. Cold-hardy and deer-resistant.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Rosemary\",\r\n      \"scientificName\": \"Salvia rosmarinus\",\r\n      \"image\": \"rosemary\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Aromatic herb for meats/breads. Improves memory and concentration.\",\r\n      \"waterNeeds\": \"Low; drought-tolerant\",\r\n      \"sunlightNeeds\": \"Full sun (6+ hours)\",\r\n      \"careTips\": \"Prune lightly but regularly. Avoid wet feet in monsoon. Grows well in containers.\",\r\n      \"storageTips\": \"Dry sprigs or freeze in oil. Fresh lasts 3 weeks in fridge wrapped in damp cloth.\",\r\n      \"growthForm\": \"Perennial woody shrub up to 1.5 meters tall\",\r\n      \"specification\": \"Blue flowers attract bees. Prostrate varieties good for rock gardens.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Sage\",\r\n      \"scientificName\": \"Salvia officinalis\",\r\n      \"image\": \"sage\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Thanksgiving stuffing herb. Sage tea for sore throats.\",\r\n      \"waterNeeds\": \"Low; let soil dry between watering\",\r\n      \"sunlightNeeds\": \"Full sun (6+ hours)\",\r\n      \"careTips\": \"Prune woody stems in spring. Prefers poor, rocky soil over rich compost.\",\r\n      \"storageTips\": \"Leaves dry well. Store whole leaves in glass jars away from light.\",\r\n      \"growthForm\": \"Perennial subshrub up to 60 cm tall\",\r\n      \"specification\": \"Variegated (tricolor) varieties popular for ornamental use. Flowers attract hummingbirds.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Bay Leaf (Tej Patta)\",\r\n      \"scientificName\": \"Laurus nobilis\",\r\n      \"image\": \"tejpatta\",\r\n      \"type\": [\"food\", \"medicinal\"],\r\n      \"use\": \"Aromatic leaves for biryanis and stews. Helps regulate blood sugar.\",\r\n      \"waterNeeds\": \"Moderate; let soil dry between watering\",\r\n      \"sunlightNeeds\": \"Full sun to partial shade\",\r\n      \"careTips\": \"Prune to shape as topiary. Protect from cold winds. Slow grower.\",\r\n      \"storageTips\": \"Dry leaves for 48 hours before storing. Flavor intensifies after a few weeks.\",\r\n      \"growthForm\": \"Evergreen tree up to 12 meters tall\",\r\n      \"specification\": \"Ancient symbol of wisdom. Leaves used in Greek/Roman laurel wreaths.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Stevia\",\r\n      \"scientificName\": \"Stevia rebaudiana\",\r\n      \"image\": \"stevia\",\r\n      \"type\": [\"medicinal\", \"food\"],\r\n      \"use\": \"Natural zero-calorie sweetener. Helps manage diabetes.\",\r\n      \"waterNeeds\": \"Moderate; don't overwater\",\r\n      \"sunlightNeeds\": \"Full sun to partial shade\",\r\n      \"careTips\": \"Pinch back for bushiness. Bring indoors in cold regions. Perennial in tropics.\",\r\n      \"storageTips\": \"Dry leaves and powder them. 1 tsp powder = 1 cup sugar sweetness.\",\r\n      \"growthForm\": \"Perennial herb up to 1 meter tall\",\r\n      \"specification\": \"300x sweeter than sugar. Approved as sugar substitute in 2015 in India.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Gotu Kola\",\r\n      \"scientificName\": \"Centella asiatica\",\r\n      \"image\": \"gotukola\",\r\n      \"type\": [\"medicinal\"],\r\n      \"use\": \"Ayurvedic brain tonic. Promotes wound healing and vein health.\",\r\n      \"waterNeeds\": \"High; keep soil moist\",\r\n      \"sunlightNeeds\": \"Partial shade to full sun\",\r\n      \"careTips\": \"Grows well as ground cover. Can become invasive in ideal conditions.\",\r\n      \"storageTips\": \"Fresh leaves best. Can be dried but loses potency quickly.\",\r\n      \"growthForm\": \"Perennial creeping herb\",\r\n      \"specification\": \"Called 'Brahmi' in North India. Different from Bacopa monnieri (true Brahmi).\"\r\n    },\r\n    {\r\n      \"commonName\": \"Giloy\",\r\n      \"scientificName\": \"Tinospora cordifolia\",\r\n      \"image\": \"giloy\",\r\n      \"type\": [\"medicinal\"],\r\n      \"use\": \"Ayurvedic immunity booster. Used for fever, diabetes and arthritis.\",\r\n      \"waterNeeds\": \"Moderate; water when dry\",\r\n      \"sunlightNeeds\": \"Partial shade to full sun\",\r\n      \"careTips\": \"Needs strong support structure. Prune to control aggressive growth.\",\r\n      \"storageTips\": \"Stems can be dried and stored for decoctions. Fresh juice most potent.\",\r\n      \"growthForm\": \"Perennial deciduous climber\",\r\n      \"specification\": \"Called 'Amrita' in Sanskrit. Grows over neem tree is considered most medicinal.\"\r\n    },\r\n    {\r\n      \"commonName\": \"Shatavari\",\r\n      \"scientificName\": \"Asparagus racemosus\",\r\n      \"image\": \"shatavari\",\r\n      \"type\": [\"medicinal\"],\r\n      \"use\": \"Women's health tonic. Galactagogue and hormonal balancer.\",\r\n      \"waterNeeds\": \"Moderate; drought-tolerant\",\r\n      \"sunlightNeeds\": \"Partial shade to full sun\",\r\n      \"careTips\": \"Provide trellis for climbing. Harvest roots after 2 years.\",\r\n      \"storageTips\": \"Dry roots and powder for storage. Keep in amber glass jars.\",\r\n      \"growthForm\": \"Perennial climbing shrub\",\r\n      \"specification\": \"Called 'Queen of Herbs' in Ayurveda. 100 roots = Shatavari (Sanskrit meaning).\"\r\n    }\r\n]\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/assets/indian-plants-data.json b/app/src/main/assets/indian-plants-data.json
+--- a/app/src/main/assets/indian-plants-data.json	(revision 29cc249e624f63b44dd98ada6848a53ba47d3126)
++++ b/app/src/main/assets/indian-plants-data.json	(date 1745526672044)
+@@ -64,19 +64,7 @@
+       "growthForm": "Succulent with thick, fleshy leaves growing in a rosette",
+       "specification": "Contains over 75 active compounds. Inner leaf gel is clear and soothing. Outer leaf contains aloin which has laxative properties."
+     },
+-    {
+-      "commonName": "Curry Leaf Plant",
+-      "scientificName": "Murraya koenigii",
+-      "image": "curryleaf",
+-      "type": ["food", "medicinal"],
+-      "use": "Leaves used as flavoring in South Indian cuisine. Also used in folk medicine for digestive problems.",
+-      "waterNeeds": "Moderate; keep soil lightly moist",
+-      "sunlightNeeds": "Full sun to partial shade",
+-      "careTips": "Fertilize every 2-3 months. Prune to maintain shape. May drop leaves in winter.",
+-      "storageTips": "Fresh leaves can be refrigerated for up to two weeks. Can be dried or frozen for longer storage.",
+-      "growthForm": "Small evergreen tree or shrub growing up to 4-6 meters",
+-      "specification": "Aromatic leaves with distinct curry-like fragrance. Seeds and bark also have medicinal properties."
+-    },
++
+     {
+       "commonName": "Ashwagandha",
+       "scientificName": "Withania somnifera",
+@@ -103,19 +91,7 @@
+       "growthForm": "Annual herb growing up to 0.5-1 meter tall",
+       "specification": "Widely used in Diwali and other Hindu ceremonies. Contains lutein which is beneficial for eye health."
+     },
+-    {
+-      "commonName": "Indian Rosewood (Sheesham)",
+-      "scientificName": "Dalbergia sissoo",
+-      "image": "rosewood",
+-      "type": ["decorative"],
+-      "use": "Valued for its hard timber used in furniture making, carving, and construction.",
+-      "waterNeeds": "Moderate; established trees are drought-tolerant",
+-      "sunlightNeeds": "Full sun",
+-      "careTips": "Prune to maintain shape. Watch for pests like defoliators and borers.",
+-      "storageTips": "Not applicable for home storage as it's primarily grown for timber.",
+-      "growthForm": "Deciduous tree growing up to 25 meters tall",
+-      "specification": "Fast-growing species that also helps in preventing soil erosion. Wood has a distinctive grain pattern and reddish-brown color."
+-    },
++
+     {
+       "commonName": "Lemongrass",
+       "scientificName": "Cymbopogon citratus",
+@@ -181,19 +157,7 @@
+       "growthForm": "Evergreen vine or shrub growing up to 2-3 meters tall",
+       "specification": "Flowers open at night and release strongest fragrance in evening. Several varieties grown in India include single and double-flowered forms."
+     },
+-    {
+-      "commonName": "Indian Sandalwood",
+-      "scientificName": "Santalum album",
+-      "image": "sandalwood",
+-      "type": ["medicinal", "religious", "decorative"],
+-      "use": "Heartwood and oil used in perfumes, religious ceremonies, and carving. Has cooling properties in Ayurveda.",
+-      "waterNeeds": "Moderate; drought-tolerant once established",
+-      "sunlightNeeds": "Full sun to partial shade",
+-      "careTips": "Requires host plants initially as it's semi-parasitic. Grows slowly and needs protection from frost.",
+-      "storageTips": "Heartwood can be stored indefinitely. Oil should be stored in dark glass bottles.",
+-      "growthForm": "Evergreen tree growing up to 12-15 meters tall",
+-      "specification": "Trees must be at least 30 years old before harvesting for quality heartwood. Protected species in India due to overexploitation."
+-    },
++
+     {
+       "commonName": "Brahmi",
+       "scientificName": "Bacopa monnieri",
+@@ -233,19 +197,7 @@
+       "growthForm": "Annual climbing vine growing up to 5 meters long",
+       "specification": "Contains charantin which helps lower blood glucose levels. Fruits become more bitter as they mature and turn orange."
+     },
+-    {
+-      "commonName": "Bael (Wood Apple)",
+-      "scientificName": "Aegle marmelos",
+-      "image": "tulsi",
+-      "type": ["religious", "food", "medicinal"],
+-      "use": "Fruit used in religious offerings to Lord Shiva, in beverages, and for treating digestive disorders.",
+-      "waterNeeds": "Low; drought-tolerant once established",
+-      "sunlightNeeds": "Full sun",
+-      "careTips": "Prune to maintain shape. Fertilize annually. Protect young plants from frost.",
+-      "storageTips": "Fresh fruit can be stored up to 2 weeks. Pulp can be dried or made into preserves.",
+-      "growthForm": "Deciduous tree growing up to 12-15 meters tall",
+-      "specification": "Hard-shelled fruit with aromatic pulp. Slow-growing but can live for over 100 years."
+-    },
++
+     {
+       "commonName": "Night Jasmine (Harsingar)",
+       "scientificName": "Nyctanthes arbor-tristis",
+@@ -259,19 +211,7 @@
+       "growthForm": "Large shrub or small tree growing up to 10 meters tall",
+       "specification": "Flowers bloom at night and drop in the morning. Orange flower tubes with white petals create a distinctive appearance."
+     },
+-    {
+-      "commonName": "Custard Apple (Sitaphal)",
+-      "scientificName": "Annona squamosa",
+-      "image": "sitaphal",
+-      "type": ["food", "medicinal"],
+-      "use": "Sweet fruit eaten fresh. Seeds and leaves used in traditional medicine to treat lice and skin conditions.",
+-      "waterNeeds": "Moderate; water deeply and infrequently",
+-      "sunlightNeeds": "Full sun",
+-      "careTips": "Prune to maintain size and shape. Apply mulch to retain moisture. Protect from frost.",
+-      "storageTips": "Ripe fruits can be refrigerated for 2-3 days. Can be frozen as pulp.",
+-      "growthForm": "Small deciduous tree growing up to 6-8 meters tall",
+-      "specification": "Hand pollination may improve fruit set. Seeds are toxic and should not be consumed."
+-    },
++
+     {
+       "commonName": "Drumstick Tree (Moringa)",
+       "scientificName": "Moringa oleifera",
+@@ -350,20 +290,7 @@
+       "growthForm": "Evergreen perennial with upright, sword-like leaves",
+       "specification": "Also called Mother-in-Law's Tongue. Removes toxins like formaldehyde and benzene from air."
+     },
+-    {
+-      "commonName": "Mint (Pudina)",
+-      "scientificName": "Mentha spicata",
+-      "image": "pudina",
+-      "type": ["food", "medicinal"],
+-      "use": "Leaves used in chutneys, drinks, and as digestive aid. Has cooling properties.",
+-      "waterNeeds": "High; keep soil moist (water every 2 days)",
+-      "sunlightNeeds": "Partial sun (4-6 hours)",
+-      "careTips": "Grows aggressively; best grown in containers. Pinch back regularly to promote bushiness.",
+-      "storageTips": "Fresh leaves last about a week refrigerated in damp paper towel. Can be frozen in ice cubes.",
+-      "growthForm": "Fast-growing perennial herb spreading by runners",
+-      "specification": "Several varieties grown in India including peppermint and spearmint. Used in traditional remedies for indigestion."
+-    },
+-    {
++  {
+       "commonName": "Coriander (Dhania)",
+       "scientificName": "Coriandrum sativum",
+       "image": "kothimbir",
+@@ -727,19 +654,7 @@
+       "growthForm": "Evergreen tree up to 12 meters tall",
+       "specification": "Ancient symbol of wisdom. Leaves used in Greek/Roman laurel wreaths."
+     },
+-    {
+-      "commonName": "Stevia",
+-      "scientificName": "Stevia rebaudiana",
+-      "image": "stevia",
+-      "type": ["medicinal", "food"],
+-      "use": "Natural zero-calorie sweetener. Helps manage diabetes.",
+-      "waterNeeds": "Moderate; don't overwater",
+-      "sunlightNeeds": "Full sun to partial shade",
+-      "careTips": "Pinch back for bushiness. Bring indoors in cold regions. Perennial in tropics.",
+-      "storageTips": "Dry leaves and powder them. 1 tsp powder = 1 cup sugar sweetness.",
+-      "growthForm": "Perennial herb up to 1 meter tall",
+-      "specification": "300x sweeter than sugar. Approved as sugar substitute in 2015 in India."
+-    },
++
+     {
+       "commonName": "Gotu Kola",
+       "scientificName": "Centella asiatica",
+@@ -753,30 +668,425 @@
+       "growthForm": "Perennial creeping herb",
+       "specification": "Called 'Brahmi' in North India. Different from Bacopa monnieri (true Brahmi)."
+     },
++
++
++
++    {
++      "commonName": "Aam (आम/Mango)",
++      "scientificName": "Mangifera indica",
++      "image": "mango",
++      "type": ["food", "medicinal"],
++      "use": "National fruit of India. Fruits eaten fresh or processed. Leaves, bark, and seeds used in traditional medicine.",
++      "waterNeeds": "Moderate; deep watering during fruit development",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Prune to maintain shape. Protect from frost. Apply potassium-rich fertilizer during fruiting season.",
++      "storageTips": "Ripe mangoes can be refrigerated for up to a week. Can be frozen as pulp or dried as slices.",
++      "growthForm": "Large evergreen tree growing up to 35-40 meters tall",
++      "specification": "Over 1000 varieties grown in India. King of fruits with unique chemical profile of terpenes."
++    },
++    {
++      "commonName": "Anar (अनार/Pomegranate)",
++      "scientificName": "Punica granatum",
++      "image": "pomegranate",
++      "type": ["food", "medicinal"],
++      "use": "Fruits eaten fresh or juiced. Rind and bark used in Ayurveda for parasitic infections and diarrhea.",
++      "waterNeeds": "Moderate; drought-tolerant once established",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Prune in winter for better fruit production. Protect from fruit flies with paper bags.",
++      "storageTips": "Fresh fruits last 1-2 months in refrigeration. Arils can be frozen or dried.",
++      "growthForm": "Deciduous shrub or small tree growing up to 5-8 meters",
++      "specification": "Symbol of fertility and abundance. Juice contains punicalagins with potent antioxidant activity."
++    },
++    {
++      "commonName": "Guava (अमरूद/Amrood)",
++      "scientificName": "Psidium guajava",
++      "image": "guava",
++      "type": ["food", "medicinal"],
++      "use": "Fruits rich in vitamin C. Leaves used for diarrhea treatment and diabetes management.",
++      "waterNeeds": "Moderate; tolerates drought once established",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Prune after fruiting to maintain shape. Protect fruits from fruit flies and birds with netting.",
++      "storageTips": "Ripe fruits last about a week refrigerated. Can be preserved as jam or jelly.",
++      "growthForm": "Evergreen shrub or small tree growing up to 3-10 meters",
++      "specification": "Both white and pink flesh varieties popular in India. Young leaves contain quercetin and other flavonoids."
++    },
++    {
++      "commonName": "Chandan (चंदन/Sandalwood)",
++      "scientificName": "Santalum album",
++      "image": "sandalwood",
++      "type": ["medicinal", "religious", "cosmetic"],
++      "use": "Heartwood and oil used in religious ceremonies, perfumes, and Ayurvedic medicine for cooling properties.",
++      "waterNeeds": "Moderate; drought-tolerant once established",
++      "sunlightNeeds": "Full sun to partial shade",
++      "careTips": "Semi-parasitic; needs host plants initially. Grows slowly; protect from frost and excessive heat.",
++      "storageTips": "Heartwood and powder should be stored in airtight containers. Oil in dark glass bottles.",
++      "growthForm": "Evergreen tree growing up to 12-15 meters tall",
++      "specification": "Protected species in India. Heartwood develops fragrance after 15-20 years of growth."
++    },
++    {
++      "commonName": "Jamun (जामुन/Java Plum)",
++      "scientificName": "Syzygium cumini",
++      "image": "jamun",
++      "type": ["food", "medicinal"],
++      "use": "Fruits eaten fresh or made into vinegar and wine. Seeds powdered for diabetes management.",
++      "waterNeeds": "Moderate; established trees are drought-tolerant",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Minimal pruning required. Remove water sprouts and suckers. Tolerates poor soil conditions.",
++      "storageTips": "Fresh fruits highly perishable; consume within 2-3 days. Seeds can be dried and powdered.",
++      "growthForm": "Evergreen tree growing up to 30 meters tall",
++      "specification": "Purple-black fruits with astringent taste. Seeds contain jamboline which helps lower blood sugar."
++    },
++    {
++      "commonName": "Chyawanprash Herbs (च्यवनप्राश)",
++      "scientificName": "Emblica officinalis + multiple herbs",
++      "image": "chyawanprash",
++      "type": ["medicinal", "food"],
++      "use": "Traditional Ayurvedic formulation used as immunity booster and rejuvenative tonic.",
++      "waterNeeds": "Varies by herb component",
++      "sunlightNeeds": "Varies by herb component",
++      "careTips": "Primarily processed product; not typically grown as single plant. Main ingredient is Amla.",
++      "storageTips": "Store in airtight containers away from direct heat and sunlight. Refrigerate after opening.",
++      "growthForm": "Processed herbal jam made from multiple plant ingredients",
++      "specification": "Contains over 50 herbs with Amla as primary ingredient. Ancient formula mentioned in Charaka Samhita."
++    },
++    {
++      "commonName": "Babool (बबूल/Acacia)",
++      "scientificName": "Vachellia nilotica",
++      "image": "babool",
++      "type": ["medicinal", "industrial"],
++      "use": "Bark used for gum inflammation and toothpaste. Gum arabic has multiple industrial applications.",
++      "waterNeeds": "Low; extremely drought-tolerant",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Requires minimal care. Thorny branches need careful handling. Can become invasive in some areas.",
++      "storageTips": "Dried bark can be stored in airtight containers. Gum arabic in cool, dry place.",
++      "growthForm": "Thorny deciduous tree growing up to 20 meters tall",
++      "specification": "Thorns are modified stipules. Spherical yellow flower heads are highly fragrant."
++    },
+     {
+-      "commonName": "Giloy",
++      "commonName": "Kela (केला/Banana)",
++      "scientificName": "Musa paradisiaca",
++      "image": "banana",
++      "type": ["food", "medicinal", "religious"],
++      "use": "Fruits eaten fresh or cooked. Flowers and stem used in curries. Plant has religious significance.",
++      "waterNeeds": "High; requires consistent moisture",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Remove suckers to maintain 3-4 stems per clump. Protect from strong winds. Heavy feeder.",
++      "storageTips": "Ripen at room temperature. Refrigerate ripe bananas for up to a week. Can be dried or fried as chips.",
++      "growthForm": "Giant herbaceous perennial growing from rhizome",
++      "specification": "Not actually a tree but world's largest herb. Dies after fruiting but produces new suckers."
++    },
++    {
++      "commonName": "Guduchi (गुडूची/Giloy)",
+       "scientificName": "Tinospora cordifolia",
+       "image": "giloy",
+       "type": ["medicinal"],
+-      "use": "Ayurvedic immunity booster. Used for fever, diabetes and arthritis.",
+-      "waterNeeds": "Moderate; water when dry",
++      "use": "Stems used in Ayurveda for fever, diabetes, and arthritis. Major immunity booster.",
++      "waterNeeds": "Moderate; tolerates dry periods",
+       "sunlightNeeds": "Partial shade to full sun",
+-      "careTips": "Needs strong support structure. Prune to control aggressive growth.",
+-      "storageTips": "Stems can be dried and stored for decoctions. Fresh juice most potent.",
+-      "growthForm": "Perennial deciduous climber",
+-      "specification": "Called 'Amrita' in Sanskrit. Grows over neem tree is considered most medicinal."
++      "careTips": "Provide strong support structure. Prune to control growth. Grows best when climbing on neem trees.",
++      "storageTips": "Dried stems can be stored for long periods. Fresh juice should be consumed immediately.",
++      "growthForm": "Perennial climbing shrub with succulent stems",
++      "specification": "Called 'Amrita' (nectar of immortality) in ancient texts. Most potent when growing on neem trees."
++    },
++    {
++      "commonName": "Sadabahar (सदाबहार/Periwinkle)",
++      "scientificName": "Catharanthus roseus",
++      "image": "periwinkle",
++      "type": ["medicinal", "decorative"],
++      "use": "Source of vinca alkaloids used in cancer treatment. Used traditionally for diabetes management.",
++      "waterNeeds": "Low; drought-tolerant",
++      "sunlightNeeds": "Full sun to partial shade",
++      "careTips": "Deadhead spent flowers to encourage more blooms. Tolerates poor soil. Prone to fungal issues in high humidity.",
++      "storageTips": "Not typically stored; medicinal compounds extracted professionally.",
++      "growthForm": "Evergreen perennial growing up to 1 meter tall",
++      "specification": "Contains over 70 alkaloids. Name means 'ever-blooming' in Hindi. White and pink varieties available."
++    },
++    {
++      "commonName": "Shahad Patta (शहद पत्ता/Stevia)",
++      "scientificName": "Stevia rebaudiana",
++      "image": "stevia",
++      "type": ["medicinal", "food"],
++      "use": "Natural zero-calorie sweetener. Helps in diabetes management without affecting blood sugar.",
++      "waterNeeds": "Moderate; don't overwater",
++      "sunlightNeeds": "Full sun to partial shade",
++      "careTips": "Pinch back for bushiness. Bring indoors in cold regions. Perennial in tropical regions.",
++      "storageTips": "Dry leaves in shade and powder them. Store in airtight containers. 1 tsp powder equals 1 cup sugar sweetness.",
++      "growthForm": "Perennial herb growing up to 1 meter tall",
++      "specification": "Contains steviol glycosides that are 300 times sweeter than sugar but without calories."
+     },
+     {
+-      "commonName": "Shatavari",
++      "commonName": "Shatavari (शतावरी)",
+       "scientificName": "Asparagus racemosus",
+       "image": "shatavari",
+       "type": ["medicinal"],
+-      "use": "Women's health tonic. Galactagogue and hormonal balancer.",
+-      "waterNeeds": "Moderate; drought-tolerant",
++      "use": "Root used in Ayurveda as female tonic for reproductive health and milk production in nursing mothers.",
++      "waterNeeds": "Moderate; tolerates brief dry periods",
+       "sunlightNeeds": "Partial shade to full sun",
+-      "careTips": "Provide trellis for climbing. Harvest roots after 2 years.",
+-      "storageTips": "Dry roots and powder for storage. Keep in amber glass jars.",
+-      "growthForm": "Perennial climbing shrub",
+-      "specification": "Called 'Queen of Herbs' in Ayurveda. 100 roots = Shatavari (Sanskrit meaning)."
++      "careTips": "Provide trellis for climbing. Harvest roots after 2 years. Plant in well-draining soil.",
++      "storageTips": "Dried roots can be stored for up to 2 years in airtight containers away from light.",
++      "growthForm": "Thorny climbing herb with feathery foliage",
++      "specification": "Name means 'she who possesses a hundred husbands' referring to its fertility-enhancing properties."
++    },
++    {
++      "commonName": "Sitaphal (सीताफल/Custard Apple)",
++      "scientificName": "Annona squamosa",
++      "image": "sitaphal",
++      "type": ["food", "medicinal"],
++      "use": "Sweet fruit eaten fresh. Seeds have insecticidal properties. Leaves used for diabetes management.",
++      "waterNeeds": "Moderate; drought-tolerant once established",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Prune to maintain shape and size. Hand pollination may improve fruit set. Protect from frost.",
++      "storageTips": "Ripe fruits are highly perishable; refrigerate for 2-3 days maximum. Pulp can be frozen.",
++      "growthForm": "Semi-deciduous small tree growing up to 8 meters tall",
++      "specification": "Seeds are toxic and should not be consumed. Fruit has custard-like texture when ripe."
++    },
++    {
++      "commonName": "Anantmool (अनंतमूल/Indian Sarsaparilla)",
++      "scientificName": "Hemidesmus indicus",
++      "image": "anantmool",
++      "type": ["medicinal"],
++      "use": "Roots used in Ayurveda for skin disorders, syphilis, and as blood purifier.",
++      "waterNeeds": "Moderate; tolerates dry periods",
++      "sunlightNeeds": "Partial shade",
++      "careTips": "Provide support for climbing. Grows well in sandy loam soil. Protect from excessive moisture.",
++      "storageTips": "Dried roots can be stored for up to a year in airtight containers in cool, dry place.",
++      "growthForm": "Slender twining shrub with woody base",
++      "specification": "Root has vanilla-like fragrance. Called 'False Sarsaparilla' as it's used similarly to American sarsaparilla."
++    },
++    {
++      "commonName": "Kalmegh (कालमेघ/Andrographis)",
++      "scientificName": "Andrographis paniculata",
++      "image": "kalmegh",
++      "type": ["medicinal"],
++      "use": "Extremely bitter herb used for fever, liver disorders, and immune enhancement.",
++      "waterNeeds": "Moderate; tolerates brief dry periods",
++      "sunlightNeeds": "Partial shade to full sun",
++      "careTips": "Sow directly as it doesn't transplant well. Harvest before flowering for highest medicinal content.",
++      "storageTips": "Dried whole plant can be stored in airtight containers for up to a year.",
++      "growthForm": "Annual herb growing up to 1 meter tall",
++      "specification": "Known as 'King of Bitters' due to intense bitter taste. Major component of Ayurvedic formula 'Sudarshan Churna'."
++    },
++    {
++      "commonName": "Imli (इमली/Tamarind)",
++      "scientificName": "Tamarindus indica",
++      "image": "tamarind",
++      "type": ["food", "medicinal"],
++      "use": "Pulp used as souring agent in cooking. Also used for digestive disorders and as mild laxative.",
++      "waterNeeds": "Low; extremely drought-tolerant once established",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Minimal pruning required. Long tap root makes transplanting difficult for mature trees.",
++      "storageTips": "Dried pulp can be stored for years. Fresh pods can be kept in cool, dry place for months.",
++      "growthForm": "Long-lived evergreen tree growing up to 30 meters tall",
++      "specification": "Can live for over 200 years. Pulp contains tartaric acid giving it characteristic sourness."
++    },
++    {
++      "commonName": "Adulsa (अडूसा)",
++      "scientificName": "Justicia adhatoda",
++      "image": "adulsa",
++      "type": ["medicinal"],
++      "use": "Leaves used in Ayurveda for bronchitis, cough, and asthma. Powerful expectorant.",
++      "waterNeeds": "Moderate; tolerates dry periods",
++      "sunlightNeeds": "Partial shade to full sun",
++      "careTips": "Prune after flowering to maintain shape. Grows easily from cuttings. Tolerates poor soil.",
++      "storageTips": "Fresh leaves best for medicinal use. Can be dried and stored in airtight containers.",
++      "growthForm": "Evergreen shrub growing up to 3 meters tall",
++      "specification": "Contains alkaloid vasicine which helps dilate bronchial passages. White flowers resemble snapdragons."
++    },
++    {
++      "commonName": "Sharifa (शरीफा/Sugar Apple)",
++      "scientificName": "Annona squamosa",
++      "image": "sharifa",
++      "type": ["food", "medicinal"],
++      "use": "Sweet fruit with custard-like flesh. Seeds used externally for lice treatment.",
++      "waterNeeds": "Moderate; drought-tolerant once established",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Same as Sitaphal (alternative name for same plant). Hand pollination improves yield.",
++      "storageTips": "Highly perishable; consume within 2-3 days of ripening. Can be refrigerated briefly.",
++      "growthForm": "Semi-deciduous small tree growing up to 8 meters tall",
++      "specification": "Segment-like fruit structure gives it scaly appearance. Contains significant vitamin C and potassium."
++    },
++    {
++      "commonName": "Kadi Patta (कड़ी पत्ता/Curry Leaf)",
++      "scientificName": "Murraya koenigii",
++      "image": "curryleaf",
++      "type": ["food", "medicinal"],
++      "use": "Leaves used as flavoring in South Indian cuisine. Used medicinally for diabetes and digestive issues.",
++      "waterNeeds": "Moderate; keep soil lightly moist",
++      "sunlightNeeds": "Full sun to partial shade",
++      "careTips": "Fertilize every 2-3 months. Prune to maintain shape. May drop leaves in winter.",
++      "storageTips": "Fresh leaves can be refrigerated for up to two weeks. Can be dried or frozen for longer storage.",
++      "growthForm": "Small evergreen tree growing up to 4-6 meters tall",
++      "specification": "Contains alkaloids that stimulate digestive enzymes. Aromatic leaves have distinct curry-like fragrance."
++    },
++    {
++      "commonName": "Parijat (पारिजात/Night Jasmine)",
++      "scientificName": "Nyctanthes arbor-tristis",
++      "image": "parijat",
++      "type": ["medicinal", "religious", "decorative"],
++      "use": "Flowers used in religious offerings. Leaves used for sciatica, arthritis, and fever.",
++      "waterNeeds": "Moderate; tolerates brief drought periods",
++      "sunlightNeeds": "Full sun to partial shade",
++      "careTips": "Prune after flowering season to maintain shape. Protect from frost in northern regions.",
++      "storageTips": "Flowers highly perishable. Leaves can be dried and stored for medicinal use.",
++      "growthForm": "Large shrub or small tree growing up to 10 meters tall",
++      "specification": "Flowers bloom at night and drop in morning. Called 'Tree of Sorrow' due to this habit."
++    },
++    {
++      "commonName": "Chironji (चिरौंजी)",
++      "scientificName": "Buchanania lanzan",
++      "image": "chironji",
++      "type": ["food", "medicinal"],
++      "use": "Seeds used in sweets and as thickening agent. Bark used for skin disorders in traditional medicine.",
++      "waterNeeds": "Moderate; drought-tolerant once established",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Slow-growing tree that requires little maintenance. Protect saplings from grazing animals.",
++      "storageTips": "Seeds can be stored for months in cool, dry place. Roasted seeds last longer than raw.",
++      "growthForm": "Medium-sized deciduous tree growing up to 15 meters tall",
++      "specification": "Seeds resembling almonds with delicate flavor. Tree has significant cultural importance in tribal areas."
++    },
++    {
++      "commonName": "Sarpagandha (सर्पगंधा/Indian Snakeroot)",
++      "scientificName": "Rauvolfia serpentina",
++      "image": "sarpagandha",
++      "type": ["medicinal"],
++      "use": "Roots used in Ayurveda for hypertension, insomnia, and snake bites.",
++      "waterNeeds": "Moderate; keep soil consistently moist",
++      "sunlightNeeds": "Partial shade",
++      "careTips": "Grows best in humus-rich soil. Harvest roots after 2-3 years. Protected species; check regulations.",
++      "storageTips": "Dried roots can be stored in airtight containers for up to a year away from light.",
++      "growthForm": "Perennial shrub growing up to 1 meter tall",
++      "specification": "Contains reserpine, first natural antihypertensive drug isolated. Listed in Red Data Book as endangered."
++    },
++    {
++      "commonName": "Nagkesar (नागकेसर)",
++      "scientificName": "Mesua ferrea",
++      "image": "nagkesar",
++      "type": ["medicinal", "decorative"],
++      "use": "Flower buds used in Ayurveda for skin diseases and bleeding disorders. Wood prized for construction.",
++      "waterNeeds": "Moderate; established trees are drought-tolerant",
++      "sunlightNeeds": "Full sun to partial shade",
++      "careTips": "Slow-growing tree that requires minimal maintenance. Protect from frost when young.",
++      "storageTips": "Dried flower buds can be stored in airtight containers for up to 2 years.",
++      "growthForm": "Evergreen tree growing up to 35 meters tall",
++      "specification": "National tree of Sri Lanka. Produces fragrant white flowers with golden centers."
++    },
++    {
++      "commonName": "Amla (आंवला/Indian Gooseberry)",
++      "scientificName": "Phyllanthus emblica",
++      "image": "amla",
++      "type": ["food", "medicinal", "religious"],
++      "use": "Extremely high vitamin C content. Used in Ayurveda for immunity, digestion, and hair health.",
++      "waterNeeds": "Moderate; drought-tolerant once established",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Prune after fruiting. Apply organic manure annually. Protect from strong winds.",
++      "storageTips": "Fresh fruits last 1-2 weeks in refrigeration. Can be preserved in salt water or made into preserves.",
++      "growthForm": "Deciduous tree growing up to 18 meters tall",
++      "specification": "One of three ingredients in Triphala. Remains fresh long after harvesting due to tannin content."
++    },
++    {
++      "commonName": "Sheesham (शीशम/Indian Rosewood)",
++      "scientificName": "Dalbergia sissoo",
++      "image": "rosewood",
++      "type": ["medicinal", "timber"],
++      "use": "Wood valued for furniture. Leaves used in traditional medicine for skin diseases.",
++      "waterNeeds": "Moderate; established trees are drought-tolerant",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Prune to maintain shape. Watch for pests like defoliators and borers.",
++      "storageTips": "Not applicable for home storage as it's primarily grown for timber.",
++      "growthForm": "Deciduous tree growing up to 25 meters tall",
++      "specification": "Fast-growing species that helps prevent soil erosion. Wood has distinctive grain pattern."
++    },
++    {
++      "commonName": "Shatawar (शतावर/Asparagus)",
++      "scientificName": "Asparagus racemosus",
++      "image": "shatawar",
++      "type": ["medicinal"],
++      "use": "Root used as women's tonic in Ayurveda. Beneficial for female reproductive system.",
++      "waterNeeds": "Moderate; tolerates brief dry periods",
++      "sunlightNeeds": "Partial shade to full sun",
++      "careTips": "Provide trellis for climbing. Harvest roots after 2 years. Plant in well-draining soil.",
++      "storageTips": "Dried roots can be stored in airtight containers away from light for up to 2 years.",
++      "growthForm": "Climbing herb with feathery foliage and small thorns",
++      "specification": "Related to but different from vegetable asparagus. Contains saponins with medicinal properties."
++    },
++    {
++      "commonName": "Lahsun (लहसुन/Garlic)",
++      "scientificName": "Allium sativum",
++      "image": "garlic",
++      "type": ["food", "medicinal"],
++      "use": "Bulbs used as spice and for cardiovascular health. Natural antibiotic and antiviral.",
++      "waterNeeds": "Moderate; stop watering when tops begin to yellow",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Plant cloves in late autumn. Harvest when tops fall over. Cure before storage.",
++      "storageTips": "Store in cool, dry place with good air circulation. Can be braided by stems for hanging.",
++      "growthForm": "Bulbous herb growing up to 60 cm tall",
++      "specification": "Contains allicin which gives it antimicrobial properties. Best planted near roses to repel pests."
++    },
++    {
++      "commonName": "Adrak (अदरक/Ginger)",
++      "scientificName": "Zingiber officinale",
++      "image": "ginger",
++      "type": ["food", "medicinal"],
++      "use": "Rhizome used as spice and for nausea, inflammation, and cold treatment.",
++      "waterNeeds": "Moderate; keep soil consistently moist",
++      "sunlightNeeds": "Partial shade",
++      "careTips": "Plant pieces with growth buds facing up. Mulch heavily. Harvest 8-10 months after planting.",
++      "storageTips": "Fresh rhizomes can be refrigerated for 3 weeks. Can be dried, pickled, or frozen.",
++      "growthForm": "Herbaceous perennial growing from rhizome up to 1 meter tall",
++      "specification": "Contains gingerol which gives it pungent flavor and anti-inflammatory properties."
++    },
++    {
++      "commonName": "Bael (बेल/Wood Apple)",
++      "scientificName": "Aegle marmelos",
++      "image": "bael",
++      "type": ["food", "medicinal", "religious"],
++      "use": "Fruit used for digestive disorders, dysentery, and diabetes. Sacred to Lord Shiva.",
++      "waterNeeds": "Low; drought-tolerant once established",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Prune to maintain shape. Fertilize annually. Protect young plants from frost.",
++      "storageTips": "Fresh fruit can be stored up to 2 weeks. Pulp can be dried or made into preserves.",
++      "growthForm": "Deciduous thorny tree growing up to 15 meters tall",
++      "specification": "Hard-shelled fruit with aromatic pulp. Slow-growing but can live for over 100 years."
++    },
++    {
++      "commonName": "Pudina (पुदीना/Mint)",
++      "scientificName": "Mentha spicata",
++      "image": "pudina",
++      "type": ["food", "medicinal"],
++      "use": "Leaves used in chutneys, beverages, and for digestive issues. Has cooling properties.",
++      "waterNeeds": "High; keep soil consistently moist",
++      "sunlightNeeds": "Full sun to partial shade",
++      "careTips": "Contains invasive runners; best grown in containers. Pinch regularly to promote bushiness.",
++      "storageTips": "Fresh leaves last 1 week refrigerated in damp paper towel. Can be frozen or dried.",
++      "growthForm": "Aromatic perennial herb spreading by runners",
++      "specification": "Contains menthol which gives cooling sensation. Repels insects naturally."
++    },
++    {
++      "commonName": "Harad (हरड़/Chebulic Myrobalan)",
++      "scientificName": "Terminalia chebula",
++      "image": "harad",
++      "type": ["medicinal"],
++      "use": "Fruit used in Ayurveda for digestive disorders and as gentle laxative. Component of Triphala.",
++      "waterNeeds": "Moderate; established trees are drought-tolerant",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Minimal pruning required. Add compost annually. Protect from frost when young.",
++      "storageTips": "Dried fruits can be stored for years in airtight containers.",
++      "growthForm": "Large deciduous tree growing up to 30 meters tall",
++      "specification": "Called 'King of Medicines' in Tibet. Rich in tannins and antioxidants."
++    },
++    {
++      "commonName": "Behada (बहेड़ा/Beleric Myrobalan)",
++      "scientificName": "Terminalia bellirica",
++      "image": "behada",
++      "type": ["medicinal"],
++      "use": "Fruit used in Ayurveda for respiratory conditions and eye disorders. Component of Triphala.",
++      "waterNeeds": "Moderate; established trees are drought-tolerant",
++      "sunlightNeeds": "Full sun",
++      "careTips": "Similar to Harad. Requires minimal maintenance once established.",
++      "storageTips": "Dried fruits can be stored for years in airtight containers away from moisture.",
++      "growthForm": "Large deciduous tree growing up to 30 meters tall",
++      "specification": "Contains gallic acid and ellagic acid with antioxidant properties. Seeds are narcotic if consumed in large quantities."
+     }
+ ]
++
++
+Index: app/src/main/java/com/example/plantwise/ProfileActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.plantwise\r\n\r\nimport android.content.Intent\r\nimport android.os.Bundle\r\nimport android.widget.Button\r\nimport android.widget.TextView\r\nimport android.widget.Toast\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport com.google.firebase.auth.FirebaseAuth\r\n\r\nclass ProfileActivity : AppCompatActivity() {\r\n\r\n    private lateinit var auth: FirebaseAuth\r\n    private lateinit var nameTextView: TextView\r\n    private lateinit var emailTextView: TextView\r\n    private lateinit var logoutButton: Button\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.activity_profile)\r\n\r\n        // Firebase Auth init\r\n        auth = FirebaseAuth.getInstance()\r\n\r\n        // Bind UI views to code (make sure IDs match layout)\r\n        nameTextView = findViewById(R.id.userName)\r\n        emailTextView = findViewById(R.id.userEmail)\r\n        logoutButton = findViewById(R.id.logoutBtn) // ✅ Corrected ID\r\n\r\n        // Show current user data\r\n        loadUserData()\r\n\r\n        // Logout logic\r\n        logoutButton.setOnClickListener {\r\n            auth.signOut()\r\n            Toast.makeText(this, \"Logged out successfully \uD83D\uDCA8\", Toast.LENGTH_SHORT).show()\r\n            startActivity(Intent(this, LoginActivity::class.java))\r\n            finish()\r\n        }\r\n    }\r\n\r\n    private fun loadUserData() {\r\n        val user = auth.currentUser\r\n        if (user != null) {\r\n            nameTextView.text = user.displayName ?: \"No Name Found \uD83D\uDE22\"\r\n            emailTextView.text = user.email ?: \"No Email Found \uD83D\uDCED\"\r\n        } else {\r\n            Toast.makeText(this, \"User not found! \uD83D\uDEA8\", Toast.LENGTH_SHORT).show()\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/plantwise/ProfileActivity.kt b/app/src/main/java/com/example/plantwise/ProfileActivity.kt
+--- a/app/src/main/java/com/example/plantwise/ProfileActivity.kt	(revision 29cc249e624f63b44dd98ada6848a53ba47d3126)
++++ b/app/src/main/java/com/example/plantwise/ProfileActivity.kt	(date 1745526672069)
+@@ -6,6 +6,7 @@
+ import android.widget.TextView
+ import android.widget.Toast
+ import androidx.appcompat.app.AppCompatActivity
++import com.google.android.material.bottomnavigation.BottomNavigationView
+ import com.google.firebase.auth.FirebaseAuth
+ 
+ class ProfileActivity : AppCompatActivity() {
+@@ -48,4 +49,38 @@
+             Toast.makeText(this, "User not found! 🚨", Toast.LENGTH_SHORT).show()
+         }
+     }
++
++    private fun setupBottomNav() {
++        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
++
++        bottomNav.setOnItemSelectedListener { menuItem ->
++            when (menuItem.itemId) {
++                R.id.nav_home -> {
++                    // you're already on Home, do nothing or refresh maybe
++                    true
++                }
++
++                R.id.nav_nursery -> {
++                    val intent = Intent(this, NurseryActivity::class.java)
++                    startActivity(intent)
++                    true
++
++                }
++
++                R.id.nav_garden -> {
++                    // Navigate to ReminderActivity when "My Garden" is tapped
++                    val intent = Intent(this, AddPlantActivity::class.java)
++                    startActivity(intent)
++                    true
++                }
++                R.id.nav_garden1 -> {
++                    // Navigate to ReminderActivity when "My Garden" is tapped
++                    val intent = Intent(this, MyPlantsActivity::class.java)
++                    startActivity(intent)
++                    true
++                }
++                else -> false
++            }
++        }
++    }
+ }
+Index: app/src/main/java/com/example/plantwise/AddPlantActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.plantwise\r\n\r\nimport android.Manifest\r\nimport android.content.Intent\r\nimport android.content.pm.PackageManager\r\nimport android.os.Build\r\nimport android.os.Bundle\r\nimport android.widget.Button\r\nimport android.widget.EditText\r\nimport android.widget.TimePicker\r\nimport android.widget.Toast\r\nimport androidx.activity.result.contract.ActivityResultContracts\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport androidx.core.content.ContextCompat\r\nimport com.example.plantwise.ReminderUtils\r\nimport com.google.firebase.auth.FirebaseAuth\r\nimport com.google.firebase.firestore.FirebaseFirestore\r\nimport com.google.firebase.messaging.FirebaseMessaging\r\n\r\nclass AddPlantActivity : AppCompatActivity() {\r\n\r\n    private lateinit var auth: FirebaseAuth\r\n    private lateinit var firestore: FirebaseFirestore\r\n\r\n    private val requestPermissionLauncher = registerForActivityResult(\r\n        ActivityResultContracts.RequestPermission()\r\n    ) { isGranted ->\r\n        if (isGranted) {\r\n            Toast.makeText(this, \"Notification permission granted! \uD83C\uDF89\", Toast.LENGTH_SHORT).show()\r\n        } else {\r\n            Toast.makeText(this, \"You won't get reminders without notification permission \uD83D\uDC94\", Toast.LENGTH_SHORT).show()\r\n        }\r\n    }\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.activity_add_plant)\r\n\r\n        auth = FirebaseAuth.getInstance()\r\n        firestore = FirebaseFirestore.getInstance()\r\n\r\n        val nameInput: EditText = findViewById(R.id.plantNameInput)\r\n        val descInput: EditText = findViewById(R.id.plantDescInput)\r\n        val timePicker: TimePicker = findViewById(R.id.wateringTimePicker)\r\n        val saveBtn: Button = findViewById(R.id.savePlantBtn)\r\n\r\n        checkNotificationPermission()\r\n        saveFcmTokenToFirestore() // \uD83D\uDD25 Save FCM token if not already saved\r\n\r\n        saveBtn.setOnClickListener {\r\n            val name = nameInput.text.toString()\r\n            val desc = descInput.text.toString()\r\n            val hour = timePicker.hour\r\n            val minute = timePicker.minute\r\n\r\n            val uid = auth.currentUser?.uid\r\n            if (uid != null && name.isNotEmpty()) {\r\n                val plant = hashMapOf(\r\n                    \"name\" to name,\r\n                    \"desc\" to desc,\r\n                    \"hour\" to hour,\r\n                    \"minute\" to minute,\r\n                    \"userId\" to uid\r\n                )\r\n\r\n                firestore.collection(\"user_plants\").add(plant)\r\n                    .addOnSuccessListener {\r\n                        Toast.makeText(this, \"Plant saved! \uD83E\uDEB4\", Toast.LENGTH_SHORT).show()\r\n                        ReminderUtils.scheduleWateringReminder(this, hour, minute, name)\r\n                        startActivity(Intent(this, MyPlantsActivity::class.java))\r\n                        finish()\r\n                    }\r\n                    .addOnFailureListener {\r\n                        Toast.makeText(this, \"Failed to save \uD83C\uDF27\uFE0F\", Toast.LENGTH_SHORT).show()\r\n                    }\r\n            }\r\n        }\r\n    }\r\n\r\n    private fun checkNotificationPermission() {\r\n        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {\r\n            if (ContextCompat.checkSelfPermission(\r\n                    this, Manifest.permission.POST_NOTIFICATIONS\r\n                ) != PackageManager.PERMISSION_GRANTED\r\n            ) {\r\n                requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)\r\n            }\r\n        }\r\n    }\r\n\r\n    // \uD83C\uDF1F Save FCM token to Firestore\r\n    private fun saveFcmTokenToFirestore() {\r\n        val user = FirebaseAuth.getInstance().currentUser ?: return\r\n\r\n        FirebaseMessaging.getInstance().token\r\n            .addOnCompleteListener { task ->\r\n                if (task.isSuccessful) {\r\n                    val token = task.result\r\n                    val db = FirebaseFirestore.getInstance()\r\n                    val tokenData = hashMapOf(\"fcmToken\" to token)\r\n\r\n                    db.collection(\"user_tokens\")\r\n                        .document(user.uid)\r\n                        .set(tokenData)\r\n                        .addOnSuccessListener {\r\n                            // Optional: log it or toast it\r\n                        }\r\n                        .addOnFailureListener { e ->\r\n                            e.printStackTrace()\r\n                        }\r\n                }\r\n            }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/plantwise/AddPlantActivity.kt b/app/src/main/java/com/example/plantwise/AddPlantActivity.kt
+--- a/app/src/main/java/com/example/plantwise/AddPlantActivity.kt	(revision 29cc249e624f63b44dd98ada6848a53ba47d3126)
++++ b/app/src/main/java/com/example/plantwise/AddPlantActivity.kt	(date 1745526672049)
+@@ -13,6 +13,7 @@
+ import androidx.appcompat.app.AppCompatActivity
+ import androidx.core.content.ContextCompat
+ import com.example.plantwise.ReminderUtils
++import com.google.android.material.bottomnavigation.BottomNavigationView
+ import com.google.firebase.auth.FirebaseAuth
+ import com.google.firebase.firestore.FirebaseFirestore
+ import com.google.firebase.messaging.FirebaseMessaging
+@@ -111,4 +112,38 @@
+                 }
+             }
+     }
++
++    private fun setupBottomNav() {
++        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
++
++        bottomNav.setOnItemSelectedListener { menuItem ->
++            when (menuItem.itemId) {
++                R.id.nav_home -> {
++                    // you're already on Home, do nothing or refresh maybe
++                    true
++                }
++
++                R.id.nav_nursery -> {
++                    val intent = Intent(this, NurseryActivity::class.java)
++                    startActivity(intent)
++                    true
++
++                }
++
++                R.id.nav_garden -> {
++                    // Navigate to ReminderActivity when "My Garden" is tapped
++                    val intent = Intent(this, AddPlantActivity::class.java)
++                    startActivity(intent)
++                    true
++                }
++                R.id.nav_garden1 -> {
++                    // Navigate to ReminderActivity when "My Garden" is tapped
++                    val intent = Intent(this, MyPlantsActivity::class.java)
++                    startActivity(intent)
++                    true
++                }
++                else -> false
++            }
++        }
++    }
+ }
+Index: app/src/main/java/com/example/plantwise/HomeActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.plantwise\r\n\r\nimport android.content.Intent\r\nimport android.os.Bundle\r\nimport android.text.Editable\r\nimport android.text.TextWatcher\r\nimport android.util.Log\r\nimport android.widget.EditText\r\nimport android.widget.Toast\r\nimport android.widget.ImageView\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport androidx.recyclerview.widget.GridLayoutManager\r\nimport androidx.recyclerview.widget.RecyclerView\r\nimport com.google.android.material.bottomnavigation.BottomNavigationView\r\n\r\nclass HomeActivity : AppCompatActivity() {\r\n\r\n    private lateinit var recyclerView: RecyclerView\r\n    private lateinit var searchBar: EditText\r\n    private lateinit var plantAdapter: PlantAdapter\r\n    private var plantList: List<PlantData> = listOf()\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.home_page)  // Make sure this matches your XML file name\r\n\r\n        val profileIcon: ImageView = findViewById(R.id.profileImage)\r\n\r\n        profileIcon.setOnClickListener {\r\n            val intent = Intent(this, ProfileActivity::class.java)\r\n            startActivity(intent)\r\n        }\r\n\r\n\r\n        recyclerView = findViewById(R.id.recyclerView)\r\n        searchBar = findViewById(R.id.searchBar)\r\n\r\n        // 2-column grid layout\r\n        recyclerView.layoutManager = GridLayoutManager(this, 2)\r\n\r\n        // Load plant list from JSON\r\n        fetchPlants()\r\n        setupBottomNav()\r\n\r\n        // Setup search\r\n        searchBar.addTextChangedListener(object : TextWatcher {\r\n            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}\r\n            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {\r\n                plantAdapter.filter.filter(s)\r\n            }\r\n            override fun afterTextChanged(s: Editable?) {}\r\n        })\r\n    }\r\n\r\n    private fun fetchPlants() {\r\n        try {\r\n            plantList = JsonUtils.loadPlantCareData(this)\r\n\r\n            plantAdapter = PlantAdapter(plantList) { selectedPlant ->\r\n                val intent = Intent(this, PlantDetailActivity::class.java)\r\n                intent.putExtra(\"plantData\", selectedPlant)\r\n                startActivity(intent)\r\n            }\r\n\r\n            recyclerView.adapter = plantAdapter\r\n        } catch (e: Exception) {\r\n            Log.e(\"JSON_ERROR\", \"Failed to load json file: ${e.message}\")\r\n            Toast.makeText(this, \"Oops! Couldn't load plant data \uD83D\uDE22\", Toast.LENGTH_SHORT).show()\r\n        }\r\n    }\r\n\r\n    private fun setupBottomNav() {\r\n        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)\r\n\r\n        bottomNav.setOnItemSelectedListener { menuItem ->\r\n            when (menuItem.itemId) {\r\n                R.id.nav_home -> {\r\n                    // you're already on Home, do nothing or refresh maybe\r\n                    true\r\n                }\r\n\r\n                R.id.nav_nursery -> {\r\n                    val intent = Intent(this, NurseryActivity::class.java)\r\n                    startActivity(intent)\r\n                    true\r\n\r\n                }\r\n\r\n                R.id.nav_garden -> {\r\n                    // Navigate to ReminderActivity when \"My Garden\" is tapped\r\n                    val intent = Intent(this, AddPlantActivity::class.java)\r\n                    startActivity(intent)\r\n                    true\r\n                }\r\n                R.id.nav_garden1 -> {\r\n                    // Navigate to ReminderActivity when \"My Garden\" is tapped\r\n                    val intent = Intent(this, MyPlantsActivity::class.java)\r\n                    startActivity(intent)\r\n                    true\r\n                }\r\n                else -> false\r\n            }\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/plantwise/HomeActivity.kt b/app/src/main/java/com/example/plantwise/HomeActivity.kt
+--- a/app/src/main/java/com/example/plantwise/HomeActivity.kt	(revision 29cc249e624f63b44dd98ada6848a53ba47d3126)
++++ b/app/src/main/java/com/example/plantwise/HomeActivity.kt	(date 1745526672054)
+@@ -74,7 +74,7 @@
+ 
+         bottomNav.setOnItemSelectedListener { menuItem ->
+             when (menuItem.itemId) {
+-                R.id.nav_home -> {
++                    R.id.nav_home -> {
+                     // you're already on Home, do nothing or refresh maybe
+                     true
+                 }
+Index: app/src/main/java/com/example/plantwise/MyPlantsActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.plantwise\r\n\r\nimport android.content.Intent\r\nimport android.os.Bundle\r\nimport android.util.Log\r\nimport android.widget.Toast\r\nimport androidx.activity.result.contract.ActivityResultContracts\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport androidx.recyclerview.widget.LinearLayoutManager\r\nimport androidx.recyclerview.widget.RecyclerView\r\nimport com.google.firebase.auth.FirebaseAuth\r\nimport com.google.firebase.firestore.FirebaseFirestore\r\nimport com.google.firebase.messaging.FirebaseMessaging\r\nclass MyPlantsActivity : AppCompatActivity() {\r\n\r\n    private lateinit var adapter: UserPlantAdapter\r\n    private lateinit var recyclerView: RecyclerView\r\n    private val plantList = mutableListOf<PlantModel>()\r\n\r\n    val launcher = registerForActivityResult(\r\n        ActivityResultContracts.StartActivityForResult()\r\n    ) { result ->\r\n        if (result.resultCode == RESULT_OK) {\r\n            loadUserPlants()\r\n        }\r\n    }\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.activity_user_plants)\r\n\r\n        recyclerView = findViewById(R.id.plantsRecyclerView)\r\n        recyclerView.layoutManager = LinearLayoutManager(this)\r\n\r\n        adapter = UserPlantAdapter(\r\n            userPlants = plantList,\r\n            onEditClick = { plant ->\r\n                val intent = Intent(this, EditPlantActivity::class.java)\r\n                intent.putExtra(\"plantId\", plant.id)\r\n                intent.putExtra(\"name\", plant.name)\r\n                intent.putExtra(\"desc\", plant.desc)\r\n                intent.putExtra(\"hour\", plant.hour)\r\n                intent.putExtra(\"minute\", plant.minute)\r\n                launcher.launch(intent)\r\n            },\r\n            onDeleteClick = { plant ->\r\n                deletePlantFromFirestore(plant)\r\n            }\r\n        )\r\n\r\n        recyclerView.adapter = adapter\r\n\r\n        loadUserPlants()\r\n        saveFcmTokenToFirestore()\r\n    }\r\n\r\n    private fun loadUserPlants() {\r\n        val uid = FirebaseAuth.getInstance().currentUser?.uid\r\n\r\n        if (uid != null) {\r\n            FirebaseFirestore.getInstance()\r\n                .collection(\"user_plants\")\r\n                .whereEqualTo(\"userId\", uid)\r\n                .get()\r\n                .addOnSuccessListener { querySnapshot ->\r\n                    plantList.clear()\r\n                    for (document in querySnapshot.documents) {\r\n                        val name = document.getString(\"name\") ?: \"Unnamed Plant\"\r\n                        val desc = document.getString(\"desc\") ?: \"No description\"\r\n                        val hour = document.getLong(\"hour\")?.toInt() ?: 0\r\n                        val minute = document.getLong(\"minute\")?.toInt() ?: 0\r\n                        val id = document.id\r\n\r\n                        val plant = PlantModel(name, desc, hour, minute, id)\r\n                        plantList.add(plant)\r\n\r\n                        ReminderUtils.scheduleWateringReminder(this, hour, minute, name)\r\n                    }\r\n                    adapter.notifyDataSetChanged()\r\n//                  Toast.makeText(this, \"Reminders set for all plants \uD83C\uDF31\uD83D\uDCA7\", Toast.LENGTH_SHORT).show()\r\n                }\r\n                .addOnFailureListener { e ->\r\n                    Log.e(\"PlantError\", \"Failed to fetch plants: \", e)\r\n                    Toast.makeText(this, \"Failed to load plants \uD83D\uDE22\", Toast.LENGTH_SHORT).show()\r\n                }\r\n        } else {\r\n            Toast.makeText(this, \"User not logged in \uD83D\uDE14\", Toast.LENGTH_SHORT).show()\r\n        }\r\n    }\r\n\r\n    private fun deletePlantFromFirestore(plant: PlantModel) {\r\n        FirebaseFirestore.getInstance()\r\n            .collection(\"user_plants\")\r\n            .document(plant.id)\r\n            .delete()\r\n            .addOnSuccessListener {\r\n                plantList.remove(plant)\r\n                adapter.notifyDataSetChanged()\r\n                Toast.makeText(this, \"Deleted \uD83C\uDF3F\", Toast.LENGTH_SHORT).show()\r\n            }\r\n            .addOnFailureListener { e ->\r\n                Log.e(\"DeleteError\", \"Failed to delete plant \uD83D\uDE22\", e)\r\n                Toast.makeText(this, \"Failed to delete \uD83E\uDD72\", Toast.LENGTH_SHORT).show()\r\n            }\r\n    }\r\n\r\n    private fun saveFcmTokenToFirestore() {\r\n        val user = FirebaseAuth.getInstance().currentUser ?: return\r\n\r\n        FirebaseMessaging.getInstance().token\r\n            .addOnCompleteListener { task ->\r\n                if (task.isSuccessful) {\r\n                    val token = task.result\r\n                    val db = FirebaseFirestore.getInstance()\r\n                    val tokenData = hashMapOf(\"fcmToken\" to token)\r\n\r\n                    db.collection(\"user_tokens\")\r\n                        .document(user.uid)\r\n                        .set(tokenData)\r\n                        .addOnSuccessListener {\r\n                            Log.d(\"FCM\", \"Token saved to Firestore \uD83D\uDCBE\")\r\n                        }\r\n                        .addOnFailureListener { e ->\r\n                            Log.e(\"FCM\", \"Failed to save token \uD83D\uDE22\", e)\r\n                        }\r\n                } else {\r\n                    Log.w(\"FCM\", \"Fetching FCM token failed\", task.exception)\r\n                }\r\n            }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/plantwise/MyPlantsActivity.kt b/app/src/main/java/com/example/plantwise/MyPlantsActivity.kt
+--- a/app/src/main/java/com/example/plantwise/MyPlantsActivity.kt	(revision 29cc249e624f63b44dd98ada6848a53ba47d3126)
++++ b/app/src/main/java/com/example/plantwise/MyPlantsActivity.kt	(date 1745526672060)
+@@ -128,4 +128,6 @@
+                 }
+             }
+     }
++
++
+ }
+Index: app/src/main/res/layout/activity_profile.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@drawable/prof\">\r\n\r\n    <!-- Wavy Background -->\r\n\r\n    <!-- Profile Image -->\r\n\r\n    <!-- \uD83D\uDFE6 Container with rounded background for text -->\r\n\r\n    <!-- Logout Button -->\r\n\r\n    <ImageView\r\n        android:id=\"@+id/wavyBg\"\r\n        android:layout_width=\"425dp\"\r\n        android:layout_height=\"195dp\"\r\n        android:scaleType=\"centerCrop\"\r\n        android:src=\"@drawable/wavy_background\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/profileImg\"\r\n        android:layout_width=\"75dp\"\r\n        android:layout_height=\"80dp\"\r\n        android:layout_marginTop=\"52dp\"\r\n        android:background=\"@drawable/circle_background\"\r\n        android:scaleType=\"centerCrop\"\r\n        android:src=\"@drawable/profile_icon\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/infoContainer\"\r\n        android:layout_width=\"271dp\"\r\n        android:layout_height=\"220dp\"\r\n        android:layout_marginTop=\"140dp\"\r\n        android:background=\"@drawable/rouunded_bg\"\r\n        android:orientation=\"vertical\"\r\n        android:padding=\"16dp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/profileImg\">\r\n\r\n        <!-- User Name -->\r\n        <TextView\r\n            android:id=\"@+id/userName\"\r\n            android:layout_width=\"143dp\"\r\n            android:layout_height=\"43dp\"\r\n            android:text=\"Name\"\r\n            android:textColor=\"#000000\"\r\n            android:textSize=\"20sp\"\r\n            android:textStyle=\"bold\" />\r\n\r\n        <!-- Email -->\r\n        <TextView\r\n            android:id=\"@+id/userEmail\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"41dp\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:text=\"email@example.com\"\r\n            android:textColor=\"#666\"\r\n            android:textSize=\"16sp\" />\r\n    </LinearLayout>\r\n\r\n    <Button\r\n        android:id=\"@+id/logoutBtn\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"40dp\"\r\n        android:backgroundTint=\"#00897B\"\r\n        android:text=\"Log Out\"\r\n        android:textColor=\"#FFFFFF\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.498\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/infoContainer\" />\r\n</androidx.constraintlayout.widget.ConstraintLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_profile.xml b/app/src/main/res/layout/activity_profile.xml
+--- a/app/src/main/res/layout/activity_profile.xml	(revision 29cc249e624f63b44dd98ada6848a53ba47d3126)
++++ b/app/src/main/res/layout/activity_profile.xml	(date 1745526672197)
+@@ -82,4 +82,17 @@
+         app:layout_constraintHorizontal_bias="0.498"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/infoContainer" />
++
++    <com.google.android.material.bottomnavigation.BottomNavigationView
++        android:id="@+id/bottomNav"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:background="@color/dark_green"
++        app:itemIconTint="@color/black"
++        app:itemTextColor="@color/white"
++        app:labelVisibilityMode="labeled"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:menu="@menu/bottom_nav_menu" />
++
+ </androidx.constraintlayout.widget.ConstraintLayout>
+Index: app/src/main/res/layout/activity_add_plant.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:padding=\"24dp\"\r\n    android:background=\"@drawable/user\"\r\n    tools:context=\".MyPlantsActivity\">\r\n\r\n    <com.google.android.material.textfield.TextInputLayout\r\n        android:id=\"@+id/plantNameLayout\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:hint=\"Plant Name\"\r\n        android:layout_marginTop=\"90dp\"\r\n        android:textColor=\"@color/black\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\">\r\n\r\n        <com.google.android.material.textfield.TextInputEditText\r\n            android:id=\"@+id/plantNameInput\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:background=\"@drawable/rouunded_bg\"\r\n            android:fontFamily=\"@font/amaranth\"\r\n            android:padding=\"12dp\"\r\n            android:textColor=\"@color/black\" />\r\n    </com.google.android.material.textfield.TextInputLayout>\r\n\r\n    <com.google.android.material.textfield.TextInputLayout\r\n        android:id=\"@+id/plantDescLayout\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:hint=\"Short Description\"\r\n        android:textColor=\"@color/black\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/plantNameLayout\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        android:layout_marginTop=\"20dp\">\r\n\r\n        <com.google.android.material.textfield.TextInputEditText\r\n            android:id=\"@+id/plantDescInput\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:background=\"@drawable/rouunded_bg\"\r\n            android:fontFamily=\"@font/amaranth\"\r\n            android:padding=\"12dp\"\r\n            android:textColor=\"@color/black\" />\r\n    </com.google.android.material.textfield.TextInputLayout>\r\n\r\n    <TimePicker\r\n        android:id=\"@+id/wateringTimePicker\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"35dp\"\r\n        android:background=\"@drawable/rouunded_bg\"\r\n        android:padding=\"16dp\"\r\n        android:timePickerMode=\"spinner\"\r\n        android:theme=\"@style/TimePickerTheme\"\r\n    app:layout_constraintEnd_toEndOf=\"parent\"\r\n    app:layout_constraintHorizontal_bias=\"0.493\"\r\n    app:layout_constraintStart_toStartOf=\"parent\"\r\n    app:layout_constraintTop_toBottomOf=\"@+id/plantDescLayout\" />\r\n\r\n    <com.google.android.material.button.MaterialButton\r\n        android:id=\"@+id/savePlantBtn\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"32dp\"\r\n        android:fontFamily=\"@font/amaranth\"\r\n        android:icon=\"@drawable/ic_water\"\r\n        android:padding=\"12dp\"\r\n        android:text=\"Save Plant \uD83C\uDF31\"\r\n        android:textAllCaps=\"false\"\r\n        android:textColor=\"@android:color/white\"\r\n        app:backgroundTint=\"@color/dark_green\"\r\n        app:cornerRadius=\"16dp\"\r\n        app:iconPadding=\"8dp\"\r\n        app:iconTint=\"@android:color/white\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/wateringTimePicker\"\r\n        app:rippleColor=\"@color/dark_green\" />\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_add_plant.xml b/app/src/main/res/layout/activity_add_plant.xml
+--- a/app/src/main/res/layout/activity_add_plant.xml	(revision 29cc249e624f63b44dd98ada6848a53ba47d3126)
++++ b/app/src/main/res/layout/activity_add_plant.xml	(date 1745526672189)
+@@ -85,5 +85,20 @@
+         app:layout_constraintTop_toBottomOf="@id/wateringTimePicker"
+         app:rippleColor="@color/dark_green" />
+ 
++    <com.google.android.material.bottomnavigation.BottomNavigationView
++        android:id="@+id/bottomNav"
++        android:layout_width="405dp"
++        android:layout_height="75dp"
++        android:layout_marginEnd="15dp"
++        android:layout_marginBottom="-10dp"
++        android:background="@color/dark_green"
++        app:itemIconTint="@color/black"
++        app:itemTextColor="@color/white"
++        app:labelVisibilityMode="labeled"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:menu="@menu/bottom_nav_menu" />
++
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
