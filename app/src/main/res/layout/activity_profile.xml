@@ -52,8 +52,8 @@
         <!-- User Name -->
         <TextView
             android:id="@+id/userName"
-            android:layout_width="143dp"
-            android:layout_height="43dp"
+            android:layout_width="239dp"
+            android:layout_height="69dp"
             android:text="Name"
             android:textColor="#000000"
             android:textSize="20sp"

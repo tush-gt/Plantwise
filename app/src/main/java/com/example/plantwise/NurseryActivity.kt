@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import org.osmdroid.config.Configuration
 import org.osmdroid.views.MapView
@@ -61,6 +62,8 @@ class NurseryActivity : AppCompatActivity() {
 
         // Initially hide the map
         mapView.visibility = View.GONE
+
+        setupBottomNav()
 
         // Check and request location permissions
         checkLocationPermission()
@@ -163,5 +166,39 @@ class NurseryActivity : AppCompatActivity() {
         }
 
         return nurseryList
+    }
+    private fun setupBottomNav() {
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+
+        bottomNav.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_home -> {
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.nav_nursery -> {
+                    val intent = Intent(this, NurseryActivity::class.java)
+                    startActivity(intent)
+                    true
+
+                }
+
+                R.id.nav_garden -> {
+                    // Navigate to ReminderActivity when "My Garden" is tapped
+                    val intent = Intent(this, AddPlantActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.nav_garden1 -> {
+                    // Navigate to ReminderActivity when "My Garden" is tapped
+                    val intent = Intent(this, MyPlantsActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 }
