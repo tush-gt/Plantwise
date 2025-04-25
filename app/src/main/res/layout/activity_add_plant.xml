@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
     android:background="@drawable/user"
     tools:context=".MyPlantsActivity">
 
@@ -13,12 +12,12 @@
         android:id="@+id/plantNameLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Plant Name"
         android:layout_marginTop="90dp"
+        android:hint="Plant Name"
         android:textColor="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/plantNameInput"
@@ -90,13 +89,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/dark_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/white"
         app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
+
 
 
 
