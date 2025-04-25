@@ -179,8 +179,8 @@ class NurseryActivity : AppCompatActivity() {
                 }
 
                 R.id.nav_nursery -> {
-                    val intent = Intent(this, NurseryActivity::class.java)
-                    startActivity(intent)
+//                    val intent = Intent(this, NurseryActivity::class.java)
+//                    startActivity(intent)
                     true
 
                 }

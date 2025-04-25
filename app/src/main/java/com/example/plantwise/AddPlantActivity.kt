@@ -44,7 +44,7 @@ class AddPlantActivity : AppCompatActivity() {
         val descInput: EditText = findViewById(R.id.plantDescInput)
         val timePicker: TimePicker = findViewById(R.id.wateringTimePicker)
         val saveBtn: Button = findViewById(R.id.savePlantBtn)
-
+        setupBottomNav()
         checkNotificationPermission()
         saveFcmTokenToFirestore() // 🔥 Save FCM token if not already saved
 
@@ -119,7 +119,8 @@ class AddPlantActivity : AppCompatActivity() {
         bottomNav.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> {
-                    // you're already on Home, do nothing or refresh maybe
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
                     true
                 }
 
@@ -132,8 +133,8 @@ class AddPlantActivity : AppCompatActivity() {
 
                 R.id.nav_garden -> {
                     // Navigate to ReminderActivity when "My Garden" is tapped
-                    val intent = Intent(this, AddPlantActivity::class.java)
-                    startActivity(intent)
+//                    val intent = Intent(this, AddPlantActivity::class.java)
+//                    startActivity(intent)
                     true
                 }
                 R.id.nav_garden1 -> {

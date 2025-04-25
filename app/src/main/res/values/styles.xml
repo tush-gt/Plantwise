@@ -1,13 +1,24 @@
 <resources>
+
+    <!-- Theme applied to your activity (MyPlantsActivity, etc.) -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- other general app styling can go here -->
+    </style>
+
+    <!-- TimePicker theming -->
     <style name="TimePickerTheme" parent="Theme.MaterialComponents.DayNight">
         <item name="android:timePickerStyle">@style/CustomTimePickerDark</item>
     </style>
 
     <style name="CustomTimePickerDark" parent="android:Widget.Material.TimePicker">
-        <item name="android:theme">@style/NumberPickerStyle</item> <!-- force internal styling -->
+        <item name="android:theme">@style/NumberPickerStyle</item>
     </style>
 
     <style name="NumberPickerStyle" parent="ThemeOverlay.MaterialComponents.TimePicker">
-        <item name="android:textColorPrimary">@android:color/white</item> <!-- try white first -->
+        <item name="android:textColorPrimary">@android:color/white</item>
     </style>
+
 </resources>
