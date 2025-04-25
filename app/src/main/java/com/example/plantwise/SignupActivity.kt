@@ -1,7 +1,5 @@
 package com.example.plantwise
 
-import com.example.plantwise.HomeActivity
-
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -27,43 +25,39 @@ class SignupActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
         binding.signup.setOnClickListener {
+            val name = binding.nameEditText.text.toString()
+            val email = binding.emailEditText.text.toString()
+            val pass = binding.passwordEditText.text.toString()
+            val confirmPass = binding.confirmPasswordEditText.text.toString()
 
-            val email = binding.email.toString()
-            val pass = binding.password.toString()
-            val confirmPass = binding.confirmPassword.toString()
-
-            if (email.isEmpty() || pass.isEmpty() || confirmPass.isEmpty()){
-                Toast.makeText(this, "Please fill the fields!", Toast.LENGTH_SHORT).show()
+            if (email.isEmpty() || pass.isEmpty() || confirmPass.isEmpty() || name.isEmpty()) {
+                Toast.makeText(this, "Please fill in all fields!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
 
+            if (pass != confirmPass) {
+                Toast.makeText(this, "Passwords do not match!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
-            if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
-                if (pass == confirmPass) {
-
-                    firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
-                        if (it.isSuccessful) {
-                            val user = firebaseAuth.currentUser
-                            val profileUpdates = UserProfileChangeRequest.Builder()
-                                .setDisplayName(binding.name.toString()) // Ensure correct ID
-                                .build()
-                            user?.updateProfile(profileUpdates)?.addOnCompleteListener {
-                                val intent = Intent(this, HomeActivity::class.java)
-                                startActivity(intent)
-                            }
+            firebaseAuth.createUserWithEmailAndPassword(email, pass)
+                .addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        val user = firebaseAuth.currentUser
+                        val profileUpdates = UserProfileChangeRequest.Builder()
+                            .setDisplayName(name)
+                            .build()
+                        user?.updateProfile(profileUpdates)?.addOnCompleteListener {
+                            Toast.makeText(this, "Signup Successful", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this, HomeActivity::class.java))
+                            finish()
                         }
-                        else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-
-                        }
+                    } else {
+                        Toast.makeText(this, it.exception?.message ?: "Signup Failed", Toast.LENGTH_SHORT).show()
                     }
-                } else {
-                    Toast.makeText(this, "Password is not matching", Toast.LENGTH_SHORT).show()
                 }
-            } else {
-                Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
-
-            }
         }
     }
 }
