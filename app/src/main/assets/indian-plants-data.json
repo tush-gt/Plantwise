@@ -64,19 +64,7 @@
       "growthForm": "Succulent with thick, fleshy leaves growing in a rosette",
       "specification": "Contains over 75 active compounds. Inner leaf gel is clear and soothing. Outer leaf contains aloin which has laxative properties."
     },
-    {
-      "commonName": "Curry Leaf Plant",
-      "scientificName": "Murraya koenigii",
-      "image": "curryleaf",
-      "type": ["food", "medicinal"],
-      "use": "Leaves used as flavoring in South Indian cuisine. Also used in folk medicine for digestive problems.",
-      "waterNeeds": "Moderate; keep soil lightly moist",
-      "sunlightNeeds": "Full sun to partial shade",
-      "careTips": "Fertilize every 2-3 months. Prune to maintain shape. May drop leaves in winter.",
-      "storageTips": "Fresh leaves can be refrigerated for up to two weeks. Can be dried or frozen for longer storage.",
-      "growthForm": "Small evergreen tree or shrub growing up to 4-6 meters",
-      "specification": "Aromatic leaves with distinct curry-like fragrance. Seeds and bark also have medicinal properties."
-    },
+
     {
       "commonName": "Ashwagandha",
       "scientificName": "Withania somnifera",
@@ -103,19 +91,7 @@
       "growthForm": "Annual herb growing up to 0.5-1 meter tall",
       "specification": "Widely used in Diwali and other Hindu ceremonies. Contains lutein which is beneficial for eye health."
     },
-    {
-      "commonName": "Indian Rosewood (Sheesham)",
-      "scientificName": "Dalbergia sissoo",
-      "image": "rosewood",
-      "type": ["decorative"],
-      "use": "Valued for its hard timber used in furniture making, carving, and construction.",
-      "waterNeeds": "Moderate; established trees are drought-tolerant",
-      "sunlightNeeds": "Full sun",
-      "careTips": "Prune to maintain shape. Watch for pests like defoliators and borers.",
-      "storageTips": "Not applicable for home storage as it's primarily grown for timber.",
-      "growthForm": "Deciduous tree growing up to 25 meters tall",
-      "specification": "Fast-growing species that also helps in preventing soil erosion. Wood has a distinctive grain pattern and reddish-brown color."
-    },
+
     {
       "commonName": "Lemongrass",
       "scientificName": "Cymbopogon citratus",
@@ -181,19 +157,7 @@
       "growthForm": "Evergreen vine or shrub growing up to 2-3 meters tall",
       "specification": "Flowers open at night and release strongest fragrance in evening. Several varieties grown in India include single and double-flowered forms."
     },
-    {
-      "commonName": "Indian Sandalwood",
-      "scientificName": "Santalum album",
-      "image": "sandalwood",
-      "type": ["medicinal", "religious", "decorative"],
-      "use": "Heartwood and oil used in perfumes, religious ceremonies, and carving. Has cooling properties in Ayurveda.",
-      "waterNeeds": "Moderate; drought-tolerant once established",
-      "sunlightNeeds": "Full sun to partial shade",
-      "careTips": "Requires host plants initially as it's semi-parasitic. Grows slowly and needs protection from frost.",
-      "storageTips": "Heartwood can be stored indefinitely. Oil should be stored in dark glass bottles.",
-      "growthForm": "Evergreen tree growing up to 12-15 meters tall",
-      "specification": "Trees must be at least 30 years old before harvesting for quality heartwood. Protected species in India due to overexploitation."
-    },
+
     {
       "commonName": "Brahmi",
       "scientificName": "Bacopa monnieri",
@@ -233,19 +197,7 @@
       "growthForm": "Annual climbing vine growing up to 5 meters long",
       "specification": "Contains charantin which helps lower blood glucose levels. Fruits become more bitter as they mature and turn orange."
     },
-    {
-      "commonName": "Bael (Wood Apple)",
-      "scientificName": "Aegle marmelos",
-      "image": "tulsi",
-      "type": ["religious", "food", "medicinal"],
-      "use": "Fruit used in religious offerings to Lord Shiva, in beverages, and for treating digestive disorders.",
-      "waterNeeds": "Low; drought-tolerant once established",
-      "sunlightNeeds": "Full sun",
-      "careTips": "Prune to maintain shape. Fertilize annually. Protect young plants from frost.",
-      "storageTips": "Fresh fruit can be stored up to 2 weeks. Pulp can be dried or made into preserves.",
-      "growthForm": "Deciduous tree growing up to 12-15 meters tall",
-      "specification": "Hard-shelled fruit with aromatic pulp. Slow-growing but can live for over 100 years."
-    },
+
     {
       "commonName": "Night Jasmine (Harsingar)",
       "scientificName": "Nyctanthes arbor-tristis",
@@ -259,19 +211,7 @@
       "growthForm": "Large shrub or small tree growing up to 10 meters tall",
       "specification": "Flowers bloom at night and drop in the morning. Orange flower tubes with white petals create a distinctive appearance."
     },
-    {
-      "commonName": "Custard Apple (Sitaphal)",
-      "scientificName": "Annona squamosa",
-      "image": "sitaphal",
-      "type": ["food", "medicinal"],
-      "use": "Sweet fruit eaten fresh. Seeds and leaves used in traditional medicine to treat lice and skin conditions.",
-      "waterNeeds": "Moderate; water deeply and infrequently",
-      "sunlightNeeds": "Full sun",
-      "careTips": "Prune to maintain size and shape. Apply mulch to retain moisture. Protect from frost.",
-      "storageTips": "Ripe fruits can be refrigerated for 2-3 days. Can be frozen as pulp.",
-      "growthForm": "Small deciduous tree growing up to 6-8 meters tall",
-      "specification": "Hand pollination may improve fruit set. Seeds are toxic and should not be consumed."
-    },
+
     {
       "commonName": "Drumstick Tree (Moringa)",
       "scientificName": "Moringa oleifera",
@@ -350,20 +290,7 @@
       "growthForm": "Evergreen perennial with upright, sword-like leaves",
       "specification": "Also called Mother-in-Law's Tongue. Removes toxins like formaldehyde and benzene from air."
     },
-    {
-      "commonName": "Mint (Pudina)",
-      "scientificName": "Mentha spicata",
-      "image": "pudina",
-      "type": ["food", "medicinal"],
-      "use": "Leaves used in chutneys, drinks, and as digestive aid. Has cooling properties.",
-      "waterNeeds": "High; keep soil moist (water every 2 days)",
-      "sunlightNeeds": "Partial sun (4-6 hours)",
-      "careTips": "Grows aggressively; best grown in containers. Pinch back regularly to promote bushiness.",
-      "storageTips": "Fresh leaves last about a week refrigerated in damp paper towel. Can be frozen in ice cubes.",
-      "growthForm": "Fast-growing perennial herb spreading by runners",
-      "specification": "Several varieties grown in India including peppermint and spearmint. Used in traditional remedies for indigestion."
-    },
-    {
+  {
       "commonName": "Coriander (Dhania)",
       "scientificName": "Coriandrum sativum",
       "image": "kothimbir",
@@ -727,19 +654,7 @@
       "growthForm": "Evergreen tree up to 12 meters tall",
       "specification": "Ancient symbol of wisdom. Leaves used in Greek/Roman laurel wreaths."
     },
-    {
-      "commonName": "Stevia",
-      "scientificName": "Stevia rebaudiana",
-      "image": "stevia",
-      "type": ["medicinal", "food"],
-      "use": "Natural zero-calorie sweetener. Helps manage diabetes.",
-      "waterNeeds": "Moderate; don't overwater",
-      "sunlightNeeds": "Full sun to partial shade",
-      "careTips": "Pinch back for bushiness. Bring indoors in cold regions. Perennial in tropics.",
-      "storageTips": "Dry leaves and powder them. 1 tsp powder = 1 cup sugar sweetness.",
-      "growthForm": "Perennial herb up to 1 meter tall",
-      "specification": "300x sweeter than sugar. Approved as sugar substitute in 2015 in India."
-    },
+
     {
       "commonName": "Gotu Kola",
       "scientificName": "Centella asiatica",
@@ -753,30 +668,425 @@
       "growthForm": "Perennial creeping herb",
       "specification": "Called 'Brahmi' in North India. Different from Bacopa monnieri (true Brahmi)."
     },
+
+
+
     {
-      "commonName": "Giloy",
+      "commonName": "Aam (आम/Mango)",
+      "scientificName": "Mangifera indica",
+      "image": "mango",
+      "type": ["food", "medicinal"],
+      "use": "National fruit of India. Fruits eaten fresh or processed. Leaves, bark, and seeds used in traditional medicine.",
+      "waterNeeds": "Moderate; deep watering during fruit development",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Prune to maintain shape. Protect from frost. Apply potassium-rich fertilizer during fruiting season.",
+      "storageTips": "Ripe mangoes can be refrigerated for up to a week. Can be frozen as pulp or dried as slices.",
+      "growthForm": "Large evergreen tree growing up to 35-40 meters tall",
+      "specification": "Over 1000 varieties grown in India. King of fruits with unique chemical profile of terpenes."
+    },
+    {
+      "commonName": "Anar (अनार/Pomegranate)",
+      "scientificName": "Punica granatum",
+      "image": "pomegranate",
+      "type": ["food", "medicinal"],
+      "use": "Fruits eaten fresh or juiced. Rind and bark used in Ayurveda for parasitic infections and diarrhea.",
+      "waterNeeds": "Moderate; drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Prune in winter for better fruit production. Protect from fruit flies with paper bags.",
+      "storageTips": "Fresh fruits last 1-2 months in refrigeration. Arils can be frozen or dried.",
+      "growthForm": "Deciduous shrub or small tree growing up to 5-8 meters",
+      "specification": "Symbol of fertility and abundance. Juice contains punicalagins with potent antioxidant activity."
+    },
+    {
+      "commonName": "Guava (अमरूद/Amrood)",
+      "scientificName": "Psidium guajava",
+      "image": "guava",
+      "type": ["food", "medicinal"],
+      "use": "Fruits rich in vitamin C. Leaves used for diarrhea treatment and diabetes management.",
+      "waterNeeds": "Moderate; tolerates drought once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Prune after fruiting to maintain shape. Protect fruits from fruit flies and birds with netting.",
+      "storageTips": "Ripe fruits last about a week refrigerated. Can be preserved as jam or jelly.",
+      "growthForm": "Evergreen shrub or small tree growing up to 3-10 meters",
+      "specification": "Both white and pink flesh varieties popular in India. Young leaves contain quercetin and other flavonoids."
+    },
+    {
+      "commonName": "Chandan (चंदन/Sandalwood)",
+      "scientificName": "Santalum album",
+      "image": "sandalwood",
+      "type": ["medicinal", "religious", "cosmetic"],
+      "use": "Heartwood and oil used in religious ceremonies, perfumes, and Ayurvedic medicine for cooling properties.",
+      "waterNeeds": "Moderate; drought-tolerant once established",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Semi-parasitic; needs host plants initially. Grows slowly; protect from frost and excessive heat.",
+      "storageTips": "Heartwood and powder should be stored in airtight containers. Oil in dark glass bottles.",
+      "growthForm": "Evergreen tree growing up to 12-15 meters tall",
+      "specification": "Protected species in India. Heartwood develops fragrance after 15-20 years of growth."
+    },
+    {
+      "commonName": "Jamun (जामुन/Java Plum)",
+      "scientificName": "Syzygium cumini",
+      "image": "jamun",
+      "type": ["food", "medicinal"],
+      "use": "Fruits eaten fresh or made into vinegar and wine. Seeds powdered for diabetes management.",
+      "waterNeeds": "Moderate; established trees are drought-tolerant",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Minimal pruning required. Remove water sprouts and suckers. Tolerates poor soil conditions.",
+      "storageTips": "Fresh fruits highly perishable; consume within 2-3 days. Seeds can be dried and powdered.",
+      "growthForm": "Evergreen tree growing up to 30 meters tall",
+      "specification": "Purple-black fruits with astringent taste. Seeds contain jamboline which helps lower blood sugar."
+    },
+    {
+      "commonName": "Chyawanprash Herbs (च्यवनप्राश)",
+      "scientificName": "Emblica officinalis + multiple herbs",
+      "image": "chyawanprash",
+      "type": ["medicinal", "food"],
+      "use": "Traditional Ayurvedic formulation used as immunity booster and rejuvenative tonic.",
+      "waterNeeds": "Varies by herb component",
+      "sunlightNeeds": "Varies by herb component",
+      "careTips": "Primarily processed product; not typically grown as single plant. Main ingredient is Amla.",
+      "storageTips": "Store in airtight containers away from direct heat and sunlight. Refrigerate after opening.",
+      "growthForm": "Processed herbal jam made from multiple plant ingredients",
+      "specification": "Contains over 50 herbs with Amla as primary ingredient. Ancient formula mentioned in Charaka Samhita."
+    },
+    {
+      "commonName": "Babool (बबूल/Acacia)",
+      "scientificName": "Vachellia nilotica",
+      "image": "babool",
+      "type": ["medicinal", "industrial"],
+      "use": "Bark used for gum inflammation and toothpaste. Gum arabic has multiple industrial applications.",
+      "waterNeeds": "Low; extremely drought-tolerant",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Requires minimal care. Thorny branches need careful handling. Can become invasive in some areas.",
+      "storageTips": "Dried bark can be stored in airtight containers. Gum arabic in cool, dry place.",
+      "growthForm": "Thorny deciduous tree growing up to 20 meters tall",
+      "specification": "Thorns are modified stipules. Spherical yellow flower heads are highly fragrant."
+    },
+    {
+      "commonName": "Kela (केला/Banana)",
+      "scientificName": "Musa paradisiaca",
+      "image": "banana",
+      "type": ["food", "medicinal", "religious"],
+      "use": "Fruits eaten fresh or cooked. Flowers and stem used in curries. Plant has religious significance.",
+      "waterNeeds": "High; requires consistent moisture",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Remove suckers to maintain 3-4 stems per clump. Protect from strong winds. Heavy feeder.",
+      "storageTips": "Ripen at room temperature. Refrigerate ripe bananas for up to a week. Can be dried or fried as chips.",
+      "growthForm": "Giant herbaceous perennial growing from rhizome",
+      "specification": "Not actually a tree but world's largest herb. Dies after fruiting but produces new suckers."
+    },
+    {
+      "commonName": "Guduchi (गुडूची/Giloy)",
       "scientificName": "Tinospora cordifolia",
       "image": "giloy",
       "type": ["medicinal"],
-      "use": "Ayurvedic immunity booster. Used for fever, diabetes and arthritis.",
-      "waterNeeds": "Moderate; water when dry",
+      "use": "Stems used in Ayurveda for fever, diabetes, and arthritis. Major immunity booster.",
+      "waterNeeds": "Moderate; tolerates dry periods",
       "sunlightNeeds": "Partial shade to full sun",
-      "careTips": "Needs strong support structure. Prune to control aggressive growth.",
-      "storageTips": "Stems can be dried and stored for decoctions. Fresh juice most potent.",
-      "growthForm": "Perennial deciduous climber",
-      "specification": "Called 'Amrita' in Sanskrit. Grows over neem tree is considered most medicinal."
+      "careTips": "Provide strong support structure. Prune to control growth. Grows best when climbing on neem trees.",
+      "storageTips": "Dried stems can be stored for long periods. Fresh juice should be consumed immediately.",
+      "growthForm": "Perennial climbing shrub with succulent stems",
+      "specification": "Called 'Amrita' (nectar of immortality) in ancient texts. Most potent when growing on neem trees."
     },
     {
-      "commonName": "Shatavari",
+      "commonName": "Sadabahar (सदाबहार/Periwinkle)",
+      "scientificName": "Catharanthus roseus",
+      "image": "periwinkle",
+      "type": ["medicinal", "decorative"],
+      "use": "Source of vinca alkaloids used in cancer treatment. Used traditionally for diabetes management.",
+      "waterNeeds": "Low; drought-tolerant",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Deadhead spent flowers to encourage more blooms. Tolerates poor soil. Prone to fungal issues in high humidity.",
+      "storageTips": "Not typically stored; medicinal compounds extracted professionally.",
+      "growthForm": "Evergreen perennial growing up to 1 meter tall",
+      "specification": "Contains over 70 alkaloids. Name means 'ever-blooming' in Hindi. White and pink varieties available."
+    },
+    {
+      "commonName": "Shahad Patta (शहद पत्ता/Stevia)",
+      "scientificName": "Stevia rebaudiana",
+      "image": "stevia",
+      "type": ["medicinal", "food"],
+      "use": "Natural zero-calorie sweetener. Helps in diabetes management without affecting blood sugar.",
+      "waterNeeds": "Moderate; don't overwater",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Pinch back for bushiness. Bring indoors in cold regions. Perennial in tropical regions.",
+      "storageTips": "Dry leaves in shade and powder them. Store in airtight containers. 1 tsp powder equals 1 cup sugar sweetness.",
+      "growthForm": "Perennial herb growing up to 1 meter tall",
+      "specification": "Contains steviol glycosides that are 300 times sweeter than sugar but without calories."
+    },
+    {
+      "commonName": "Shatavari (शतावरी)",
       "scientificName": "Asparagus racemosus",
       "image": "shatavari",
       "type": ["medicinal"],
-      "use": "Women's health tonic. Galactagogue and hormonal balancer.",
-      "waterNeeds": "Moderate; drought-tolerant",
+      "use": "Root used in Ayurveda as female tonic for reproductive health and milk production in nursing mothers.",
+      "waterNeeds": "Moderate; tolerates brief dry periods",
       "sunlightNeeds": "Partial shade to full sun",
-      "careTips": "Provide trellis for climbing. Harvest roots after 2 years.",
-      "storageTips": "Dry roots and powder for storage. Keep in amber glass jars.",
-      "growthForm": "Perennial climbing shrub",
-      "specification": "Called 'Queen of Herbs' in Ayurveda. 100 roots = Shatavari (Sanskrit meaning)."
+      "careTips": "Provide trellis for climbing. Harvest roots after 2 years. Plant in well-draining soil.",
+      "storageTips": "Dried roots can be stored for up to 2 years in airtight containers away from light.",
+      "growthForm": "Thorny climbing herb with feathery foliage",
+      "specification": "Name means 'she who possesses a hundred husbands' referring to its fertility-enhancing properties."
+    },
+    {
+      "commonName": "Sitaphal (सीताफल/Custard Apple)",
+      "scientificName": "Annona squamosa",
+      "image": "sitaphal",
+      "type": ["food", "medicinal"],
+      "use": "Sweet fruit eaten fresh. Seeds have insecticidal properties. Leaves used for diabetes management.",
+      "waterNeeds": "Moderate; drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Prune to maintain shape and size. Hand pollination may improve fruit set. Protect from frost.",
+      "storageTips": "Ripe fruits are highly perishable; refrigerate for 2-3 days maximum. Pulp can be frozen.",
+      "growthForm": "Semi-deciduous small tree growing up to 8 meters tall",
+      "specification": "Seeds are toxic and should not be consumed. Fruit has custard-like texture when ripe."
+    },
+    {
+      "commonName": "Anantmool (अनंतमूल/Indian Sarsaparilla)",
+      "scientificName": "Hemidesmus indicus",
+      "image": "anantmool",
+      "type": ["medicinal"],
+      "use": "Roots used in Ayurveda for skin disorders, syphilis, and as blood purifier.",
+      "waterNeeds": "Moderate; tolerates dry periods",
+      "sunlightNeeds": "Partial shade",
+      "careTips": "Provide support for climbing. Grows well in sandy loam soil. Protect from excessive moisture.",
+      "storageTips": "Dried roots can be stored for up to a year in airtight containers in cool, dry place.",
+      "growthForm": "Slender twining shrub with woody base",
+      "specification": "Root has vanilla-like fragrance. Called 'False Sarsaparilla' as it's used similarly to American sarsaparilla."
+    },
+    {
+      "commonName": "Kalmegh (कालमेघ/Andrographis)",
+      "scientificName": "Andrographis paniculata",
+      "image": "kalmegh",
+      "type": ["medicinal"],
+      "use": "Extremely bitter herb used for fever, liver disorders, and immune enhancement.",
+      "waterNeeds": "Moderate; tolerates brief dry periods",
+      "sunlightNeeds": "Partial shade to full sun",
+      "careTips": "Sow directly as it doesn't transplant well. Harvest before flowering for highest medicinal content.",
+      "storageTips": "Dried whole plant can be stored in airtight containers for up to a year.",
+      "growthForm": "Annual herb growing up to 1 meter tall",
+      "specification": "Known as 'King of Bitters' due to intense bitter taste. Major component of Ayurvedic formula 'Sudarshan Churna'."
+    },
+    {
+      "commonName": "Imli (इमली/Tamarind)",
+      "scientificName": "Tamarindus indica",
+      "image": "tamarind",
+      "type": ["food", "medicinal"],
+      "use": "Pulp used as souring agent in cooking. Also used for digestive disorders and as mild laxative.",
+      "waterNeeds": "Low; extremely drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Minimal pruning required. Long tap root makes transplanting difficult for mature trees.",
+      "storageTips": "Dried pulp can be stored for years. Fresh pods can be kept in cool, dry place for months.",
+      "growthForm": "Long-lived evergreen tree growing up to 30 meters tall",
+      "specification": "Can live for over 200 years. Pulp contains tartaric acid giving it characteristic sourness."
+    },
+    {
+      "commonName": "Adulsa (अडूसा)",
+      "scientificName": "Justicia adhatoda",
+      "image": "adulsa",
+      "type": ["medicinal"],
+      "use": "Leaves used in Ayurveda for bronchitis, cough, and asthma. Powerful expectorant.",
+      "waterNeeds": "Moderate; tolerates dry periods",
+      "sunlightNeeds": "Partial shade to full sun",
+      "careTips": "Prune after flowering to maintain shape. Grows easily from cuttings. Tolerates poor soil.",
+      "storageTips": "Fresh leaves best for medicinal use. Can be dried and stored in airtight containers.",
+      "growthForm": "Evergreen shrub growing up to 3 meters tall",
+      "specification": "Contains alkaloid vasicine which helps dilate bronchial passages. White flowers resemble snapdragons."
+    },
+    {
+      "commonName": "Sharifa (शरीफा/Sugar Apple)",
+      "scientificName": "Annona squamosa",
+      "image": "sharifa",
+      "type": ["food", "medicinal"],
+      "use": "Sweet fruit with custard-like flesh. Seeds used externally for lice treatment.",
+      "waterNeeds": "Moderate; drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Same as Sitaphal (alternative name for same plant). Hand pollination improves yield.",
+      "storageTips": "Highly perishable; consume within 2-3 days of ripening. Can be refrigerated briefly.",
+      "growthForm": "Semi-deciduous small tree growing up to 8 meters tall",
+      "specification": "Segment-like fruit structure gives it scaly appearance. Contains significant vitamin C and potassium."
+    },
+    {
+      "commonName": "Kadi Patta (कड़ी पत्ता/Curry Leaf)",
+      "scientificName": "Murraya koenigii",
+      "image": "curryleaf",
+      "type": ["food", "medicinal"],
+      "use": "Leaves used as flavoring in South Indian cuisine. Used medicinally for diabetes and digestive issues.",
+      "waterNeeds": "Moderate; keep soil lightly moist",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Fertilize every 2-3 months. Prune to maintain shape. May drop leaves in winter.",
+      "storageTips": "Fresh leaves can be refrigerated for up to two weeks. Can be dried or frozen for longer storage.",
+      "growthForm": "Small evergreen tree growing up to 4-6 meters tall",
+      "specification": "Contains alkaloids that stimulate digestive enzymes. Aromatic leaves have distinct curry-like fragrance."
+    },
+    {
+      "commonName": "Parijat (पारिजात/Night Jasmine)",
+      "scientificName": "Nyctanthes arbor-tristis",
+      "image": "parijat",
+      "type": ["medicinal", "religious", "decorative"],
+      "use": "Flowers used in religious offerings. Leaves used for sciatica, arthritis, and fever.",
+      "waterNeeds": "Moderate; tolerates brief drought periods",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Prune after flowering season to maintain shape. Protect from frost in northern regions.",
+      "storageTips": "Flowers highly perishable. Leaves can be dried and stored for medicinal use.",
+      "growthForm": "Large shrub or small tree growing up to 10 meters tall",
+      "specification": "Flowers bloom at night and drop in morning. Called 'Tree of Sorrow' due to this habit."
+    },
+    {
+      "commonName": "Chironji (चिरौंजी)",
+      "scientificName": "Buchanania lanzan",
+      "image": "chironji",
+      "type": ["food", "medicinal"],
+      "use": "Seeds used in sweets and as thickening agent. Bark used for skin disorders in traditional medicine.",
+      "waterNeeds": "Moderate; drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Slow-growing tree that requires little maintenance. Protect saplings from grazing animals.",
+      "storageTips": "Seeds can be stored for months in cool, dry place. Roasted seeds last longer than raw.",
+      "growthForm": "Medium-sized deciduous tree growing up to 15 meters tall",
+      "specification": "Seeds resembling almonds with delicate flavor. Tree has significant cultural importance in tribal areas."
+    },
+    {
+      "commonName": "Sarpagandha (सर्पगंधा/Indian Snakeroot)",
+      "scientificName": "Rauvolfia serpentina",
+      "image": "sarpagandha",
+      "type": ["medicinal"],
+      "use": "Roots used in Ayurveda for hypertension, insomnia, and snake bites.",
+      "waterNeeds": "Moderate; keep soil consistently moist",
+      "sunlightNeeds": "Partial shade",
+      "careTips": "Grows best in humus-rich soil. Harvest roots after 2-3 years. Protected species; check regulations.",
+      "storageTips": "Dried roots can be stored in airtight containers for up to a year away from light.",
+      "growthForm": "Perennial shrub growing up to 1 meter tall",
+      "specification": "Contains reserpine, first natural antihypertensive drug isolated. Listed in Red Data Book as endangered."
+    },
+    {
+      "commonName": "Nagkesar (नागकेसर)",
+      "scientificName": "Mesua ferrea",
+      "image": "nagkesar",
+      "type": ["medicinal", "decorative"],
+      "use": "Flower buds used in Ayurveda for skin diseases and bleeding disorders. Wood prized for construction.",
+      "waterNeeds": "Moderate; established trees are drought-tolerant",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Slow-growing tree that requires minimal maintenance. Protect from frost when young.",
+      "storageTips": "Dried flower buds can be stored in airtight containers for up to 2 years.",
+      "growthForm": "Evergreen tree growing up to 35 meters tall",
+      "specification": "National tree of Sri Lanka. Produces fragrant white flowers with golden centers."
+    },
+    {
+      "commonName": "Amla (आंवला/Indian Gooseberry)",
+      "scientificName": "Phyllanthus emblica",
+      "image": "amla",
+      "type": ["food", "medicinal", "religious"],
+      "use": "Extremely high vitamin C content. Used in Ayurveda for immunity, digestion, and hair health.",
+      "waterNeeds": "Moderate; drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Prune after fruiting. Apply organic manure annually. Protect from strong winds.",
+      "storageTips": "Fresh fruits last 1-2 weeks in refrigeration. Can be preserved in salt water or made into preserves.",
+      "growthForm": "Deciduous tree growing up to 18 meters tall",
+      "specification": "One of three ingredients in Triphala. Remains fresh long after harvesting due to tannin content."
+    },
+    {
+      "commonName": "Sheesham (शीशम/Indian Rosewood)",
+      "scientificName": "Dalbergia sissoo",
+      "image": "rosewood",
+      "type": ["medicinal", "timber"],
+      "use": "Wood valued for furniture. Leaves used in traditional medicine for skin diseases.",
+      "waterNeeds": "Moderate; established trees are drought-tolerant",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Prune to maintain shape. Watch for pests like defoliators and borers.",
+      "storageTips": "Not applicable for home storage as it's primarily grown for timber.",
+      "growthForm": "Deciduous tree growing up to 25 meters tall",
+      "specification": "Fast-growing species that helps prevent soil erosion. Wood has distinctive grain pattern."
+    },
+    {
+      "commonName": "Shatawar (शतावर/Asparagus)",
+      "scientificName": "Asparagus racemosus",
+      "image": "shatawar",
+      "type": ["medicinal"],
+      "use": "Root used as women's tonic in Ayurveda. Beneficial for female reproductive system.",
+      "waterNeeds": "Moderate; tolerates brief dry periods",
+      "sunlightNeeds": "Partial shade to full sun",
+      "careTips": "Provide trellis for climbing. Harvest roots after 2 years. Plant in well-draining soil.",
+      "storageTips": "Dried roots can be stored in airtight containers away from light for up to 2 years.",
+      "growthForm": "Climbing herb with feathery foliage and small thorns",
+      "specification": "Related to but different from vegetable asparagus. Contains saponins with medicinal properties."
+    },
+    {
+      "commonName": "Lahsun (लहसुन/Garlic)",
+      "scientificName": "Allium sativum",
+      "image": "garlic",
+      "type": ["food", "medicinal"],
+      "use": "Bulbs used as spice and for cardiovascular health. Natural antibiotic and antiviral.",
+      "waterNeeds": "Moderate; stop watering when tops begin to yellow",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Plant cloves in late autumn. Harvest when tops fall over. Cure before storage.",
+      "storageTips": "Store in cool, dry place with good air circulation. Can be braided by stems for hanging.",
+      "growthForm": "Bulbous herb growing up to 60 cm tall",
+      "specification": "Contains allicin which gives it antimicrobial properties. Best planted near roses to repel pests."
+    },
+    {
+      "commonName": "Adrak (अदरक/Ginger)",
+      "scientificName": "Zingiber officinale",
+      "image": "ginger",
+      "type": ["food", "medicinal"],
+      "use": "Rhizome used as spice and for nausea, inflammation, and cold treatment.",
+      "waterNeeds": "Moderate; keep soil consistently moist",
+      "sunlightNeeds": "Partial shade",
+      "careTips": "Plant pieces with growth buds facing up. Mulch heavily. Harvest 8-10 months after planting.",
+      "storageTips": "Fresh rhizomes can be refrigerated for 3 weeks. Can be dried, pickled, or frozen.",
+      "growthForm": "Herbaceous perennial growing from rhizome up to 1 meter tall",
+      "specification": "Contains gingerol which gives it pungent flavor and anti-inflammatory properties."
+    },
+    {
+      "commonName": "Bael (बेल/Wood Apple)",
+      "scientificName": "Aegle marmelos",
+      "image": "bael",
+      "type": ["food", "medicinal", "religious"],
+      "use": "Fruit used for digestive disorders, dysentery, and diabetes. Sacred to Lord Shiva.",
+      "waterNeeds": "Low; drought-tolerant once established",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Prune to maintain shape. Fertilize annually. Protect young plants from frost.",
+      "storageTips": "Fresh fruit can be stored up to 2 weeks. Pulp can be dried or made into preserves.",
+      "growthForm": "Deciduous thorny tree growing up to 15 meters tall",
+      "specification": "Hard-shelled fruit with aromatic pulp. Slow-growing but can live for over 100 years."
+    },
+    {
+      "commonName": "Pudina (पुदीना/Mint)",
+      "scientificName": "Mentha spicata",
+      "image": "pudina",
+      "type": ["food", "medicinal"],
+      "use": "Leaves used in chutneys, beverages, and for digestive issues. Has cooling properties.",
+      "waterNeeds": "High; keep soil consistently moist",
+      "sunlightNeeds": "Full sun to partial shade",
+      "careTips": "Contains invasive runners; best grown in containers. Pinch regularly to promote bushiness.",
+      "storageTips": "Fresh leaves last 1 week refrigerated in damp paper towel. Can be frozen or dried.",
+      "growthForm": "Aromatic perennial herb spreading by runners",
+      "specification": "Contains menthol which gives cooling sensation. Repels insects naturally."
+    },
+    {
+      "commonName": "Harad (हरड़/Chebulic Myrobalan)",
+      "scientificName": "Terminalia chebula",
+      "image": "harad",
+      "type": ["medicinal"],
+      "use": "Fruit used in Ayurveda for digestive disorders and as gentle laxative. Component of Triphala.",
+      "waterNeeds": "Moderate; established trees are drought-tolerant",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Minimal pruning required. Add compost annually. Protect from frost when young.",
+      "storageTips": "Dried fruits can be stored for years in airtight containers.",
+      "growthForm": "Large deciduous tree growing up to 30 meters tall",
+      "specification": "Called 'King of Medicines' in Tibet. Rich in tannins and antioxidants."
+    },
+    {
+      "commonName": "Behada (बहेड़ा/Beleric Myrobalan)",
+      "scientificName": "Terminalia bellirica",
+      "image": "behada",
+      "type": ["medicinal"],
+      "use": "Fruit used in Ayurveda for respiratory conditions and eye disorders. Component of Triphala.",
+      "waterNeeds": "Moderate; established trees are drought-tolerant",
+      "sunlightNeeds": "Full sun",
+      "careTips": "Similar to Harad. Requires minimal maintenance once established.",
+      "storageTips": "Dried fruits can be stored for years in airtight containers away from moisture.",
+      "growthForm": "Large deciduous tree growing up to 30 meters tall",
+      "specification": "Contains gallic acid and ellagic acid with antioxidant properties. Seeds are narcotic if consumed in large quantities."
     }
 ]
+
+

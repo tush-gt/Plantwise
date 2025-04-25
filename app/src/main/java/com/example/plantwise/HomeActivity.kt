@@ -74,7 +74,7 @@ class HomeActivity : AppCompatActivity() {
 
         bottomNav.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.nav_home -> {
+                    R.id.nav_home -> {
                     // you're already on Home, do nothing or refresh maybe
                     true
                 }
