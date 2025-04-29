@@ -78,6 +78,10 @@
         <activity
             android:name=".EditPlantActivity"
             android:exported="true" />
+        <activity
+            android:name=".BuyTreeActivity"
+            android:exported="true" />
+
 
         <service
             android:name=".MyFirebaseMessagingService"
