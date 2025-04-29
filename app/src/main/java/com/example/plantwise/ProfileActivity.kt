@@ -57,6 +57,8 @@ class ProfileActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.nav_home -> {
                     // you're already on Home, do nothing or refresh maybe
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
                     true
                 }
 

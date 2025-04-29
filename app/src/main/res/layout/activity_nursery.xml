@@ -12,6 +12,8 @@
         android:layout_height="match_parent"
         android:background="@drawable/plantgraphic">
 
+
+
         <org.osmdroid.views.MapView
             android:id="@+id/mapView"
             android:layout_width="match_parent"
@@ -56,6 +58,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="384dp"
+            android:layout_height="63dp"
+            android:layout_margin="16dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search Plant Nurseries"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleText"
+            android:visibility="gone"/>
 
         <ImageView
             android:id="@+id/imageView3"
