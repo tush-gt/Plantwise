@@ -82,6 +82,7 @@ dependencies {
     annotationProcessor ("com.github.bumptech.glide:compiler:4.16.0")
     implementation ("com.google.firebase:firebase-messaging:23.4.1")
     implementation ("org.osmdroid:osmdroid-android:6.1.10")
+    implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
 
 
 
