@@ -84,6 +84,15 @@ dependencies {
     implementation ("org.osmdroid:osmdroid-android:6.1.10")
     implementation ("com.squareup.okhttp3:okhttp:4.9.3")
     implementation ("com.google.code.gson:gson:2.8.8")
+    implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
+    implementation ("com.cloudinary:cloudinary-android:2.3.1")
+    // Replace with:
+    implementation ("androidx.core:core-ktx:1.8.0")
+
+
+
+
+
 
 }
 //
