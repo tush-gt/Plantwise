@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
 
 class TreeAdapter(
-    private val trees: List<TreeDataModel>,
+    private val trees: MutableList<TreeDataModel>,
     private val isAdmin: Boolean
 ) : RecyclerView.Adapter<TreeAdapter.TreeViewHolder>() {
 
@@ -49,11 +49,23 @@ class TreeAdapter(
         }
 
         holder.deleteButton.setOnClickListener {
-            FirebaseFirestore.getInstance().collection("trees").document(tree.id).delete()
+            val context = holder.itemView.context
+            val treeId = tree.id
+
+            FirebaseFirestore.getInstance().collection("trees").document(treeId)
+                .delete()
+                .addOnSuccessListener {
+                    Toast.makeText(context, "${tree.name} deleted", Toast.LENGTH_SHORT).show()
+                    trees.removeAt(holder.adapterPosition)
+                    notifyItemRemoved(holder.adapterPosition)
+                }
+                .addOnFailureListener {
+                    Toast.makeText(context, "Failed to delete ${tree.name}", Toast.LENGTH_SHORT).show()
+                }
         }
 
         holder.editButton.setOnClickListener {
-            // Launch Edit Dialog
+            // TODO: Implement edit logic
         }
     }
 

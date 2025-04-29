@@ -26,6 +26,7 @@ class BuyTreeActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()
     private val treeList = mutableListOf<TreeDataModel>()
     private lateinit var adapter: TreeAdapter
+    
     private val currentUser = FirebaseAuth.getInstance().currentUser
     private val isAdmin = currentUser?.email == "dbit@gmail.com"
     private var selectedImageUri: Uri? = null
