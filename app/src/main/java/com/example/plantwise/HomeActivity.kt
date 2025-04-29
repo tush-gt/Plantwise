@@ -98,12 +98,12 @@ class HomeActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
-//                R.id.buy_plant-> {
-//                    // Navigate to ReminderActivity when "My Garden" is tapped
-//                    val intent = Intent(this, BuyTreeActivity::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
+                R.id.buy_plant-> {
+                    // Navigate to ReminderActivity when "My Garden" is tapped
+                    val intent = Intent(this, BuyTreeActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
 
                 else -> false
             }

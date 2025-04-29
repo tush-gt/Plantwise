@@ -8,11 +8,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.cloudinary.Cloudinary
+import com.cloudinary.utils.ObjectUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.storage.FirebaseStorage
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class BuyTreeActivity : AppCompatActivity() {
 
@@ -89,28 +94,41 @@ class BuyTreeActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val fileName = "tree_images/${System.currentTimeMillis()}.jpg"
-            val storage = FirebaseStorage.getInstance("gs://plantwise-242527.appspot.com") // ✅ use your actual bucket
-            val imageRef = storage.reference.child(fileName)
+            val config = hashMapOf(
+                "cloud_name" to "dztzai54z",
+                "api_key" to "265654958636919",
+                "api_secret" to "d9LlXTITp3hm2PUEVU_bcEu1-s4" // 🛑 Replace this with your real API secret
+            )
 
-            imageRef.putFile(selectedImageUri!!)
-                .addOnSuccessListener {
-                    imageRef.downloadUrl.addOnSuccessListener { uri ->
-                        val tree = TreeDataModel(name = name, price = price, imageUrl = uri.toString())
-                        db.collection("trees").add(tree)
-                            .addOnSuccessListener {
-                                Toast.makeText(this, "Tree added successfully", Toast.LENGTH_SHORT).show()
-                                loadTreesFromFirebase()
-                                dialog.dismiss()
-                            }
-                            .addOnFailureListener {
-                                Toast.makeText(this, "Failed to save tree", Toast.LENGTH_SHORT).show()
-                            }
+            val cloudinary = Cloudinary(config)
+
+            lifecycleScope.launch {
+                try {
+                    val inputStream = withContext(Dispatchers.IO) {
+                        contentResolver.openInputStream(selectedImageUri!!)
                     }
+
+                    val uploadResult = withContext(Dispatchers.IO) {
+                        cloudinary.uploader().upload(inputStream, ObjectUtils.emptyMap())
+                    }
+
+                    val imageUrl = uploadResult["secure_url"] as String
+                    val tree = TreeDataModel(name = name, price = price, imageUrl = imageUrl)
+
+                    db.collection("trees").add(tree)
+                        .addOnSuccessListener {
+                            Toast.makeText(this@BuyTreeActivity, "Tree added successfully", Toast.LENGTH_SHORT).show()
+                            loadTreesFromFirebase()
+                            dialog.dismiss()
+                        }
+                        .addOnFailureListener {
+                            Toast.makeText(this@BuyTreeActivity, "Failed to save tree", Toast.LENGTH_SHORT).show()
+                        }
+
+                } catch (e: Exception) {
+                    Toast.makeText(this@BuyTreeActivity, "Upload failed: ${e.message}", Toast.LENGTH_LONG).show()
                 }
-                .addOnFailureListener { exception ->
-                    Toast.makeText(this, "Upload failed: ${exception.message}", Toast.LENGTH_LONG).show()
-                }
+            }
         }
 
         dialog.show()

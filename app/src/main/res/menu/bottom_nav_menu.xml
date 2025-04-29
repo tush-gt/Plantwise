@@ -18,5 +18,8 @@
         android:id="@+id/nav_garden1"
         android:icon="@drawable/baseline_auto_stories_24"
         android:title="Your Garden" />
-
+    <item
+        android:id="@+id/buy_plant"
+        android:icon="@drawable/baseline_auto_stories_24"
+        android:title="Buy" />
 </menu>
